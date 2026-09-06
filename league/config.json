@@ -1,0 +1,129 @@
+{
+  "season": 2026,
+  "my_team": "SP",
+  "teams": {
+    "SP": "Succession Plan",
+    "QF": "The Quadfather",
+    "PK": "PhatKats!",
+    "PP": "Powder Puffs",
+    "RP": "The roc pile",
+    "HI": "Hot Ice",
+    "NP": "Namby Pambies",
+    "MS": "Monstars",
+    "SB": "Shitbirds",
+    "MM": "Magic's Minions",
+    "GG": "Greenville Gorillas",
+    "KR": "Kangaroosters"
+  },
+  "draft_order": [
+    "SP QF PK PP RP HI NP MS SB MM MM MM",
+    "GG KR MM SB MS NP HI NP PP PK QF SP",
+    "SP QF PK PP MM HI NP MS SB MM MM GG",
+    "GG KR MM SB MS NP HI RP PP PK SP SP",
+    "SP QF PK PP NP HI NP MS SB KR MS GG",
+    "MM KR RP SB MS NP HI RP PP PK QF SP",
+    "SP QF PK PP RP HI NP KR SB SP KR GG",
+    "GG KR GG SB MS RP HI RP PP PK QF SP",
+    "SP QF PK PP RP HI NP MS SB MM KR GG",
+    "SP KR GG SB MS RP HI RP PP PK QF SP",
+    "KR QF PK PP RP HI NP MS SB MM KR GG",
+    "GG KR MM SB MS NP HI RP PP PK QF SP",
+    "SP QF PK PP RP HI NP MS SB MM KR GG",
+    "GG KR MM SB MS NP HI RP PP PK QF QF",
+    "GG QF PK PP RP HI NP MS SB MM KR GG"
+  ],
+  "lineup": ["QB", "RB", "RB", "WR", "WR", "TE", "W/R", "W/R/T", "K", "DEF", "BN", "BN", "BN", "BN", "BN"],
+  "roster_goal": {"QB": 1, "RB": 5, "WR": 6, "TE": 1, "K": 1, "DEF": 1},
+  "pick_clock_seconds": 45,
+
+  "scoring": {
+    "passYds": 0.04,
+    "passTds": 5.0,
+    "passInts": -2.0,
+    "receptions": 0.5,
+    "receptionYds": 0.1,
+    "receptionTds": 6.0,
+    "rushYds": 0.1,
+    "rushTds": 6.0,
+    "fumbles": -2.0,
+    "twoPts": 2.0,
+    "kickExtraPoints": 1.0,
+    "kick019": 3.0,
+    "kick2029": 3.0,
+    "kick3039": 3.0,
+    "kick4049": 4.0,
+    "kick50": 5.0,
+    "dfInts": 2.0,
+    "dfTds": 6.0,
+    "dfSacks": 1.0,
+    "dfFumbles": 2.0,
+    "dfSafeties": 2.0,
+    "dfPointsAllowedPerGame": 1.0
+  },
+
+  "adp": {
+    "prefer_host_snapshot": true,
+    "fantasypros_column": "half_ppr"
+  },
+
+  "watch": [
+    "Jahmyr Gibbs", "Bijan Robinson", "Justin Jefferson", "Jonathan Taylor", "Jaxon Smith-Njigba",
+    "Puka Nacua", "Brock Bowers", "A.J. Brown", "Trey McBride", "Drake Maye", "Tyler Warren",
+    "Amon-Ra St. Brown", "Kenneth Walker III", "Josh Allen", "Michael Pittman Jr.", "Kyler Murray",
+    "Tucker Kraft", "Carnell Tate", "D'Andre Swift", "DJ Moore", "Jauan Jennings", "Jeremiyah Love",
+    "Brandon Aubrey", "Zach Charbonnet", "Tank Bigsby"
+  ],
+  "avoid": [
+    "De'Von Achane", "Drake London", "Rico Dowdle", "Marvin Harrison Jr.", "Tony Pollard",
+    "George Kittle", "Tyler Allgeier", "Garrett Wilson", "Malik Nabers", "Tyreek Hill"
+  ],
+  "tiers": [
+    "Tier 1 Pick 1",
+    "Tier 2 The 24 and 25 turn",
+    "Tier 3 Picks 47 to 49",
+    "Tier 4 Picks 72 to 82",
+    "Tier 5 Picks 96 to 109",
+    "Tier 6 Pick 120 and later"
+  ],
+  "tier_adp_cutoffs": [5, 32, 60, 90, 115],
+
+  "plan_notes": [
+    "You pick at 1, then at the 24 and 25 turn, then three straight at 47, 48 and 49. After that it is the 72 and 73 turn, a solo pick at 82, the 96 and 97 turn, 109, 120, and finally 144 and 145 for defense and kicker. You have nothing in rounds 11, 14 or 15.",
+    "Because you draft in bursts and then wait 20 plus picks, the plan is built to start runs rather than chase them. Each slot lists a first choice from your watch list and steady fallbacks on stable offenses. Nobody on the do not draft list appears anywhere.",
+    "One quarterback. Maye at 48 unless Allen falls to 24, in which case skip the quarterback slot and take a running back. Tight end at 25 if McBride is there, otherwise Warren at 47, Kraft at 49, or Kelce and Goedert at 97.",
+    "Five running backs and six receivers fill the rest. Defense at 144 and kicker at 145 with whatever is left in those tiers, since the drop from the top defenses to the streamable ones is small in this scoring."
+  ],
+
+  "plan": [
+    {"pick": 1, "want": "RB", "targets": ["Jahmyr Gibbs", "Bijan Robinson", "Jonathan Taylor"],
+     "why": "Gibbs or Bijan. Both are on your list and both are 40 plus points clear of every other back in this scoring."},
+    {"pick": 24, "want": "WR", "targets": ["Josh Allen", "A.J. Brown", "Brock Bowers", "Kenneth Walker III", "Justin Jefferson", "Trey McBride"],
+     "why": "Your list has three players who normally land right here. Allen at ADP 24.6 is 355 projected points with five point passing TDs and outscores every skill player on the board. If he is gone, A.J. Brown at ADP 23 is the receiver you have taken in all four mocks. Bowers at ADP 20.5 is the reach option."},
+    {"pick": 25, "want": "TE", "targets": ["Trey McBride", "Jeremiyah Love", "Brock Bowers", "A.J. Brown", "Kyren Williams", "Javonte Williams"],
+     "why": "Back to back with 2.12. McBride at ADP 29.4 gives you the top projected tight end and clears that position for the whole draft. Jeremiyah Love at ADP 30.1 is your list's running back in this range. If you took Allen at 24, A.J. Brown is the pick here."},
+    {"pick": 47, "want": "RB", "targets": ["D'Andre Swift", "Tyler Warren", "Cam Skattebo", "David Montgomery", "Bucky Irving", "Quinshon Judkins"],
+     "why": "First of three straight picks. Swift at ADP 42.6 is on your list and was your best draft pick last year. Tyler Warren is the tight end fallback if McBride and Bowers both went. Skattebo and Montgomery are steady backs on run first offenses."},
+    {"pick": 48, "want": "QB", "targets": ["Drake Maye", "Jalen Hurts", "Joe Burrow", "Jayden Daniels", "Kyler Murray"],
+     "why": "Maye has been your 4.12 pick in every mock and his ADP is 49.2, so this is exactly where he lands. Skip this slot entirely if you already took Allen at 24 and take another running back or DJ Moore instead."},
+    {"pick": 49, "want": "WR", "targets": ["DJ Moore", "Tucker Kraft", "David Montgomery", "Quinshon Judkins", "Terry McLaurin", "Luther Burden III"],
+     "why": "DJ Moore at ADP 54.5 is on your list and has been your 4.11 pick in half your mocks. Kraft is the tight end if you still need one. Judkins was your mock pick in this range and is a fine RB3."},
+    {"pick": 72, "want": "RB", "targets": ["Jaylen Warren", "TreVeyon Henderson", "David Montgomery", "Tucker Kraft", "MarShawn Lloyd", "Rhamondre Stevenson"],
+     "why": "Warren projects 183 at ADP 73 on a run heavy Steelers offense, which is RB2 production at an RB4 price. Henderson is the younger alternative on the same Patriots offense as Maye and Brown."},
+    {"pick": 73, "want": "WR", "targets": ["Christian Watson", "Parker Washington", "Jameson Williams", "Rome Odunze", "TreVeyon Henderson", "Davante Adams"],
+     "why": "Third receiver. Watson and Parker Washington both project 167 and both are second options on stable offenses rather than the guy a bad team leans on. Odunze was your mock 3 pick here."},
+    {"pick": 82, "want": "WR", "targets": ["Carnell Tate", "DK Metcalf", "Harold Fannin Jr.", "MarShawn Lloyd", "Brian Thomas Jr.", "Kyle Pitts Sr."],
+     "why": "Carnell Tate at ADP 83.7 is on your list and has been your 5.01 pick in two mocks. Kittle is off your board so if you still need a tight end, Fannin is the young one with upside in this range."},
+    {"pick": 96, "want": "WR", "targets": ["Alec Pierce", "Josh Downs", "Chris Godwin Jr.", "Blake Corum", "Chuba Hubbard", "Brandon Aubrey"],
+     "why": "Pierce projects 164 at ADP 98, which is 20 points above anyone else in this window, and you took him at 7.01 in mock 1. Aubrey is on your list but he projects one point better than Shrader, who goes 45 picks later. Take Aubrey only if the rest of this list is gone."},
+    {"pick": 97, "want": "TE", "targets": ["Travis Kelce", "Dallas Goedert", "Dalton Kincaid", "Blake Corum", "Chuba Hubbard", "Jordan Mason"],
+     "why": "Tight end if you never got McBride, Bowers, Warren, Kraft or Fannin. Otherwise Corum or Hubbard for the running back bench."},
+    {"pick": 109, "want": "RB", "targets": ["Jordan Mason", "Kyle Monangai", "RJ Harvey", "Kenneth Gainwell", "Aaron Jones Sr.", "Jayden Reed"],
+     "why": "Fifth running back and every name projects around 140. Mason is the one your league drafted in the fourth round last year so he will feel familiar to them, which means he goes first."},
+    {"pick": 120, "want": "WR", "targets": ["Michael Pittman Jr.", "Kyler Murray", "Jayden Reed", "Courtland Sutton", "Tank Bigsby", "Jauan Jennings"],
+     "why": "Pittman at ADP 122 is on your list and has been your pick in three mocks. Murray is here as the second quarterback only if you want the insurance, since he projects 291 and would be one of the better backups in the league."},
+    {"pick": 144, "want": "DEF", "targets": ["Eagles", "Patriots", "Vikings", "Ravens", "Lions", "Jaguars"],
+     "why": "Defense with your second to last pick. The Rams, Texans and Broncos will be long gone and the drop to this tier is small. Stream it in season."},
+    {"pick": 145, "want": "K", "targets": ["Brandon Aubrey", "Spencer Shrader", "Jake Bates", "Tyler Bass", "Cam Little", "Tyler Loop"],
+     "why": "Kicker last. Aubrey will not be here but if he is, he is yours. Shrader, Bates and Bass all project within a point of him. Jennings, Bigsby and Charbonnet from your list are all undrafted or near it and will be there on waivers week one."}
+  ]
+}

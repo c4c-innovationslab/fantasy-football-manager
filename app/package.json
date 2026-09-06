@@ -1,0 +1,37 @@
+{
+  "name": "ff-app",
+  "version": "0.1.0",
+  "repository": "https://github.com/jjtimmons/ff",
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "antd": "^5.19.4",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-measure": "^2.5.2",
+    "react-redux": "^9.1.2",
+    "react-tooltip": "^5.27.1",
+    "redux": "^5.0.0",
+    "redux-persist": "^6.0.0"
+  },
+  "scripts": {
+    "build": "next build",
+    "start": "next dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-measure": "^2.0.12",
+    "@types/react-redux": "^7.1.33",
+    "typescript": "^5.5.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

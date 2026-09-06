@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Succession Plan Draft Room</title>
+<script src="league_data.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #80B0E8; --peony: #FFC0C0; --rain: #008471; --lavender: #D1CAEA; --lime: #D6D35F;
+    --tomato: #C45F3F; --sun: #F4D242; --pond: #898E46; --gum: #F29CC3;
+    --ink: #151515; --muted: #6f6f6f; --card: #F7F4EC; --card2: #EFEBE0; --line: #E4DFD3; --white: #fff;
+    --display: 'Archivo', sans-serif; --body: 'Plus Jakarta Sans', sans-serif;
+    --r: 18px; --r2: 12px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--white); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.4; }
+  button { font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; border: none; background: var(--card2); color: var(--ink); padding: 7px 14px; border-radius: 999px; }
+  button:hover { filter: brightness(0.96); }
+  button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--sky); outline-offset: 1px; }
+  button.dark { background: var(--ink); color: #fff; }
+  button.pink { background: var(--gum); color: var(--ink); }
+  button.sky { background: var(--sky); color: var(--ink); }
+  button.sun { background: var(--sun); color: var(--ink); }
+  button.sm { padding: 4px 10px; font-size: 12px; }
+  button.icon { padding: 4px; background: transparent; line-height: 0; border-radius: 8px; }
+  button.icon:hover { background: var(--card2); }
+  input[type=text], select { font-family: inherit; font-size: 13px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: #fff; }
+  input[type=text] { width: 100%; }
+  h1 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 26px; margin: 0; letter-spacing: -0.01em; line-height: 1.1; }
+  h2 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 13px; margin: 0 0 10px 0; letter-spacing: 0.02em; text-transform: uppercase; }
+  h3 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 11px; margin: 12px 0 6px 0; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+
+  .shell { display: grid; grid-template-columns: 220px 1fr; height: 100vh; padding: 14px; gap: 14px; }
+  .side { background: var(--ink); color: #fff; border-radius: 26px; padding: 22px 14px; display: flex; flex-direction: column; gap: 4px; }
+  .side .brand { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 18px; padding: 0 10px 18px 10px; color: var(--sun); }
+  .side .group { font-size: 11px; color: #9a9a9a; padding: 14px 10px 6px 10px; }
+  .side button.nav { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; background: transparent; color: #d6d6d6; padding: 9px 10px; border-radius: 12px; font-weight: 500; }
+  .side button.nav:hover { background: #262626; color: #fff; filter: none; }
+  .side button.nav.on { background: #262626; color: var(--gum); }
+  .side button.nav svg { flex: 0 0 auto; }
+  .side .spacer { flex: 1; }
+
+  .main { display: flex; flex-direction: column; min-height: 0; min-width: 0; gap: 14px; }
+  .shell, .content, .card, .tile, .stack, .searchpill { min-width: 0; }
+  .tile .big { overflow-wrap: anywhere; }
+  .topbar { display: flex; align-items: center; gap: 12px; }
+  .searchpill { flex: 1; display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px 6px 4px 6px; }
+  .searchpill .lens { width: 34px; height: 34px; border-radius: 50%; background: var(--gum); display: grid; place-items: center; flex: 0 0 auto; }
+  .searchpill input { border: none; padding: 6px 0; flex: 1; min-width: 120px; }
+  .searchpill .chips { display: flex; gap: 6px; font-size: 12px; padding-right: 6px; flex-wrap: wrap; }
+  .searchpill .chips button { padding: 4px 10px; font-size: 11px; background: #fff; border: 1px dashed #bdb8ac; color: var(--muted); }
+  .searchpill .chips button.on { background: var(--ink); color: #fff; border-style: solid; border-color: var(--ink); }
+  .topbar .actions { display: flex; gap: 8px; align-items: center; }
+
+  .content { flex: 1; min-height: 0; display: grid; gap: 14px; }
+  .content.draft { grid-template-columns: 300px 1fr 280px; }
+  .content.build { grid-template-columns: 1fr 1fr; }
+  .content.plan { grid-template-columns: 1fr 1fr; }
+  .card { background: var(--card); border-radius: var(--r); padding: 16px 18px; min-height: 0; display: flex; flex-direction: column; }
+  .card.white { background: #fff; border: 1px solid var(--line); }
+  .card .scroll { flex: 1; min-height: 0; overflow-y: auto; }
+  .stack { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+  .stack > .card { flex: 1; }
+
+  .clockrow { display: grid; grid-template-columns: 130px 1.4fr 1fr 1fr; gap: 14px; }
+  .tile { border-radius: var(--r); padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 92px; }
+  .tile .big { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 26px; line-height: 1; }
+  .tile .label { font-size: 12px; margin-top: 6px; }
+  .tile.timer { background: var(--sun); }
+  .tile.timer .big { font-size: 34px; }
+  .tile.timer.warn { background: var(--tomato); color: #fff; }
+  .tile.timer.late { background: var(--ink); color: var(--sun); }
+  .tile.pick { background: var(--card); }
+  .tile.pick.mine { background: var(--gum); }
+  .tile.next { background: var(--sky); }
+  .tile.fill { background: var(--lavender); }
+  .pickbtns { display: flex; gap: 6px; margin-top: 8px; }
+  .bar { height: 8px; border-radius: 999px; background: rgba(0,0,0,.08); margin-top: 8px; overflow: hidden; }
+  .bar i { display: block; height: 100%; border-radius: 999px; background: var(--ink); }
+
+  .rec { background: #fff; border-radius: var(--r2); padding: 12px 14px; margin-bottom: 12px; border: 1px solid var(--line); }
+  .rec .who { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 17px; }
+  .rec .why { font-size: 12.5px; margin-top: 4px; }
+  .rec .alts { margin-top: 8px; font-size: 12px; }
+  .rec .alts span { display: inline-block; margin: 2px 6px 2px 0; padding: 2px 9px; background: var(--card); border-radius: 999px; }
+  .rec .alts span.gone { text-decoration: line-through; color: var(--muted); background: transparent; }
+  .rec .wl { margin-top: 10px; font-size: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+
+  .slot { display: grid; grid-template-columns: 50px 1fr; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+  .slot .num { font-family: var(--display); font-stretch: 125%; font-weight: 800; }
+  .slot .num small { display: block; font-family: var(--body); font-weight: 500; font-size: 11px; color: var(--muted); }
+  .slot.done { color: var(--muted); }
+  .slot.done .got { color: var(--ink); font-weight: 700; }
+  .slot.now { background: var(--peony); margin: 0 -10px; padding: 8px 10px; border-radius: var(--r2); }
+  .slot .targets span { margin-right: 6px; }
+  .slot .targets span.gone { text-decoration: line-through; color: #a8a8a8; }
+  .slot .targets span.mine { font-weight: 700; color: var(--rain); }
+
+  .legend { font-size: 12px; color: var(--muted); margin: 0 0 8px 0; }
+  .legend .fit { margin-left: 8px; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 8px; position: sticky; top: 0; background: var(--card); z-index: 1; }
+  td { padding: 6px 8px; background: #fff; vertical-align: middle; border-top: 4px solid var(--card); }
+  tr td:first-child { border-radius: 10px 0 0 10px; }
+  tr td:last-child { border-radius: 0 10px 10px 0; }
+  td.name { white-space: nowrap; }
+  tr.taken td { color: #b0b0b0; text-decoration: line-through; background: var(--card2); }
+  tr.taken td.act, tr.taken td.name button { text-decoration: none; }
+  tr.mine td { background: var(--lime); text-decoration: none; color: var(--ink); font-weight: 600; }
+  tr.target td { background: var(--peony); }
+  tr.avoid td { color: #a8a8a8; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .pos { display: inline-block; min-width: 34px; text-align: center; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 999px; background: var(--card2); }
+  .pos.QB { background: var(--sky); } .pos.RB { background: var(--tomato); color: #fff; } .pos.WR { background: var(--sun); } .pos.TE { background: var(--rain); color: #fff; } .pos.K { background: var(--lavender); } .pos.DEF { background: var(--pond); color: #fff; }
+  .fit { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .fit.steal { background: var(--tomato); } .fit.safe { background: var(--rain); } .fit.risky { background: var(--sun); }
+  td.act { white-space: nowrap; text-align: right; }
+  td.act button { margin-left: 4px; }
+
+  .roster .row { display: grid; grid-template-columns: 50px 1fr auto; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; align-items: center; }
+  .roster .row .lab { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 10px; letter-spacing: .04em; }
+  .roster .row .empty { color: #a8a8a8; }
+  .needs .n { display: grid; grid-template-columns: 34px 1fr 44px; gap: 8px; align-items: center; font-size: 12px; padding: 4px 0; }
+  .needs .n .bar { margin: 0; }
+  .best .line { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .chip { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 999px; background: var(--card2); margin-left: 6px; }
+
+  .wlrow { display: grid; grid-template-columns: 18px 1fr auto auto auto; gap: 8px; align-items: center; padding: 8px 10px; background: #fff; border-radius: var(--r2); margin-bottom: 6px; cursor: grab; font-size: 13px; }
+  .wlrow.dragging { opacity: 0.4; }
+  .wlrow.over { box-shadow: inset 0 3px 0 var(--rain); }
+  .wlrow.taken { color: #b0b0b0; text-decoration: line-through; }
+  .wlrow select { padding: 3px 10px; font-size: 12px; }
+  .tierhead { display: flex; justify-content: space-between; align-items: center; font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; padding: 8px 12px; border-radius: 999px; margin: 12px 0 8px 0; }
+  .tierhead small { font-family: var(--body); font-weight: 500; text-transform: none; letter-spacing: 0; }
+  .tierhead input { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 12px; text-transform: uppercase; background: transparent; border: none; color: inherit; width: 62%; padding: 0; border-radius: 0; }
+  .tierhead:nth-of-type(6n+1) { background: var(--sky); } .tierhead:nth-of-type(6n+2) { background: var(--peony); } .tierhead:nth-of-type(6n+3) { background: var(--rain); color: #fff; } .tierhead:nth-of-type(6n+4) { background: var(--lavender); } .tierhead:nth-of-type(6n+5) { background: var(--lime); } .tierhead:nth-of-type(6n+6) { background: var(--gum); }
+  .dz { display: grid; grid-template-columns: 56px 1fr auto; gap: 8px; align-items: center; padding: 9px 12px; border: 1px dashed #bdb8ac; border-radius: var(--r2); margin-bottom: 6px; min-height: 42px; font-size: 13px; background: #fff; }
+  .dz.over { border-color: var(--rain); background: var(--peony); border-style: solid; }
+  .dz.filled { border-style: solid; border-color: var(--line); }
+  .dz .lab { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 10px; letter-spacing: .04em; }
+  .dz .empty { color: #a8a8a8; }
+  .sumline { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; }
+
+  @media (max-width: 1150px) {
+    .content.draft { grid-template-columns: 1fr 1fr; }
+    .content.draft > .stack:first-child { grid-column: 1 / -1; }
+  }
+  @media (max-width: 860px) {
+    .shell { grid-template-columns: 1fr; height: auto; padding: 10px; }
+    .side { flex-direction: row; flex-wrap: wrap; align-items: center; padding: 12px; border-radius: 18px; }
+    .side .brand { padding: 0 10px; width: 100%; }
+    .side .group, .side .spacer { display: none; }
+    .side button.nav { width: auto; }
+    .main { height: auto; }
+    .content.draft, .content.build, .content.plan, .clockrow { grid-template-columns: 1fr; }
+    .card .scroll { max-height: 60vh; }
+    .searchpill .chips { display: none; }
+    .tile .big { font-size: 22px; } .tile.timer .big { font-size: 28px; }
+    .side button.nav { padding: 7px 9px; font-size: 12px; }
+    body { overflow-x: hidden; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <nav class="side">
+    <div class="brand">Succession Plan</div>
+    <div class="group">Draft</div>
+    <button class="nav on" id="navDraft" onclick="showView('draft')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Draft board</button>
+    <button class="nav" id="navPlan" onclick="showView('plan')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg>My plan</button>
+    <button class="nav" id="navBuild" onclick="showView('build')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14c2 .6 3 2.7 3 6"/></svg>Roster builder</button>
+    <div class="group">Controls</div>
+    <button class="nav" id="startDraftBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l14 8-14 8z"/></svg>Start the draft</button>
+    <button class="nav" id="clockBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Start the clock</button>
+    <button class="nav" id="undoBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l-4-4 4-4"/><path d="M5 10h9a5 5 0 010 10h-3"/></svg>Undo last pick</button>
+    <div class="spacer"></div>
+    <button class="nav" id="resetBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 109-9"/><path d="M3 4v5h5"/></svg>Reset</button>
+  </nav>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="searchpill">
+        <span class="lens"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#151515" stroke-width="2.4"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg></span>
+        <input type="text" id="search" placeholder="Search a player. Enter marks the top match as taken.">
+        <div class="chips" id="filters"></div>
+      </div>
+      <div class="actions">
+        <span id="dataPill" class="chip" style="padding:6px 12px;margin:0"></span>
+        <span id="statusPill" class="chip" style="background:var(--lime);padding:6px 12px;margin:0">Not started</span>
+      </div>
+    </div>
+
+    <div class="clockrow" id="clock"></div>
+
+    <div class="content draft" id="viewDraft">
+      <div class="stack">
+        <div class="card">
+          <div id="recBox"></div>
+          <h2>Next up</h2>
+          <div class="scroll" id="slotsShort"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="legend">Fit at your current pick
+          <span class="fit steal"></span>Should be gone, grab him
+          <span class="fit safe"></span>Likely there
+          <span class="fit risky"></span>Coin flip
+          <span style="margin-left:10px">Filled star is your watch list. Circle with a line is your do not draft list. VOR is value over the replacement player at that position.</span>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>Player</th><th>Pos</th><th>Team</th><th style="text-align:right">ADP</th><th style="text-align:right">Proj</th><th style="text-align:right">VOR</th><th></th></tr></thead>
+            <tbody id="board"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <h2>Your roster</h2>
+          <div class="scroll">
+            <div class="roster" id="roster"></div>
+            <div class="needs" id="needs"></div>
+            <h2 style="margin-top:16px">Best available</h2>
+            <div class="best" id="best"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content plan" id="viewPlan" style="display:none">
+      <div class="card">
+        <h2>Your 15 slots and targets</h2>
+        <div class="scroll" id="slots"></div>
+        <div class="note">Targets are in order of preference. Crossed out names are off the board. Green names are yours.</div>
+      </div>
+      <div class="card">
+        <h2>How the plan works</h2>
+        <div class="scroll" style="font-size:13px;line-height:1.55"><div id="planNotes"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content build" id="viewBuild" style="display:none">
+      <div class="card">
+        <h2>Watch list and tiers</h2>
+        <div class="note" style="margin:0 0 10px 0">Six tiers match your pick windows. Rename any tier in place, drag a player onto another player to reorder, onto a tier header to move tiers, or onto a slot on the right.</div>
+        <div style="display:flex;gap:8px;margin-bottom:10px"><input type="text" id="wlAdd" placeholder="Type a name to add to the watch list"><button id="wlAddBtn" class="dark">Add</button></div>
+        <div class="scroll" id="wlList"></div>
+        <div style="margin-top:10px"><button id="addTierBtn" class="sm">Add a tier</button></div>
+      </div>
+      <div class="card">
+        <h2>Ideal roster</h2>
+        <div class="note" style="margin:0 0 10px 0">Drop players from the watch list into slots. A slot only accepts a position it can start.</div>
+        <div class="scroll">
+          <div id="dzList"></div>
+          <div id="buildSum"></div>
+        </div>
+        <div style="margin-top:10px"><button id="clearBuild" class="sm">Clear the roster</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = window.LEAGUE_DATA;
+if(!DATA){ document.body.innerHTML = '<div style="padding:40px;font-family:sans-serif"><h1>league_data.js is missing</h1><p>Run <code>python3 league/build.py</code> from the repo root, then reload this page.</p></div>'; throw new Error("league_data.js missing"); }
+const CFG = DATA.config;
+const TEAMS = CFG.teams;
+const ORDER = CFG.draft_order.join(" ").split(" ");
+const MY_TEAM = CFG.my_team;
+const TOTAL_PICKS = ORDER.length;
+const MY_PICKS = [];
+ORDER.forEach((t,i)=>{ if(t===MY_TEAM) MY_PICKS.push(i+1); });
+
+// Player pool comes from the ffdraft.app pipeline. proj is season points under the scoring in config.json,
+// vor is points over the replacement player at the position, adp prefers the league host export when present.
+const RAW = DATA.players.map(p=>({...p, status:"open"}));
+
+const WATCH = CFG.watch;
+const AVOID = CFG.avoid;
+const PLAN = CFG.plan;
+
+const LINEUP = CFG.lineup;
+const FITS = {QB:["QB"],RB:["RB"],WR:["WR"],TE:["TE"],K:["K"],DEF:["DEF"],"W/R":["WR","RB"],"W/R/T":["WR","RB","TE"],BN:["QB","RB","WR","TE","K","DEF"]};
+const DEFAULT_TIERS = CFG.tiers;
+const CUTS = CFG.tier_adp_cutoffs;
+const CLOCK = CFG.pick_clock_seconds || 45;
+const ROSTER_SIZE = LINEUP.length;
+let state = { cur:1, history:[], filter:"ALL", started:false, tiers: DEFAULT_TIERS.slice(), watch: WATCH.map(n=>({name:n,tier:1})), build: Array(LINEUP.length).fill(null) };
+state.watch.forEach(w=>{ const p=RAW.find(x=>x.name===w.name); const a=p?p.adp:999; let t=1; while(t<=CUTS.length && a>CUTS[t-1]) t++; w.tier = Math.min(t, DEFAULT_TIERS.length); });
+const SAVE_KEY = "spdraft_"+DATA.season;
+const tierName = t => state.tiers[t-1] || ("Tier "+t);
+
+const $ = id => document.getElementById(id);
+const byName = n => RAW.find(p=>p.name===n);
+const onWatch = n => state.watch.some(w=>w.name===n);
+const esc = s => s.replace(/'/g,"\\'");
+
+function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify({cur:state.cur,history:state.history,started:state.started,tiers:state.tiers,watch:state.watch,build:state.build,st:Object.fromEntries(RAW.filter(p=>p.status!=="open").map(p=>[p.key,p.status]))})); }catch(e){} }
+function load(){ try{ const s=JSON.parse(localStorage.getItem(SAVE_KEY)); if(s){ state.cur=s.cur; state.history=s.history; state.started=!!s.started; if(s.tiers) state.tiers=s.tiers; if(s.watch) state.watch=s.watch; if(s.build) state.build=s.build; if(s.st && !Array.isArray(s.st)) RAW.forEach(p=>{ if(s.st[p.key]) p.status=s.st[p.key]; });} }catch(e){} }
+
+const NTEAMS = Object.keys(TEAMS).length;
+function roundPick(n){ const r=Math.ceil(n/NTEAMS), p=((n-1)%NTEAMS)+1; return r+"."+String(p).padStart(2,"0"); }
+function nextMine(){ return MY_PICKS.find(p=>p>=state.cur); }
+function isMine(){ return MY_PICKS.includes(state.cur); }
+function slotFor(n){ return PLAN.find(s=>s.pick===n); }
+
+let clockLeft = CLOCK, clockTimer = null;
+function startClock(){ clearInterval(clockTimer); clockLeft = CLOCK; clockTimer = setInterval(()=>{ clockLeft--; if(clockLeft<=0){ clockLeft=0; clearInterval(clockTimer); clockTimer=null; } renderTimer(); }, 1000); renderTimer(); }
+function stopClock(){ clearInterval(clockTimer); clockTimer=null; renderTimer(); }
+function renderTimer(){ const t=$("timer"); if(!t) return; t.textContent = clockTimer||clockLeft<CLOCK ? (clockLeft<=0?"Time":clockLeft+"s") : CLOCK+"s"; const tile=t.closest(".tile"); tile.className="tile timer"+(clockLeft<=5&&clockTimer?" late":(clockLeft<=15&&clockTimer?" warn":"")); $("clockBtn").lastChild.textContent = clockTimer ? "Restart the clock" : "Start the clock"; }
+
+function mark(p, status){ state.history.push({id:p.id, prev:p.status, cur:state.cur}); p.status = status; if(state.cur<TOTAL_PICKS) state.cur++; if(clockTimer) startClock(); save(); render(); }
+function undo(){ const h=state.history.pop(); if(!h) return; RAW[h.id].status=h.prev; state.cur=h.cur; save(); render(); }
+function bump(d){ state.cur=Math.min(TOTAL_PICKS,Math.max(1,state.cur+d)); save(); render(); }
+function toggleWatch(name){ const i=state.watch.findIndex(w=>w.name===name); if(i>=0) state.watch.splice(i,1); else state.watch.push({name,tier:3}); save(); render(); }
+function fitClass(p){ if(p.adp>=999) return "safe"; if(p.adp < state.cur-4) return "steal"; if(p.adp >= state.cur+6) return "safe"; return "risky"; }
+function fillLineup(players){ const slots = LINEUP.map(l=>({lab:l,p:null})); players.slice().sort((a,b)=>b.proj-a.proj).forEach(p=>{ const s = slots.find(s=>!s.p && FITS[s.lab].includes(p.pos)); if(s) s.p=p; }); return slots; }
+
+const starSvg = on => `<svg width="13" height="13" viewBox="0 0 24 24" fill="${on?'#C45F3F':'none'}" stroke="${on?'#C45F3F':'#b5b5b5'}" stroke-width="2"><path d="M12 2.5l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.6 5.9 21l1.5-6.8L2.2 9.5l6.9-.7z"/></svg>`;
+const avoidSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C45F3F" stroke-width="2.4" style="margin-right:5px;vertical-align:-1px"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg>`;
+const gripSvg = `<svg width="12" height="14" viewBox="0 0 12 14" fill="#b5b5b5"><circle cx="3" cy="3" r="1.4"/><circle cx="9" cy="3" r="1.4"/><circle cx="3" cy="7" r="1.4"/><circle cx="9" cy="7" r="1.4"/><circle cx="3" cy="11" r="1.4"/><circle cx="9" cy="11" r="1.4"/></svg>`;
+const xSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8a8a8a" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
+
+function slotHtml(s){
+  const got = state.history.filter(h=>h.cur===s.pick && RAW[h.id].status==="mine").map(h=>RAW[h.id].name)[0];
+  const cls = s.pick<state.cur ? "done" : (s.pick===state.cur?"now":"");
+  return `<div class="slot ${cls}"><div class="num">${roundPick(s.pick)}<small>pick ${s.pick}</small></div>
+    <div>${got?`<div class="got">${got}</div>`:""}<div class="targets">${s.targets.map(n=>{const p=byName(n);const c=p?(p.status==="mine"?"mine":(p.status==="taken"?"gone":"")):"";return `<span class="${c}">${n}</span>`;}).join("")}</div></div></div>`;
+}
+
+function render(){
+  const onClock = TEAMS[ORDER[state.cur-1]] || "Draft complete";
+  const nm = nextMine(); const mine = isMine() && state.started;
+  const filled = RAW.filter(p=>p.status==="mine").length;
+  $("clock").innerHTML = `
+    <div class="tile timer"><div class="big" id="timer">45s</div><div class="label">Pick clock</div></div>
+    <div class="tile pick ${mine?"mine":""}"><div><div class="big">${!state.started?"Waiting for the room":(mine?"You are on the clock":onClock+" is picking")}</div>
+      <div class="label">${state.started?(state.cur<=TOTAL_PICKS?"Pick "+roundPick(state.cur)+", overall "+state.cur+" of "+TOTAL_PICKS:"Draft complete"):"Press Start the draft in the sidebar"}</div></div>
+      <div class="pickbtns"><button class="sm" onclick="bump(-1)">Back one</button><button class="sm" onclick="bump(1)">Skip one</button></div></div>
+    <div class="tile next"><div><div class="big">${nm?nm-state.cur:0}</div><div class="label">${nm?"picks until your turn at "+roundPick(nm):"No picks left"}</div></div><div class="bar"><i style="width:${nm?Math.max(4,100-Math.min(100,(nm-state.cur)*4)):100}%"></i></div></div>
+    <div class="tile fill"><div><div class="big">${filled} of ${ROSTER_SIZE}</div><div class="label">roster spots filled</div></div><div class="bar"><i style="width:${filled/ROSTER_SIZE*100}%"></i></div></div>`;
+  renderTimer();
+  $("statusPill").textContent = !state.started?"Not started":(state.cur>TOTAL_PICKS?"Complete":"Live");
+  $("statusPill").style.background = !state.started?"var(--lime)":"var(--gum)";
+
+  const target = slotFor(mine?state.cur:nm);
+  const wlOpen = state.watch.map(w=>({...w,p:byName(w.name)})).filter(w=>w.p&&w.p.status==="open").sort((a,b)=>a.tier-b.tier).slice(0,5);
+  if(target){
+    const avail = target.targets.map(n=>byName(n)).filter(p=>p);
+    const first = avail.find(p=>p.status==="open");
+    $("recBox").innerHTML = `<div class="rec">
+      <h2 style="margin-bottom:4px;color:var(--tomato)">${mine?"Recommended now":"Plan for "+roundPick(target.pick)}</h2>
+      <div class="who">${first?first.name+" <span class='pos "+first.pos+"'>"+first.pos+"</span>":"All targets are gone. Use best available."}</div>
+      <div class="why">${target.why}</div>
+      <div class="alts">${avail.map(p=>`<span class="${p.status!=="open"?"gone":""}">${p.name} ${p.adp<999?p.adp.toFixed(0):""}</span>`).join("")}</div>
+      ${first&&mine?`<div style="margin-top:10px"><button class="dark" onclick="mark(byName('${esc(first.name)}'),'mine')">Draft ${first.name}</button></div>`:""}
+      <div class="wl"><strong>Best value on the board right now</strong><br>${(()=>{const b=RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!["K","DEF"].includes(p.pos)).sort((a,b)=>b.vor-a.vor)[0]; return b?`${b.name} <span class="pos ${b.pos}">${b.pos}</span> ${b.vor>0?"+":""}${b.vor.toFixed(0)} over replacement, ADP ${b.adp<999?b.adp.toFixed(0):"und"}`:"Nobody left";})()}</div>
+      <div class="wl"><strong>Top of your watch list still available</strong><br>${wlOpen.length?wlOpen.map(w=>`${w.p.name} <span class="chip">T${w.tier}</span>`).join("<br>"):"Nobody left from the list"}</div>
+    </div>`;
+  } else $("recBox").innerHTML="";
+
+  $("slots").innerHTML = PLAN.map(slotHtml).join("");
+  $("slotsShort").innerHTML = PLAN.filter(s=>s.pick>=state.cur).slice(0,5).map(slotHtml).join("") || `<div class="note">All of your picks are in.</div>`;
+
+  const F=["ALL","QB","RB","WR","TE","K","DEF","Targets","Watching","Avoid"];
+  $("filters").innerHTML = F.map(f=>`<button class="${state.filter===f?"on":""}" onclick="state.filter='${f}';render()">${f==="ALL"?"All":f}</button>`).join("");
+
+  const q = $("search").value.trim().toLowerCase();
+  const targetNames = new Set((target?target.targets:[]));
+  let rows = RAW.filter(p=>{
+    if(state.filter==="Targets") return targetNames.has(p.name);
+    if(state.filter==="Watching") return onWatch(p.name);
+    if(state.filter==="Avoid") return AVOID.includes(p.name);
+    if(state.filter!=="ALL" && p.pos!==state.filter) return false;
+    return true;
+  });
+  if(q) rows = rows.filter(p=>p.name.toLowerCase().includes(q)||p.team.toLowerCase()===q);
+  rows.sort((a,b)=>a.adp-b.adp || b.proj-a.proj);
+  $("board").innerHTML = rows.map(p=>{
+    const avoid = AVOID.includes(p.name);
+    const cls = p.status==="mine"?"mine":(p.status==="taken"?"taken":(avoid?"avoid":(targetNames.has(p.name)?"target":"")));
+    const fit = p.status==="open"&&!avoid?`<span class="fit ${fitClass(p)}"></span>`:"";
+    const w = state.watch.find(x=>x.name===p.name);
+    return `<tr class="${cls}"><td class="name"><button class="icon" title="${w?'Remove from watch list':'Add to watch list'}" onclick="toggleWatch('${esc(p.name)}')">${starSvg(!!w)}</button> ${fit}${avoid?avoidSvg:""}${p.name}${w?`<span class="chip">T${w.tier}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${p.team}</td><td class="num" title="${p.adpSource==="host"?"League host ADP":(p.adpSource==="fantasypros"?"FantasyPros ADP":"Not being drafted")}">${p.adp<999?p.adp.toFixed(1):"und"}</td><td class="num">${p.proj.toFixed(0)}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td>
+      <td class="act">${p.status==="open"?`<button class="sm" onclick="mark(RAW[${p.id}],'taken')">Taken</button><button class="sm dark" onclick="mark(RAW[${p.id}],'mine')">Mine</button>`:`<button class="sm" onclick="RAW[${p.id}].status='open';save();render()">Put back</button>`}</td></tr>`;
+  }).join("");
+
+  const slots = fillLineup(RAW.filter(p=>p.status==="mine"));
+  $("roster").innerHTML = slots.map(s=>`<div class="row"><span class="lab">${s.lab}</span><span class="${s.p?"":"empty"}">${s.p?s.p.name:"open"}</span><span>${s.p?s.p.proj.toFixed(0):""}</span></div>`).join("");
+  const counts = {QB:0,RB:0,WR:0,TE:0,K:0,DEF:0};
+  RAW.filter(p=>p.status==="mine").forEach(p=>counts[p.pos]++);
+  const goal = CFG.roster_goal;
+  const barColor = {QB:"var(--sky)",RB:"var(--tomato)",WR:"var(--sun)",TE:"var(--rain)",K:"var(--lavender)",DEF:"var(--pond)"};
+  $("needs").innerHTML = `<h3>Against the plan</h3>`+Object.keys(goal).map(k=>`<div class="n"><span class="pos ${k}">${k}</span><div class="bar"><i style="width:${Math.min(100,counts[k]/goal[k]*100)}%;background:${barColor[k]}"></i></div><span style="text-align:right">${counts[k]} of ${goal[k]}</span></div>`).join("");
+
+  $("best").innerHTML = ["QB","RB","WR","TE","DEF","K"].map(pos=>{
+    const top = RAW.filter(p=>p.status==="open"&&p.pos===pos&&!AVOID.includes(p.name)).sort((a,b)=>b.vor-a.vor).slice(0,3);
+    return `<h3>${pos}</h3>`+top.map(p=>`<div class="line"><span>${p.name} <span style="color:var(--muted)">${p.adp<999?p.adp.toFixed(0):"und"}</span></span><span>${p.proj.toFixed(0)} <span style="color:var(--muted)">${p.vor>0?"+":""}${p.vor.toFixed(0)}</span> <button class="sm" onclick="mark(RAW[${p.id}],'mine')">Mine</button></span></div>`).join("");
+  }).join("");
+
+  renderBuilder();
+}
+
+let dragName = null;
+function renderBuilder(){
+  state.watch.forEach(w=>{ if(w.tier>state.tiers.length) w.tier=state.tiers.length; if(w.tier<1) w.tier=1; });
+  const tiers = state.tiers.map((_,i)=>i+1);
+  $("wlList").innerHTML = tiers.map(t=>{
+    const items = state.watch.filter(w=>w.tier===t);
+    const head = `<div class="tierhead"><input value="${state.tiers[t-1].replace(/"/g,'&quot;')}" onchange="state.tiers[${t-1}]=this.value;save();render()" title="Click to rename this tier"><small>${items.length} player${items.length===1?"":"s"}${!items.length&&t===tiers.length&&tiers.length>1?` <button class="sm" style="margin-left:8px;padding:1px 8px" onclick="state.tiers.pop();save();render()">Remove</button>`:""}</small></div>`;
+    return head+(items.length?"":`<div class="note" style="margin:0 0 6px 4px">Empty. Drag a player here or set a tier from a dropdown.</div>`)+items.map(w=>{
+      const p = byName(w.name); const inBuild = state.build.includes(w.name);
+      return `<div class="wlrow ${p&&p.status==="taken"?"taken":""}" draggable="true" data-name="${w.name}">
+        <span class="grip">${gripSvg}</span>
+        <span>${w.name} ${p?`<span class="pos ${p.pos}">${p.pos}</span> <span style="color:var(--muted);font-size:12px">${p.adp<999?p.adp.toFixed(0):"und"} adp, ${p.proj.toFixed(0)} pts</span>`:`<span class="chip">not in ADP pool</span>`}${inBuild?`<span class="chip">in roster</span>`:""}</span>
+        <select onchange="setTier('${esc(w.name)}',this.value)">${tiers.map(x=>`<option value="${x}" ${x===w.tier?"selected":""}>T${x}</option>`).join("")}</select>
+        <button class="sm" onclick="addToBuild('${esc(w.name)}')">Add</button>
+        <button class="icon" title="Remove" onclick="toggleWatch('${esc(w.name)}')">${xSvg}</button>
+      </div>`;
+    }).join("");
+  }).join("");
+
+  $("dzList").innerHTML = LINEUP.map((lab,i)=>{
+    const n = state.build[i]; const p = n?byName(n):null;
+    return `<div class="dz ${n?"filled":""}" data-i="${i}"><span class="lab">${lab}</span><span class="${n?"":"empty"}">${n?n+(p?` <span class="pos ${p.pos}">${p.pos}</span>`:""):"drop a "+FITS[lab].join(" or ")+" here"}</span>${n?`<button class="icon" onclick="state.build[${i}]=null;save();renderBuilder()">${xSvg}</button>`:"<span></span>"}</div>`;
+  }).join("");
+
+  const built = state.build.filter(Boolean).map(byName).filter(Boolean);
+  const total = built.reduce((a,p)=>a+p.proj,0);
+  const starters = state.build.slice(0,LINEUP.filter(l=>l!=="BN").length).map(byName).filter(Boolean).reduce((a,p)=>a+p.proj,0);
+  $("buildSum").innerHTML = `<h3>Summary</h3><div class="sumline"><span>Starters projected</span><span>${starters.toFixed(0)}</span></div><div class="sumline"><span>Whole roster projected</span><span>${total.toFixed(0)}</span></div><div class="sumline"><span>Slots filled</span><span>${state.build.filter(Boolean).length} of ${ROSTER_SIZE}</span></div>
+    <div class="note">Players whose ADP comes before your nearest pick will need to fall. ${built.filter(p=>{const nxt=MY_PICKS.find(k=>k>=p.adp); return nxt && nxt-p.adp>8;}).map(p=>p.name).join(", ")||"Everyone here lines up with a pick you own."}</div>`;
+
+  document.querySelectorAll(".wlrow").forEach(el=>{
+    el.addEventListener("dragstart", e=>{ dragName=el.dataset.name; el.classList.add("dragging"); e.dataTransfer.effectAllowed="move"; });
+    el.addEventListener("dragend", ()=>{ el.classList.remove("dragging"); document.querySelectorAll(".over").forEach(x=>x.classList.remove("over")); });
+    el.addEventListener("dragover", e=>{ e.preventDefault(); el.classList.add("over"); });
+    el.addEventListener("dragleave", ()=>el.classList.remove("over"));
+    el.addEventListener("drop", e=>{ e.preventDefault(); reorder(dragName, el.dataset.name); });
+  });
+  document.querySelectorAll(".tierhead").forEach((el,i)=>{
+    el.addEventListener("dragover", e=>{ e.preventDefault(); el.style.outline="2px solid var(--ink)"; });
+    el.addEventListener("dragleave", ()=>el.style.outline="");
+    el.addEventListener("drop", e=>{ e.preventDefault(); el.style.outline=""; if(dragName) setTier(dragName, i+1); });
+  });
+  document.querySelectorAll(".dz").forEach(el=>{
+    el.addEventListener("dragover", e=>{ e.preventDefault(); el.classList.add("over"); });
+    el.addEventListener("dragleave", ()=>el.classList.remove("over"));
+    el.addEventListener("drop", e=>{ e.preventDefault(); el.classList.remove("over"); placeInBuild(dragName, +el.dataset.i); });
+  });
+}
+function setTier(name,t){ const w=state.watch.find(x=>x.name===name); if(w){ w.tier=+t; } save(); renderBuilder(); }
+function reorder(from,to){ if(!from||from===to) return; const a=state.watch.findIndex(w=>w.name===from), b=state.watch.findIndex(w=>w.name===to); if(a<0||b<0) return; const [item]=state.watch.splice(a,1); const tgt=state.watch[b>a?b-1:b]; item.tier=tgt.tier; state.watch.splice(b>a?b:b,0,item); save(); renderBuilder(); }
+function placeInBuild(name,i){ if(!name) return; const p=byName(name); if(p && !FITS[LINEUP[i]].includes(p.pos)) { alert(name+" cannot start at "+LINEUP[i]); return; } const old=state.build.indexOf(name); if(old>=0) state.build[old]=null; state.build[i]=name; save(); renderBuilder(); }
+function addToBuild(name){ const p=byName(name); const i=state.build.findIndex((n,i)=>!n && (!p || FITS[LINEUP[i]].includes(p.pos))); if(i<0){ alert("No open slot fits "+name); return; } placeInBuild(name,i); }
+
+function showView(v){ ["draft","plan","build"].forEach(k=>{ const cap=k[0].toUpperCase()+k.slice(1); $("view"+cap).style.display = v===k?"grid":"none"; $("nav"+cap).classList.toggle("on", v===k); }); }
+
+$("search").addEventListener("input", render);
+$("search").addEventListener("keydown", e=>{ if(e.key==="Enter"){ const q=$("search").value.trim().toLowerCase(); if(!q) return; const p = RAW.filter(x=>x.status==="open"&&x.name.toLowerCase().includes(q)).sort((a,b)=>a.adp-b.adp)[0]; if(p){ $("search").value=""; mark(p,"taken"); } } });
+$("wlAddBtn").onclick = ()=>{ const q=$("wlAdd").value.trim().toLowerCase(); if(!q) return; const p=RAW.find(x=>x.name.toLowerCase().includes(q)); const name=p?p.name:$("wlAdd").value.trim(); if(!onWatch(name)) state.watch.push({name,tier:3}); $("wlAdd").value=""; save(); render(); };
+$("wlAdd").addEventListener("keydown", e=>{ if(e.key==="Enter") $("wlAddBtn").onclick(); });
+$("addTierBtn").onclick = ()=>{ state.tiers.push("Tier "+(state.tiers.length+1)); save(); render(); };
+$("clearBuild").onclick = ()=>{ state.build=Array(LINEUP.length).fill(null); save(); renderBuilder(); };
+$("startDraftBtn").onclick = ()=>{ if(state.history.length && !confirm("Picks are already recorded. Start over from pick 1?")) return; RAW.forEach(p=>p.status="open"); state.cur=1; state.history=[]; state.started=true; showView("draft"); startClock(); save(); render(); };
+$("clockBtn").onclick = ()=>startClock();
+$("undoBtn").onclick = undo;
+$("resetBtn").onclick = ()=>{ if(confirm("Clear every pick and the roster builder? Your watch list stays.")){ RAW.forEach(p=>p.status="open"); state.cur=1; state.history=[]; state.started=false; state.build=Array(LINEUP.length).fill(null); stopClock(); clockLeft=45; save(); render(); } };
+
+$("planNotes").innerHTML = (CFG.plan_notes||[]).map(t=>`<p>${t}</p>`).join("");
+$("dataPill").textContent = DATA.season+" projections, "+RAW.length+" players"+(DATA.builtFrom.hostSnapshot?", host ADP":"");
+$("dataPill").style.background = "var(--lavender)";
+load(); render();
+</script>
+</body>
+</html>
