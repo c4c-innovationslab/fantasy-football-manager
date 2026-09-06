@@ -58,6 +58,38 @@
   .content.draft { grid-template-columns: 270px 1fr 330px; }
   .content.build { grid-template-columns: 1fr 1fr; }
   .content.plan { grid-template-columns: 1fr 1fr; }
+  .content.odds { grid-template-columns: 1.5fr 1fr; }
+  .content.league { grid-template-columns: 1fr; }
+  .teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .team { background: #fff; border: 1px solid var(--line); border-radius: var(--r2); padding: 12px 14px; font-size: 12.5px; }
+  .team.me { background: var(--lime); }
+  .team.clock { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+  .team .nm { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; display: flex; justify-content: space-between; align-items: baseline; }
+  .team .nm small { font-family: var(--body); font-weight: 500; color: var(--muted); }
+  .team .cnt { display: flex; gap: 4px; flex-wrap: wrap; margin: 8px 0; }
+  .team .cnt .pos { min-width: 0; padding: 2px 7px; }
+  .team .cnt .pos.zero { opacity: .35; }
+  .team .pl { display: grid; grid-template-columns: 36px 1fr auto; gap: 6px; padding: 3px 0; border-top: 1px solid var(--line); }
+  .team .pl .rp { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .team .need { margin-top: 8px; font-size: 12px; }
+  .team .need b { color: var(--tomato); }
+  .odds td.pct, .odds th.pct { text-align: center; font-variant-numeric: tabular-nums; min-width: 58px; }
+  .odds td.pct span { display: inline-block; min-width: 42px; padding: 2px 6px; border-radius: 999px; font-weight: 600; font-size: 12px; }
+  .odds td.pct.hi span { background: #d7efe9; color: #0d5c4f; }
+  .odds td.pct.mid span { background: #fff3c4; color: #6b5200; }
+  .odds td.pct.lo span { background: #fbe1d9; color: #8a2f16; }
+  .odds td.pct.none span { background: var(--card2); color: var(--muted); }
+  .odds th.pct small { display: block; font-weight: 500; color: var(--muted); }
+  .strat { background: #fff; border: 1px solid var(--line); border-radius: var(--r2); padding: 12px 14px; margin-bottom: 10px; font-size: 12.5px; }
+  .strat .hd { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .strat .hd b { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; }
+  .strat .lean { font-size: 12px; }
+  .strat .cand { display: grid; grid-template-columns: 1fr auto auto; gap: 6px 10px; margin-top: 8px; font-size: 12px; }
+  .strat .cand span:nth-child(3n+2), .strat .cand span:nth-child(3n) { text-align: right; font-variant-numeric: tabular-nums; }
+  .strat .cand .plan { color: var(--rain); font-weight: 600; }
+  .gap { display: grid; grid-template-columns: 38px 1fr auto; gap: 8px; align-items: center; padding: 4px 0; font-size: 12px; }
+  .gap .bar { margin: 0; }
+  .slot .targets span.odds { color: var(--muted); font-size: 11px; margin-left: -4px; margin-right: 8px; }
   .card { background: var(--card); border-radius: var(--r); padding: 16px 18px; min-height: 0; display: flex; flex-direction: column; }
   .card.white { background: #fff; border: 1px solid var(--line); }
   .card .scroll { flex: 1; min-height: 0; overflow-y: auto; }
@@ -196,6 +228,10 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>Draft board</button>
     <button class="nav" id="navPlan" onclick="showView('plan')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg>My plan</button>
+    <button class="nav" id="navOdds" onclick="showView('odds')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16"/><path d="M6 15l4-5 4 3 5-7"/></svg>Fall odds</button>
+    <button class="nav" id="navLeague" onclick="showView('league')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10M15 10v10"/></svg>Rest of league</button>
     <button class="nav" id="navBuild" onclick="showView('build')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14c2 .6 3 2.7 3 6"/></svg>Roster builder</button>
     <div class="group">Controls</div>
@@ -272,9 +308,43 @@
         <div class="note">Targets are in order of preference. Crossed out names are off the board. Green names are yours.</div>
       </div>
       <div class="card">
-        <h2>How the plan works</h2>
-        <div class="scroll" style="font-size:13px;line-height:1.55"><div id="planNotes"></div>
+        <h2>Strategy right now</h2>
+        <div class="note" style="margin:0 0 10px 0">Re-ranked on every pick from your roster, positional scarcity, and the odds each player is still there when you pick. Odds beside a target name are the chance he is available at that slot.</div>
+        <div class="scroll">
+          <div id="strategy"></div>
+          <h3>How the plan works</h3>
+          <div style="font-size:13px;line-height:1.55"><div id="planNotes"></div></div>
         </div>
+      </div>
+    </div>
+
+    <div class="content odds" id="viewOdds" style="display:none">
+      <div class="card">
+        <h2>Odds a player is still there for you</h2>
+        <div class="note" style="margin:0 0 10px 0">Each column is a stretch of picks you own. The number is the chance the player is on the board when that stretch starts. The model walks every opposing pick between now and then, using ADP as the baseline and each team's roster holes to raise or lower the chance they take him. Green is 70 plus, yellow is 40 to 70, red is under 40.</div>
+        <div style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap" id="oddsFilters"></div>
+        <div class="scroll wide odds">
+          <table>
+            <thead id="oddsHead"></thead>
+            <tbody id="oddsBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Where your roster stands</h2>
+        <div class="scroll">
+          <div id="gaps"></div>
+          <h3>Reading the stretches</h3>
+          <div id="stretchNotes" style="font-size:12.5px;line-height:1.5"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content league" id="viewLeague" style="display:none">
+      <div class="card">
+        <h2>Every roster</h2>
+        <div class="note" style="margin:0 0 10px 0">Picks are credited to whichever team was on the clock when you marked the player taken. The team with the dark outline is on the clock now. Needs are the starting spots a team has not filled yet, which is what the fall odds use to guess what each team does next.</div>
+        <div class="scroll"><div class="teams" id="teams"></div></div>
       </div>
     </div>
 
@@ -334,8 +404,8 @@ const byName = n => RAW.find(p=>p.name===n);
 const onWatch = n => state.watch.some(w=>w.name===n);
 const esc = s => s.replace(/'/g,"\\'");
 
-function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify({cur:state.cur,history:state.history,started:state.started,sort:state.sort,tiers:state.tiers,watch:state.watch,build:state.build,st:Object.fromEntries(RAW.filter(p=>p.status!=="open").map(p=>[p.key,p.status]))})); }catch(e){} }
-function load(){ try{ const s=JSON.parse(localStorage.getItem(SAVE_KEY)); if(s){ state.cur=s.cur; state.history=s.history; state.started=!!s.started; if(s.tiers) state.tiers=s.tiers; if(s.watch) state.watch=s.watch; if(s.build) state.build=s.build; if(s.sort) state.sort=s.sort; if(s.st && !Array.isArray(s.st)) RAW.forEach(p=>{ if(s.st[p.key]) p.status=s.st[p.key]; });} }catch(e){} }
+function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify({cur:state.cur,history:state.history,started:state.started,sort:state.sort,oddsFilter:state.oddsFilter,tiers:state.tiers,watch:state.watch,build:state.build,st:Object.fromEntries(RAW.filter(p=>p.status!=="open").map(p=>[p.key,p.status]))})); }catch(e){} }
+function load(){ try{ const s=JSON.parse(localStorage.getItem(SAVE_KEY)); if(s){ state.cur=s.cur; state.history=s.history; state.started=!!s.started; if(s.tiers) state.tiers=s.tiers; if(s.watch) state.watch=s.watch; if(s.build) state.build=s.build; if(s.sort) state.sort=s.sort; if(s.oddsFilter) state.oddsFilter=s.oddsFilter; if(s.st && !Array.isArray(s.st)) RAW.forEach(p=>{ if(s.st[p.key]) p.status=s.st[p.key]; });} }catch(e){} }
 
 const NTEAMS = Object.keys(TEAMS).length;
 function roundPick(n){ const r=Math.ceil(n/NTEAMS), p=((n-1)%NTEAMS)+1; return r+"."+String(p).padStart(2,"0"); }
@@ -364,7 +434,7 @@ function slotHtml(s){
   const got = state.history.filter(h=>h.cur===s.pick && RAW[h.id].status==="mine").map(h=>RAW[h.id].name)[0];
   const cls = s.pick<state.cur ? "done" : (s.pick===state.cur?"now":"");
   return `<div class="slot ${cls}"><div class="num">${roundPick(s.pick)}<small>pick ${s.pick}</small></div>
-    <div>${got?`<div class="got">${got}</div>`:""}<div class="targets">${s.targets.map(n=>{const p=byName(n);const c=p?(p.status==="mine"?"mine":(p.status==="taken"?"gone":"")):"";return `<span class="${c}">${n}</span>`;}).join("")}</div></div></div>`;
+    <div>${got?`<div class="got">${got}</div>`:""}<div class="targets">${s.targets.map(n=>{const p=byName(n);const c=p?(p.status==="mine"?"mine":(p.status==="taken"?"gone":"")):"";const o=p&&p.status==="open"&&s.pick>state.cur?`<span class="odds">${pct(pAvail(p,s.pick))}</span>`:"";return `<span class="${c}">${n}</span>${o}`;}).join("")}</div></div></div>`;
 }
 
 function render(){
@@ -414,6 +484,7 @@ function render(){
     return true;
   });
   if(q) rows = rows.filter(p=>p.name.toLowerCase().includes(q)||p.team.toLowerCase()===q);
+  RAW.forEach(p=>{ p.pNext = nm ? pAvail(p, nm) : null; });
   const COLS = [
     {key:"name", label:"Player", cls:""},
     {key:"pos", label:"", cls:""},
@@ -425,6 +496,7 @@ function render(){
     {key:"proj", label:"Proj", cls:"num"},
     {key:"vor", label:"VOR", cls:"num"},
     {key:"vorRank", label:"Rk", cls:"num", title:"Overall rank by VOR"},
+    {key:"pNext", label:"Next", cls:"num", title:"Chance the player is still on the board at your next pick"},
     {key:null, label:"", cls:""}
   ];
   const arrow = (key,dir) => `<button class="${state.sort.key===key&&state.sort.dir===dir?"on":""}" title="Sort ${dir>0?"ascending":"descending"}" onclick="sortBy('${key}',${dir})"><svg width="9" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="${dir>0?"M5 0l5 6H0z":"M5 6L0 0h10z"}"/></svg></button>`;
@@ -441,7 +513,7 @@ function render(){
     const cls = p.status==="mine"?"mine":(p.status==="taken"?"taken":(avoid?"avoid":(targetNames.has(p.name)?"target":"")));
     const fit = p.status==="open"&&!avoid?`<span class="fit ${fitClass(p)}"></span>`:"";
     const w = state.watch.find(x=>x.name===p.name);
-    return `<tr class="${cls}"><td class="name"><button class="icon" title="${w?'Remove from watch list':'Add to watch list'}" onclick="toggleWatch('${esc(p.name)}')">${starSvg(!!w)}</button> ${fit}${avoid?avoidSvg:""}${p.name}${w?`<span class="chip">T${w.tier}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${p.team}</td><td class="num">${p.bye||""}</td><td class="num" title="${p.adpSource==="host"?"League host ADP":(p.adpSource==="fantasypros"?"FantasyPros ADP":"Not being drafted")}">${p.adp<999?p.adp.toFixed(1):"und"}</td><td class="num">${p.consensus<999?p.consensus.toFixed(1):"und"}</td><td class="rank"><b>${p.pos}${p.posRank}</b>${p.posAdpRank?` <span title="Consensus ADP rank at the position">${p.posAdpRank}</span>`:""}</td><td class="num">${p.proj.toFixed(0)}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td><td class="num">${p.vorRank}</td>
+    return `<tr class="${cls}"><td class="name"><button class="icon" title="${w?'Remove from watch list':'Add to watch list'}" onclick="toggleWatch('${esc(p.name)}')">${starSvg(!!w)}</button> ${fit}${avoid?avoidSvg:""}${p.name}${w?`<span class="chip">T${w.tier}</span>`:""}${p.hostProj!=null&&p.pipelineProj&&Math.abs(p.hostProj-p.pipelineProj)/p.pipelineProj>0.4?`<span class="chip" style="background:var(--peony)" title="Your league host projects ${p.hostProj.toFixed(0)} and the pipeline projects ${p.pipelineProj.toFixed(0)}. Check for news.">news?</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${p.team}</td><td class="num">${p.bye||""}</td><td class="num" title="${p.adpSource==="host"?"League host ADP":(p.adpSource==="fantasypros"?"FantasyPros ADP":"Not being drafted")}">${p.adp<999?p.adp.toFixed(1):"und"}</td><td class="num">${p.consensus<999?p.consensus.toFixed(1):"und"}</td><td class="rank"><b>${p.pos}${p.posRank}</b>${p.posAdpRank?` <span title="Consensus ADP rank at the position">${p.posAdpRank}</span>`:""}</td><td class="num">${p.proj.toFixed(0)}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td><td class="num">${p.vorRank}</td><td class="num">${p.status==="open"&&nm?pct(p.pNext):""}</td>
       <td class="act">${p.status==="open"?`<button class="sm" onclick="mark(RAW[${p.id}],'taken')">Taken</button><button class="sm dark" onclick="mark(RAW[${p.id}],'mine')">Mine</button>`:`<button class="sm" onclick="RAW[${p.id}].status='open';save();render()">Put back</button>`}</td></tr>`;
   }).join("");
 
@@ -459,6 +531,9 @@ function render(){
   }).join("");
 
   renderTrends(nm, mine);
+  renderStrategy(nm, mine);
+  renderOdds();
+  renderLeague();
   renderBuilder();
 }
 
@@ -529,6 +604,167 @@ function renderTrends(nm, mine){
   }).join("");
 }
 
+
+// ---------- Rosters for every team ----------
+// A pick is credited to the team on the clock when it was marked. Your own picks are the ones marked mine.
+const STARTERS = (()=>{ const c={QB:0,RB:0,WR:0,TE:0,K:0,DEF:0}; LINEUP.forEach(l=>{ if(c[l]!==undefined) c[l]++; }); return c; })();
+const FLEX_SLOTS = LINEUP.filter(l=>l==="W/R"||l==="W/R/T"||l==="FLEX").length;
+const ROUNDS = Math.ceil(TOTAL_PICKS/NTEAMS);
+function rosters(){
+  const r = {}; Object.keys(TEAMS).forEach(t=>r[t]=[]);
+  state.history.forEach(h=>{ const p=RAW[h.id]; if(p.status==="open") return; const t = p.status==="mine" ? MY_TEAM : (ORDER[h.cur-1]||MY_TEAM); if(r[t]) r[t].push({p, at:h.cur}); });
+  return r;
+}
+function posCounts(list){ const c={QB:0,RB:0,WR:0,TE:0,K:0,DEF:0}; list.forEach(x=>c[x.p.pos]++); return c; }
+function teamNeeds(counts){ return ["QB","RB","WR","TE","K","DEF"].filter(pos=>counts[pos]<STARTERS[pos]); }
+
+// How much more or less likely a team is to take a position than ADP alone suggests, given what they already hold.
+function needMult(counts, pos, pickNo){
+  const c = counts[pos]||0, round = Math.ceil(pickNo/NTEAMS);
+  if(pos==="K"||pos==="DEF"){ if(round>=ROUNDS-1) return c?0.1:1.8; if(round>=ROUNDS-3) return c?0.05:0.6; return 0.04; }
+  const start = STARTERS[pos];
+  const depth = {QB:1,RB:4,WR:4,TE:1}[pos];
+  if(c<start) return round>=5 ? 1.4 : 1.1;
+  if(c<depth) return 1.0;
+  if(pos==="QB"||pos==="TE") return c>=2 ? 0.08 : 0.3;
+  return 0.45;
+}
+
+// ---------- Fall odds ----------
+// Chance a player is still on the board when pick N arrives. Walks every opposing pick from now to N,
+// with the hazard at each pick coming from a normal curve around ADP and scaled by that team's needs.
+function Phi(z){ const t=1/(1+0.2316419*Math.abs(z)); const d=0.3989423*Math.exp(-z*z/2); let p=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274)))); return z>0?1-p:p; }
+let oddsCache = {key:null, rost:null, drift:null};
+function oddsContext(){
+  const key = state.cur+"|"+state.history.length+"|"+RAW.filter(p=>p.status!=="open").length;
+  if(oddsCache.key===key) return oddsCache;
+  const rost = rosters(); const counts = {}; Object.keys(rost).forEach(t=>counts[t]=posCounts(rost[t]));
+  const drift = {}; const acc = {};
+  state.history.forEach(h=>{ const p=RAW[h.id]; if(p.status==="open"||p.adp>=999) return; (acc[p.pos]=acc[p.pos]||[]).push(p.adp-h.cur); });
+  Object.keys(acc).forEach(pos=>{ if(acc[pos].length>=3){ const m=acc[pos].reduce((a,b)=>a+b,0)/acc[pos].length; drift[pos]=Math.max(-8,Math.min(8,m))*0.5; } });
+  oddsCache = {key, rost, counts, drift};
+  return oddsCache;
+}
+function pAvail(p, N){
+  if(!p || p.status!=="open") return 0;
+  if(!N || N<=state.cur) return 1;
+  const ctx = oddsContext();
+  let adp = p.adp>=999 ? TOTAL_PICKS+40 : p.adp;
+  adp -= (ctx.drift[p.pos]||0);
+  const sigma = p.adp>=999 ? 60 : Math.max(3, 0.13*adp+3);
+  let S = 1;
+  for(let k=state.cur;k<N;k++){
+    const t = ORDER[k-1]; if(!t || t===MY_TEAM) continue;
+    const F1=Phi((k-adp)/sigma), F2=Phi((k+1-adp)/sigma);
+    let h = (1-F1)>1e-6 ? (F2-F1)/(1-F1) : 1;
+    h *= needMult(ctx.counts[t]||{}, p.pos, k);
+    if(AVOID.includes(p.name)) h *= 1; 
+    S *= (1-Math.min(0.97,h));
+    if(S<0.001) return 0;
+  }
+  return S;
+}
+const pct = v => v==null ? "" : Math.round(v*100)+"%";
+const pctCls = v => v>=0.7?"hi":(v>=0.4?"mid":"lo");
+
+// Your picks grouped into stretches: consecutive picks that sit within two of each other.
+function stretches(){
+  const out=[]; MY_PICKS.forEach(n=>{ const last=out[out.length-1]; if(last && n-last[last.length-1]<=2) last.push(n); else out.push([n]); }); return out;
+}
+const stretchLabel = st => st.length>1 ? roundPick(st[0])+" to "+roundPick(st[st.length-1]) : roundPick(st[0]);
+
+// How badly you need a position, from your own roster against the plan.
+function myNeed(pos, pickNo, counts){
+  const c = counts ? (counts[pos]||0) : RAW.filter(p=>p.status==="mine"&&p.pos===pos).length;
+  const g = CFG.roster_goal[pos]||0, start = STARTERS[pos];
+  const round = Math.ceil(pickNo/NTEAMS);
+  if(pos==="K"||pos==="DEF") return round>=ROUNDS-1 ? (c?0.05:1.5) : (round>=ROUNDS-2 ? (c?0.05:0.6) : 0.02);
+  if(c<start) return 1.35;
+  if(c<g) return 1.0 - 0.12*(c-start);
+  return 0.2;
+}
+
+// ---------- Strategy right now ----------
+function renderStrategy(nm, mine){
+  const upcoming = MY_PICKS.filter(n=>n>=state.cur).slice(0,4);
+  if(!upcoming.length){ $("strategy").innerHTML=`<div class="note">All of your picks are in.</div>`; return; }
+  const counts = posCounts(RAW.filter(p=>p.status==="mine").map(p=>({p})));  // grows as each card claims its lean
+  const claimed = new Set();
+  $("strategy").innerHTML = upcoming.map((N,i)=>{
+    const slot = slotFor(N);
+    const isNow = mine && N===state.cur;
+    const scored = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!claimed.has(p.name)).map(p=>{ const pa=isNow?1:pAvail(p,N); return {p, pa, score: Math.max(0,p.vor)*myNeed(p.pos,N,counts)*(0.35+0.65*pa)}; }).filter(x=>x.pa>=0.2||isNow).sort((a,b)=>b.score-a.score);
+    const top = scored.slice(0,6);
+    const gapWord = pos => { const c=counts[pos]||0, g=CFG.roster_goal[pos]||0; return `${c} of ${g}`; };
+    const holdLine = top[0] ? `You hold ${gapWord(top[0].p.pos)} ${top[0].p.pos}s${i>0?" counting the leans above":""}.` : "";
+    if(top[0]){ claimed.add(top[0].p.name); counts[top[0].p.pos]=(counts[top[0].p.pos]||0)+1; }
+    const byPos = {}; scored.forEach(x=>{ if(!byPos[x.p.pos]) byPos[x.p.pos]=x; });
+    const lean = Object.entries(byPos).filter(([pos])=>!["K","DEF"].includes(pos)||Math.ceil(N/NTEAMS)>=ROUNDS-1).sort((a,b)=>b[1].score-a[1].score).slice(0,2);
+    const planOpen = slot ? slot.targets.map(byName).filter(p=>p&&p.status==="open").map(p=>({p,pa:isNow?1:pAvail(p,N)})) : [];
+    const planLine = slot ? (planOpen.length ? `Plan says ${slot.want}. ${planOpen.slice(0,3).map(x=>`${x.p.name} ${pct(x.pa)}`).join(", ")}.` : `Every plan target for this slot is gone.`) : "";
+    const agree = slot && lean.length && lean[0][0]===slot.want;
+    return `<div class="strat"><div class="hd"><b>${roundPick(N)}${isNow?" now":""}</b><span style="color:var(--muted)">pick ${N}${i===0&&!isNow&&nm?", "+(N-state.cur)+" away":""}</span></div>
+      <div class="lean">${lean.length?`Lean <span class="pos ${lean[0][0]}">${lean[0][0]}</span> ${lean[0][1].p.name} ${isNow?"":pct(lean[0][1].pa)}${lean[1]?`, then <span class="pos ${lean[1][0]}">${lean[1][0]}</span> ${lean[1][1].p.name} ${isNow?"":pct(lean[1][1].pa)}`:""}. ${holdLine}${slot?(agree?" That matches the plan.":` The plan said ${slot.want} here, but your roster and the board say ${lean[0][0]}.`):""}`:"Nothing with value left."}</div>
+      <div class="lean" style="margin-top:4px;color:var(--muted)">${planLine}</div>
+      <div class="cand">${top.map(x=>`<span class="${slot&&slot.targets.includes(x.p.name)?"plan":""}">${x.p.name} <span class="pos ${x.p.pos}">${x.p.pos}</span></span><span>${x.p.vor>0?"+":""}${x.p.vor.toFixed(0)}</span><span>${isNow?"here":pct(x.pa)}</span>`).join("")}</div>
+      ${isNow&&top[0]?`<div style="margin-top:8px"><button class="dark sm" onclick="mark(byName('${esc(top[0].p.name)}'),'mine')">Draft ${top[0].p.name}</button></div>`:""}</div>`;
+  }).join("");
+}
+
+// ---------- Fall odds tab ----------
+if(!state.oddsFilter) state.oddsFilter = "Watching";
+function renderOdds(){
+  const sts = stretches().filter(st=>st[0]>state.cur);
+  const F = ["Watching","Targets","Top 60 by VOR","QB","RB","WR","TE"];
+  $("oddsFilters").innerHTML = F.map(f=>`<button class="sm ${state.oddsFilter===f?"dark":""}" onclick="state.oddsFilter='${f}';renderOdds()">${f}</button>`).join("");
+  const targetNames = new Set(PLAN.filter(s=>s.pick>=state.cur).flatMap(s=>s.targets));
+  let rows = RAW.filter(p=>p.status==="open");
+  if(state.oddsFilter==="Watching") rows = rows.filter(p=>onWatch(p.name));
+  else if(state.oddsFilter==="Targets") rows = rows.filter(p=>targetNames.has(p.name));
+  else if(state.oddsFilter==="Top 60 by VOR") rows = rows.filter(p=>!["K","DEF"].includes(p.pos)).sort((a,b)=>b.vor-a.vor).slice(0,60);
+  else rows = rows.filter(p=>p.pos===state.oddsFilter).sort((a,b)=>b.vor-a.vor).slice(0,40);
+  rows.sort((a,b)=>a.adp-b.adp);
+  $("oddsHead").innerHTML = `<tr><th>Player</th><th></th><th class="num">ADP</th><th class="num">VOR</th>${sts.map(st=>`<th class="pct">${stretchLabel(st)}<small>pick ${st[0]}</small></th>`).join("")}</tr>`;
+  if(!sts.length){ $("oddsBody").innerHTML=`<tr><td colspan="4">No picks left to project.</td></tr>`; return; }
+  $("oddsBody").innerHTML = rows.map(p=>{
+    const cells = sts.map(st=>{ const v=pAvail(p,st[0]); const gone = v<0.02; return `<td class="pct ${gone?"none":pctCls(v)}"><span>${gone?"gone":pct(v)}</span></td>`; });
+    return `<tr class="${AVOID.includes(p.name)?"avoid":""}"><td class="name">${onWatch(p.name)?starSvg(true)+" ":""}${p.name}${targetNames.has(p.name)?`<span class="chip">plan</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td class="num">${p.adp<999?p.adp.toFixed(0):"und"}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td>${cells.join("")}</tr>`;
+  }).join("") || `<tr><td colspan="${4+sts.length}">Nobody matches this filter.</td></tr>`;
+
+  // roster gaps
+  const counts = posCounts(RAW.filter(p=>p.status==="mine").map(p=>({p})));
+  const barColor = {QB:"var(--sky)",RB:"var(--tomato)",WR:"var(--sun)",TE:"var(--rain)",K:"var(--lavender)",DEF:"var(--pond)"};
+  $("gaps").innerHTML = Object.keys(CFG.roster_goal).map(pos=>{ const c=counts[pos], g=CFG.roster_goal[pos]; const st=STARTERS[pos]; const word = c<st?"<b>starter open</b>":(c<g?"depth to add":"set"); return `<div class="gap"><span class="pos ${pos}">${pos}</span><div class="bar"><i style="width:${Math.min(100,c/g*100)}%;background:${barColor[pos]}"></i></div><span>${c} of ${g}, ${word}</span></div>`; }).join("");
+
+  // per stretch notes
+  $("stretchNotes").innerHTML = sts.slice(0,5).map(st=>{
+    const N = st[0];
+    const need = ["QB","RB","WR","TE"].map(pos=>({pos, m:myNeed(pos,N)})).sort((a,b)=>b.m-a.m);
+    const likely = pos => RAW.filter(p=>p.status==="open"&&p.pos===pos&&!AVOID.includes(p.name)&&p.vor>0).map(p=>({p,pa:pAvail(p,N)})).filter(x=>x.pa>=0.5).sort((a,b)=>b.p.vor-a.p.vor);
+    const parts = need.slice(0,2).map(n=>{ const l=likely(n.pos); return l.length?`${l.length} ${n.pos}${l.length===1?"":"s"} with starter value ${l.length===1?"is":"are"} better than a coin flip to be there, led by ${l[0].p.name}`:`no ${n.pos} with starter value is better than a coin flip to be there`; });
+    const wlSafe = state.watch.map(w=>byName(w.name)).filter(p=>p&&p.status==="open").map(p=>({p,pa:pAvail(p,N)})).filter(x=>x.pa>=0.6).sort((a,b)=>a.p.adp-b.p.adp).slice(0,3);
+    return `<p><strong>${stretchLabel(st)}</strong>, ${st.length} pick${st.length===1?"":"s"}. ${parts.join(". ")}. ${wlSafe.length?`From your watch list, ${wlSafe.map(x=>`${x.p.name} ${pct(x.pa)}`).join(", ")}.`:"Nobody from your watch list is a good bet to last this long."}</p>`;
+  }).join("");
+}
+
+// ---------- Rest of league tab ----------
+function renderLeague(){
+  const rost = rosters();
+  const onClock = state.started && state.cur<=TOTAL_PICKS ? ORDER[state.cur-1] : null;
+  const order = Object.keys(TEAMS).sort((a,b)=>(b===MY_TEAM)-(a===MY_TEAM));
+  $("teams").innerHTML = order.map(t=>{
+    const list = rost[t].slice().sort((a,b)=>a.at-b.at);
+    const c = posCounts(list);
+    const needs = teamNeeds(c);
+    const nextPick = ORDER.findIndex((x,i)=>x===t && i+1>=state.cur);
+    const proj = list.reduce((a,x)=>a+x.p.proj,0);
+    return `<div class="team ${t===MY_TEAM?"me":""} ${t===onClock?"clock":""}"><div class="nm"><span>${TEAMS[t]}</span><small>${list.length} pick${list.length===1?"":"s"}</small></div>
+      <div class="cnt">${["QB","RB","WR","TE","K","DEF"].map(pos=>`<span class="pos ${pos} ${c[pos]?"":"zero"}">${pos} ${c[pos]}</span>`).join("")}</div>
+      ${list.map(x=>`<div class="pl"><span class="rp">${roundPick(x.at)}</span><span>${x.p.name}</span><span class="pos ${x.p.pos}">${x.p.pos}</span></div>`).join("")||`<div class="note" style="margin:0">No picks yet.</div>`}
+      <div class="need">${needs.length?`Needs <b>${needs.join(", ")}</b>`:"Starters filled"}${nextPick>=0?`. Next pick ${roundPick(nextPick+1)}`:""}${list.length?`. ${proj.toFixed(0)} projected`:""}</div></div>`;
+  }).join("");
+}
+
 let dragName = null;
 function renderBuilder(){
   state.watch.forEach(w=>{ if(w.tier>state.tiers.length) w.tier=state.tiers.length; if(w.tier<1) w.tier=1; });
@@ -582,7 +818,7 @@ function reorder(from,to){ if(!from||from===to) return; const a=state.watch.find
 function placeInBuild(name,i){ if(!name) return; const p=byName(name); if(p && !FITS[LINEUP[i]].includes(p.pos)) { alert(name+" cannot start at "+LINEUP[i]); return; } const old=state.build.indexOf(name); if(old>=0) state.build[old]=null; state.build[i]=name; save(); renderBuilder(); }
 function addToBuild(name){ const p=byName(name); const i=state.build.findIndex((n,i)=>!n && (!p || FITS[LINEUP[i]].includes(p.pos))); if(i<0){ alert("No open slot fits "+name); return; } placeInBuild(name,i); }
 
-function showView(v){ ["draft","plan","build"].forEach(k=>{ const cap=k[0].toUpperCase()+k.slice(1); $("view"+cap).style.display = v===k?"grid":"none"; $("nav"+cap).classList.toggle("on", v===k); }); }
+function showView(v){ ["draft","plan","odds","league","build"].forEach(k=>{ const cap=k[0].toUpperCase()+k.slice(1); $("view"+cap).style.display = v===k?"grid":"none"; $("nav"+cap).classList.toggle("on", v===k); }); }
 
 $("search").addEventListener("input", render);
 $("search").addEventListener("keydown", e=>{ if(e.key==="Enter"){ const q=$("search").value.trim().toLowerCase(); if(!q) return; const p = RAW.filter(x=>x.status==="open"&&x.name.toLowerCase().includes(q)).sort((a,b)=>a.adp-b.adp)[0]; if(p){ $("search").value=""; mark(p,"taken"); } } });

@@ -45,6 +45,20 @@ Everything about your league lives in `league/config.json`.
 
 Rebuild after any change with `make league`.
 
+## Tabs in the draft room
+
+- **Draft board.** The full player pool with sortable columns, your plan targets for the next slot, your roster, and live trends read from the picks so far.
+- **My plan.** Your fifteen slots with the chance each target is still there, and a strategy panel that re-ranks the board for your next four picks from your roster gaps, positional scarcity, and fall odds.
+- **Fall odds.** A grid of your watch list or plan targets against every stretch of picks you own, each cell being the chance the player is still on the board when that stretch starts.
+- **Rest of league.** Every team's roster, position counts, unfilled starting spots, and next pick. Picks are credited to whichever team was on the clock when you marked a player taken.
+- **Roster builder.** Tiers and drag and drop lineup building, unchanged from your original tool.
+
+## How fall odds work
+
+For a player and one of your future picks, the model walks every opposing pick in between. At each one it takes the chance the player goes right there from a normal curve centred on his ADP, with the spread growing later in the draft, and scales it by how much that team needs his position given the roster it has drafted so far. A team holding two quarterbacks almost never takes a third, a team with no tight end in round six is more likely than ADP says to grab one, and kickers and defenses are ignored until the last rounds. Positions the room has been reaching for get their ADP nudged earlier. The product of all those survival chances is the number you see.
+
+Projections are a blend of the pipeline average and the host export when both exist, weighted by `projections.host_weight` in the config. The host number is usually fresher on injuries. A pink `news?` chip on the board marks players where the two disagree by more than forty percent.
+
 ## ADP sources
 
 The board prefers the ADP from your league host when a player is in `league/host_snapshot.csv`. That file is the export from the host draft room. Players not in it fall back to FantasyPros ADP from the pipeline, and players in neither show as undrafted. Hover over an ADP cell to see which source it came from. Set `adp.prefer_host_snapshot` to false in the config to use FantasyPros only.

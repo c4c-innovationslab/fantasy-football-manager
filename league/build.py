@@ -188,6 +188,12 @@ def build():
             adp_val, adp_src = fp_adp, "fantasypros"
         else:
             adp_val, adp_src = UNDRAFTED, "none"
+        proj = forecast(r, scoring)
+        host_proj = host["proj"] if host else None
+        blend = config.get("projections", {}).get("host_weight", 0.5)
+        if host_proj is not None and blend > 0:
+            # the host export is usually fresher on injuries and depth chart news, so blend it in
+            proj = round((1 - blend) * proj + blend * host_proj, 1)
         players.append(
             {
                 "key": r["key"],
@@ -197,8 +203,9 @@ def build():
                 "bye": int(r["bye"]) if r.get("bye") else None,
                 "adp": adp_val,
                 "adpSource": adp_src,
-                "proj": forecast(r, scoring),
-                "hostProj": host["proj"] if host else None,
+                "proj": proj,
+                "pipelineProj": forecast(r, scoring),
+                "hostProj": host_proj,
                 # FantasyPros consensus ADP, shown next to the host ADP so you can see where the room disagrees
                 "consensus": fp_adp if fp_adp is not None else UNDRAFTED,
             }
