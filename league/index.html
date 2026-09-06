@@ -712,9 +712,24 @@ function myNeed(pos, pickNo, counts){
   const g = CFG.roster_goal[pos]||0, start = STARTERS[pos];
   const round = Math.ceil(pickNo/NTEAMS);
   if(pos==="K"||pos==="DEF"){ const mine=MY_PICKS; const idx=mine.indexOf(pickNo); const fromEnd = idx>=0 ? mine.length-idx : mine.filter(n=>n>=pickNo).length; if(fromEnd<=2) return c?0.05:1.5; return 0.02; }
-  if(c<start) return c===0 ? 1.35 : 1.2;
+  // an empty starting spot gets more urgent every round it stays open
+  if(c<start) return (c===0 ? 1.35 : 1.2) * (1 + 0.14*Math.max(0, round-4));
   if(c<g) return 1.0 - 0.12*(c-start);
-  return 0.2;
+  return 0.05;
+}
+
+// Starting spots you still have to fill against the picks you have left. When they match, the next pick
+// has to be one of those positions or the lineup ends the draft with a hole in it.
+function mustFill(counts, pickNo){
+  const open = []; ["QB","RB","WR","TE","K","DEF"].forEach(pos=>{ for(let i=(counts[pos]||0);i<STARTERS[pos];i++) open.push(pos); });
+  const left = MY_PICKS.filter(n=>n>=pickNo).length;
+  if(!open.length || left>open.length) return null;
+  return new Set(open);
+}
+function needOrForce(p, pickNo, counts){
+  const force = mustFill(counts, pickNo);
+  if(force) return force.has(p.pos) ? (["K","DEF"].includes(p.pos)?2:4) : 0;
+  return myNeed(p.pos, pickNo, counts);
 }
 
 // ---------- Strategy right now ----------
@@ -726,7 +741,7 @@ function renderStrategy(nm, mine){
   $("strategy").innerHTML = turnHtml(nm, mine) + upcoming.map((N,i)=>{
     const slot = slotFor(N);
     const isNow = mine && N===state.cur;
-    const scored = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!claimed.has(p.name)).map(p=>{ const pa=isNow?1:pAvail(p,N); return {p, pa, score: Math.max(0,p.vor)*myNeed(p.pos,N,counts)*(0.35+0.65*pa)}; }).filter(x=>x.pa>=0.2||isNow).sort((a,b)=>b.score-a.score);
+    const scored = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!claimed.has(p.name)).map(p=>{ const pa=isNow?1:pAvail(p,N); return {p, pa, score: (Math.max(0,p.vor)+(["K","DEF"].includes(p.pos)?0:1))*needOrForce(p,N,counts)*(0.35+0.65*pa)}; }).filter(x=>x.pa>=0.2||isNow).sort((a,b)=>b.score-a.score);
     const top = scored.slice(0,6);
     const gapWord = pos => { const c=counts[pos]||0, g=CFG.roster_goal[pos]||0; return `${c} of ${g}`; };
     const holdLine = top[0] ? `You hold ${gapWord(top[0].p.pos)} ${top[0].p.pos}s${i>0?" counting the leans above":""}.` : "";
@@ -762,7 +777,7 @@ function turnPlan(nm, mine){
     bestNow[pos] = pool.filter(x=>x.p.pos===pos).reduce((a,x)=>Math.max(a,x.p.vor),0);
     bestNext[pos] = nextSt ? RAW.filter(p=>p.status==="open"&&p.pos===pos&&!AVOID.includes(p.name)).filter(p=>pAvail(p,nextSt[0])>=0.5).reduce((a,p)=>Math.max(a,p.vor),0) : 0;
   });
-  const val = (x, counts) => myNeed(x.p.pos, N, counts) * (Math.max(0,x.p.vor) - 0.5*Math.max(0,bestNext[x.p.pos])) * (0.4+0.6*x.pa);
+  const val = (x, counts) => needOrForce(x.p, N, counts) * (Math.max(0,x.p.vor) + 1 - 0.5*Math.max(0,bestNext[x.p.pos])) * (0.4+0.6*x.pa);
   // candidates: top few at each position by value, then best combos of m
   const cands = [];
   ["QB","RB","WR","TE","K","DEF"].forEach(pos=>{ pool.filter(x=>x.p.pos===pos).sort((a,b)=>b.p.vor-a.p.vor).slice(0, pos==="RB"||pos==="WR"?4:2).forEach(x=>cands.push(x)); });
@@ -805,8 +820,9 @@ function runMock(mode){
     let pick;
     if(t===MY_TEAM){
       const c = counts[t];
-      const scored = pool.filter(p=>!AVOID.includes(p.name)).map(p=>({p, s: Math.max(0,p.vor)*myNeed(p.pos,k,c)})).sort((a,b)=>b.s-a.s);
-      pick = (scored[0]&&scored[0].s>0 ? scored[0].p : pool.slice().sort((a,b)=>a.adp-b.adp)[0]);
+      const force = mustFill(c, k);
+      const scored = pool.filter(p=>!AVOID.includes(p.name)&&(!force||force.has(p.pos))).map(p=>({p, s: (Math.max(0,p.vor)+1)*(force?(["K","DEF"].includes(p.pos)?1:3):myNeed(p.pos,k,c))})).sort((a,b)=>b.s-a.s);
+      pick = scored[0] ? scored[0].p : pool.slice().sort((a,b)=>a.adp-b.adp)[0];
     } else {
       const c = counts[t];
       const w = pool.map(p=>{
