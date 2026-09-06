@@ -59,7 +59,27 @@
   .content.build { grid-template-columns: 1fr 1fr; }
   .content.plan { grid-template-columns: 1fr 1fr; }
   .content.odds { grid-template-columns: 1.5fr 1fr; }
-  .content.league { grid-template-columns: 1fr; }
+  .content.league { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .content.league .card.mockcard { max-height: 46vh; }
+  .mockctl { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .mockctl label { font-size: 12px; display: flex; align-items: center; gap: 4px; }
+  .mockwrap { display: grid; grid-template-columns: 1.6fr 1fr; gap: 14px; min-height: 0; flex: 1; }
+  .mockwrap > div { min-height: 0; overflow-y: auto; }
+  .mockrow { display: grid; grid-template-columns: 44px 1fr 1fr auto auto; gap: 8px; padding: 4px 6px; border-bottom: 1px solid var(--line); font-size: 12.5px; align-items: center; }
+  .mockrow.mine { background: var(--lime); border-radius: 8px; font-weight: 600; }
+  .mockrow.round { background: var(--card2); font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; border-radius: 8px; margin-top: 6px; grid-template-columns: 1fr; }
+  .mockrow .rp { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .mockrow .tm { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .team .pl.mock { opacity: .55; font-style: italic; }
+  .turn { background: var(--peony); border-radius: var(--r2); padding: 12px 14px; margin-bottom: 12px; font-size: 12.5px; }
+  .turn .hd { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 14px; margin-bottom: 6px; }
+  .turn .combo { background: #fff; border-radius: 10px; padding: 8px 10px; margin: 6px 0; display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+  .turn .combo.best { box-shadow: inset 0 0 0 2px var(--ink); }
+  .turn .combo .tot { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 13px; text-align: right; }
+  .turn .drop { display: grid; grid-template-columns: 38px 1fr 1fr auto; gap: 6px 8px; font-size: 12px; margin-top: 8px; align-items: center; }
+  .turn .drop .h { font-size: 11px; color: var(--muted); }
+  .turn .drop .lock { color: var(--tomato); font-weight: 700; }
+  .turn .drop .wait { color: var(--rain); font-weight: 700; }
   .teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
   .team { background: #fff; border: 1px solid var(--line); border-radius: var(--r2); padding: 12px 14px; font-size: 12.5px; }
   .team.me { background: var(--lime); }
@@ -341,6 +361,18 @@
     </div>
 
     <div class="content league" id="viewLeague" style="display:none">
+      <div class="card mockcard">
+        <h2>Mock the rest of the draft</h2>
+        <div class="note" style="margin:0 0 8px 0">Starts from the picks already recorded and plays out every remaining pick. Other teams draft from ADP scaled by their roster holes, the same model behind the fall odds. Your picks use the strategy scoring. Expected mode takes the most likely player each time, random mode rolls the dice so you can see the range. Re-run after every pick to see how the room shifts.</div>
+        <div class="mockctl">
+          <button class="dark sm" onclick="runMock('expected')">Run expected mock</button>
+          <button class="sm" onclick="runMock('random')">Run random mock</button>
+          <button class="sm" onclick="mock=null;render()">Clear</button>
+          <label><input type="checkbox" id="mockInRosters" checked onchange="renderLeague()">Show mock picks in rosters</label>
+          <span id="mockStamp" class="note" style="margin:0"></span>
+        </div>
+        <div class="mockwrap"><div id="mockPicks"></div><div id="mockMine"></div></div>
+      </div>
       <div class="card">
         <h2>Every roster</h2>
         <div class="note" style="margin:0 0 10px 0">Picks are credited to whichever team was on the clock when you marked the player taken. The team with the dark outline is on the clock now. Needs are the starting spots a team has not filled yet, which is what the fall odds use to guess what each team does next.</div>
@@ -464,6 +496,7 @@ function render(){
       <div class="alts">${avail.map(p=>`<span class="${p.status!=="open"?"gone":""}">${p.name} ${p.adp<999?p.adp.toFixed(0):""}</span>`).join("")}</div>
       ${first&&mine?`<div style="margin-top:10px"><button class="dark" onclick="mark(byName('${esc(first.name)}'),'mine')">Draft ${first.name}</button></div>`:""}
       <div class="wl"><strong>Best value on the board right now</strong><br>${(()=>{const b=RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!["K","DEF"].includes(p.pos)).sort((a,b)=>b.vor-a.vor)[0]; return b?`${b.name} <span class="pos ${b.pos}">${b.pos}</span> ${b.vor>0?"+":""}${b.vor.toFixed(0)} over replacement, ADP ${b.adp<999?b.adp.toFixed(0):"und"}`:"Nobody left";})()}</div>
+      ${(()=>{ const tp = turnPlan(nm, mine); return tp ? `<div class="wl"><strong>Snake turn, ${tp.left} pick${tp.left===1?"":"s"} at ${stretchLabel(tp.st)}</strong><br>${tp.best.map(x=>`${x.p.name} <span class="pos ${x.p.pos}">${x.p.pos}</span>`).join(" then ")}<br><span style="color:var(--muted)">${tp.lock.length?`Lock in ${tp.lock.join(" and ")} now, `:""}${tp.wait.length?`${tp.wait.join(" and ")} will still be there next turn.`:"nothing is safe to wait on."}</span></div>` : ""; })()}
       <div class="wl"><strong>Top of your watch list still available</strong><br>${wlOpen.length?wlOpen.map(w=>`${w.p.name} <span class="chip">T${w.tier}</span>`).join("<br>"):"Nobody left from the list"}</div>
     </div>`;
   } else $("recBox").innerHTML="";
@@ -678,8 +711,8 @@ function myNeed(pos, pickNo, counts){
   const c = counts ? (counts[pos]||0) : RAW.filter(p=>p.status==="mine"&&p.pos===pos).length;
   const g = CFG.roster_goal[pos]||0, start = STARTERS[pos];
   const round = Math.ceil(pickNo/NTEAMS);
-  if(pos==="K"||pos==="DEF") return round>=ROUNDS-1 ? (c?0.05:1.5) : (round>=ROUNDS-2 ? (c?0.05:0.6) : 0.02);
-  if(c<start) return 1.35;
+  if(pos==="K"||pos==="DEF"){ const mine=MY_PICKS; const idx=mine.indexOf(pickNo); const fromEnd = idx>=0 ? mine.length-idx : mine.filter(n=>n>=pickNo).length; if(fromEnd<=2) return c?0.05:1.5; return 0.02; }
+  if(c<start) return c===0 ? 1.35 : 1.2;
   if(c<g) return 1.0 - 0.12*(c-start);
   return 0.2;
 }
@@ -690,7 +723,7 @@ function renderStrategy(nm, mine){
   if(!upcoming.length){ $("strategy").innerHTML=`<div class="note">All of your picks are in.</div>`; return; }
   const counts = posCounts(RAW.filter(p=>p.status==="mine").map(p=>({p})));  // grows as each card claims its lean
   const claimed = new Set();
-  $("strategy").innerHTML = upcoming.map((N,i)=>{
+  $("strategy").innerHTML = turnHtml(nm, mine) + upcoming.map((N,i)=>{
     const slot = slotFor(N);
     const isNow = mine && N===state.cur;
     const scored = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&!claimed.has(p.name)).map(p=>{ const pa=isNow?1:pAvail(p,N); return {p, pa, score: Math.max(0,p.vor)*myNeed(p.pos,N,counts)*(0.35+0.65*pa)}; }).filter(x=>x.pa>=0.2||isNow).sort((a,b)=>b.score-a.score);
@@ -699,7 +732,7 @@ function renderStrategy(nm, mine){
     const holdLine = top[0] ? `You hold ${gapWord(top[0].p.pos)} ${top[0].p.pos}s${i>0?" counting the leans above":""}.` : "";
     if(top[0]){ claimed.add(top[0].p.name); counts[top[0].p.pos]=(counts[top[0].p.pos]||0)+1; }
     const byPos = {}; scored.forEach(x=>{ if(!byPos[x.p.pos]) byPos[x.p.pos]=x; });
-    const lean = Object.entries(byPos).filter(([pos])=>!["K","DEF"].includes(pos)||Math.ceil(N/NTEAMS)>=ROUNDS-1).sort((a,b)=>b[1].score-a[1].score).slice(0,2);
+    const lean = Object.entries(byPos).filter(([pos])=>!["K","DEF"].includes(pos)||myNeed(pos,N,counts)>=0.5).sort((a,b)=>b[1].score-a[1].score).slice(0,2);
     const planOpen = slot ? slot.targets.map(byName).filter(p=>p&&p.status==="open").map(p=>({p,pa:isNow?1:pAvail(p,N)})) : [];
     const planLine = slot ? (planOpen.length ? `Plan says ${slot.want}. ${planOpen.slice(0,3).map(x=>`${x.p.name} ${pct(x.pa)}`).join(", ")}.` : `Every plan target for this slot is gone.`) : "";
     const agree = slot && lean.length && lean[0][0]===slot.want;
@@ -709,6 +742,98 @@ function renderStrategy(nm, mine){
       <div class="cand">${top.map(x=>`<span class="${slot&&slot.targets.includes(x.p.name)?"plan":""}">${x.p.name} <span class="pos ${x.p.pos}">${x.p.pos}</span></span><span>${x.p.vor>0?"+":""}${x.p.vor.toFixed(0)}</span><span>${isNow?"here":pct(x.pa)}</span>`).join("")}</div>
       ${isNow&&top[0]?`<div style="margin-top:8px"><button class="dark sm" onclick="mark(byName('${esc(top[0].p.name)}'),'mine')">Draft ${top[0].p.name}</button></div>`:""}</div>`;
   }).join("");
+}
+
+// ---------- Snake turn planner ----------
+// At a turn you own two or three picks in a row and nobody picks in between, so the question is which set of
+// players to take, not the order. Players are scored by need weighted VOR minus half of the best VOR you could
+// still get at that position at your next turn. That pushes thin positions into this turn and deep ones to the next.
+function turnPlan(nm, mine){
+  if(!nm) return null;
+  const st = stretches().find(s=>s.includes(nm)); if(!st) return null;
+  const picksLeft = st.filter(n=>n>=state.cur); if(picksLeft.length<2) return null;
+  const N = picksLeft[0], m = picksLeft.length;
+  const isNow = mine && N===state.cur;
+  const nextSt = stretches().find(s=>s[0]>st[st.length-1]);
+  const counts0 = posCounts(RAW.filter(p=>p.status==="mine").map(p=>({p})));
+  const pool = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)).map(p=>({p, pa:isNow?1:pAvail(p,N)})).filter(x=>x.pa>=0.5);
+  const bestNow = {}, bestNext = {};
+  ["QB","RB","WR","TE","K","DEF"].forEach(pos=>{
+    bestNow[pos] = pool.filter(x=>x.p.pos===pos).reduce((a,x)=>Math.max(a,x.p.vor),0);
+    bestNext[pos] = nextSt ? RAW.filter(p=>p.status==="open"&&p.pos===pos&&!AVOID.includes(p.name)).filter(p=>pAvail(p,nextSt[0])>=0.5).reduce((a,p)=>Math.max(a,p.vor),0) : 0;
+  });
+  const val = (x, counts) => myNeed(x.p.pos, N, counts) * (Math.max(0,x.p.vor) - 0.5*Math.max(0,bestNext[x.p.pos])) * (0.4+0.6*x.pa);
+  // candidates: top few at each position by value, then best combos of m
+  const cands = [];
+  ["QB","RB","WR","TE","K","DEF"].forEach(pos=>{ pool.filter(x=>x.p.pos===pos).sort((a,b)=>b.p.vor-a.p.vor).slice(0, pos==="RB"||pos==="WR"?4:2).forEach(x=>cands.push(x)); });
+  const combos = [];
+  const rec = (start, chosen) => {
+    if(chosen.length===m){ const c={...counts0}; let tot=0; chosen.slice().sort((a,b)=>b.p.vor-a.p.vor).forEach(x=>{ tot+=val(x,c); c[x.p.pos]=(c[x.p.pos]||0)+1; }); combos.push({set:chosen.slice(), tot}); return; }
+    for(let i=start;i<cands.length;i++){ chosen.push(cands[i]); rec(i+1, chosen); chosen.pop(); }
+  };
+  rec(0, []);
+  combos.sort((a,b)=>b.tot-a.tot);
+  const best = combos[0] ? combos[0].set.slice().sort((a,b)=>b.p.vor-a.p.vor) : [];
+  const drop = ["QB","RB","WR","TE"].map(pos=>({pos, now:bestNow[pos], next:bestNext[pos], d:bestNow[pos]-bestNext[pos]}));
+  const lock = drop.filter(d=>d.now>0&&d.d>=25&&myNeed(d.pos,N,counts0)>=0.5).map(d=>d.pos);
+  const wait = drop.filter(d=>d.now>0&&d.d<12).map(d=>d.pos);
+  return {st, N, left:m, isNow, best, combos:combos.slice(0,40), drop, lock, wait, nextSt};
+}
+function turnHtml(nm, mine){
+  const tp = turnPlan(nm, mine); if(!tp) return "";
+  const sig = set => set.map(x=>x.p.pos).sort().join(" + ");
+  const seen = new Set(); const alts = tp.combos.filter(c=>{ const k=sig(c.set); if(seen.has(k)) return false; seen.add(k); return true; });
+  return `<div class="turn"><div class="hd">Snake turn at ${stretchLabel(tp.st)}, ${tp.left} pick${tp.left===1?"":"s"} in a row${tp.isNow?", you are up":""}</div>
+    <div>Nobody picks between these, so the order does not matter. What matters is which positions to take now and which to push to ${tp.nextSt?stretchLabel(tp.nextSt):"later"}.</div>
+    ${alts.slice(0,3).map((c,i)=>`<div class="combo ${i===0?"best":""}">${c.set.slice().sort((a,b)=>b.p.vor-a.p.vor).map(x=>`<span>${x.p.name} <span class="pos ${x.p.pos}">${x.p.pos}</span> <span style="color:var(--muted)">${x.p.vor>0?"+":""}${x.p.vor.toFixed(0)}${tp.isNow?"":", "+pct(x.pa)}</span></span>`).join("")}<span class="tot" style="grid-row:1 / span ${c.set.length}">${i===0?"take this":"or"}</span></div>`).join("")}
+    <div class="drop"><span class="h"></span><span class="h">best now</span><span class="h">best likely next turn</span><span class="h">call</span>
+    ${tp.drop.map(d=>`<span class="pos ${d.pos}">${d.pos}</span><span>${d.now>0?"+"+d.now.toFixed(0):"none"}</span><span>${d.next>0?"+"+d.next.toFixed(0):"nobody with value"}</span><span class="${tp.lock.includes(d.pos)?"lock":(tp.wait.includes(d.pos)?"wait":"")}">${tp.lock.includes(d.pos)?"lock now":(tp.wait.includes(d.pos)?"can wait":(d.now>0?"drop of "+d.d.toFixed(0):""))}</span>`).join("")}</div>
+    ${tp.isNow&&tp.best[0]?`<div style="margin-top:8px">${tp.best.map(x=>`<button class="dark sm" style="margin-right:6px" onclick="mark(byName('${esc(x.p.name)}'),'mine')">Draft ${x.p.name}</button>`).join("")}</div>`:""}</div>`;
+}
+
+// ---------- Mock draft ----------
+let mock = null;
+function runMock(mode){
+  const taken = new Set(RAW.filter(p=>p.status!=="open").map(p=>p.name));
+  const rost = rosters(); const counts = {}; Object.keys(rost).forEach(t=>counts[t]=posCounts(rost[t]));
+  const drift = oddsContext().drift;
+  const picks = [];
+  const openPool = () => RAW.filter(p=>!taken.has(p.name));
+  for(let k=state.cur;k<=TOTAL_PICKS;k++){
+    const t = ORDER[k-1]; if(!t) break;
+    const pool = openPool(); if(!pool.length) break;
+    let pick;
+    if(t===MY_TEAM){
+      const c = counts[t];
+      const scored = pool.filter(p=>!AVOID.includes(p.name)).map(p=>({p, s: Math.max(0,p.vor)*myNeed(p.pos,k,c)})).sort((a,b)=>b.s-a.s);
+      pick = (scored[0]&&scored[0].s>0 ? scored[0].p : pool.slice().sort((a,b)=>a.adp-b.adp)[0]);
+    } else {
+      const c = counts[t];
+      const w = pool.map(p=>{
+        let adp = p.adp>=999 ? TOTAL_PICKS+40 : p.adp - (drift[p.pos]||0);
+        const sigma = p.adp>=999 ? 60 : Math.max(3, 0.13*adp+3);
+        const z = adp>=k ? (adp-k)/sigma : (k-adp)/(2.5*sigma);
+        let wt = Math.exp(-0.5*z*z) * (adp<k?1.2:1) * needMult(c, p.pos, k);
+        return {p, wt};
+      }).filter(x=>x.wt>1e-6).sort((a,b)=>b.wt-a.wt).slice(0,14);
+      if(mode==="random"){ const tot=w.reduce((a,x)=>a+Math.pow(x.wt,1.5),0); let r=Math.random()*tot; pick=w[w.length-1].p; for(const x of w){ r-=Math.pow(x.wt,1.5); if(r<=0){ pick=x.p; break; } } }
+      else pick = w[0].p;
+    }
+    taken.add(pick.name); counts[t][pick.pos]++; picks.push({at:k, team:t, p:pick});
+  }
+  mock = {mode, picks, at:new Date()};
+  render();
+}
+function renderMock(){
+  if(!mock){ $("mockPicks").innerHTML=`<div class="note">No mock yet. Run one to see how the rest of the draft could go.</div>`; $("mockMine").innerHTML=""; $("mockStamp").textContent=""; return; }
+  const stale = mock.picks.length && mock.picks[0].at!==state.cur;
+  $("mockStamp").textContent = `${mock.mode} mock from pick ${mock.picks[0]?mock.picks[0].at:state.cur}${stale?", picks have moved since, run it again":""}`;
+  let lastRound = 0;
+  $("mockPicks").innerHTML = mock.picks.map(x=>{ const r=Math.ceil(x.at/NTEAMS); const head = r!==lastRound ? `<div class="mockrow round">Round ${r}</div>` : ""; lastRound=r; return head+`<div class="mockrow ${x.team===MY_TEAM?"mine":""}"><span class="rp">${roundPick(x.at)}</span><span class="tm">${TEAMS[x.team]}</span><span>${x.p.name}</span><span class="pos ${x.p.pos}">${x.p.pos}</span><span class="rp">${x.p.adp<999?x.p.adp.toFixed(0):"und"}</span></div>`; }).join("");
+  const mine = RAW.filter(p=>p.status==="mine").map(p=>({p, at:null})).concat(mock.picks.filter(x=>x.team===MY_TEAM));
+  const slots = fillLineup(mine.map(x=>x.p));
+  const starters = slots.filter(s=>s.p&&s.lab!=="BN").reduce((a,s)=>a+s.p.proj,0);
+  $("mockMine").innerHTML = `<h3 style="margin-top:0">Your roster if it plays out this way</h3>` + slots.map(s=>`<div class="row" style="display:grid;grid-template-columns:44px 1fr auto;gap:8px;padding:4px 0;border-bottom:1px solid var(--line);font-size:12.5px"><span class="lab" style="font-family:var(--display);font-stretch:125%;font-weight:800;font-size:10px">${s.lab}</span><span class="${s.p?"":"empty"}" style="${s.p&&s.p.status!=="mine"?"font-style:italic;opacity:.75":""}">${s.p?s.p.name:"open"}</span><span>${s.p?s.p.proj.toFixed(0):""}</span></div>`).join("") + `<div class="sumline" style="margin-top:8px"><span>Starters projected</span><span>${starters.toFixed(0)}</span></div><div class="note">Italic names are mock picks. Real picks are upright.</div>`;
 }
 
 // ---------- Fall odds tab ----------
@@ -749,18 +874,22 @@ function renderOdds(){
 
 // ---------- Rest of league tab ----------
 function renderLeague(){
+  renderMock();
   const rost = rosters();
+  const showMock = mock && $("mockInRosters").checked;
+  if(showMock) mock.picks.forEach(x=>{ if(rost[x.team]) rost[x.team].push({p:x.p, at:x.at, mock:true}); });
   const onClock = state.started && state.cur<=TOTAL_PICKS ? ORDER[state.cur-1] : null;
   const order = Object.keys(TEAMS).sort((a,b)=>(b===MY_TEAM)-(a===MY_TEAM));
   $("teams").innerHTML = order.map(t=>{
     const list = rost[t].slice().sort((a,b)=>a.at-b.at);
-    const c = posCounts(list);
+    const real = list.filter(x=>!x.mock);
+    const c = posCounts(real);
     const needs = teamNeeds(c);
     const nextPick = ORDER.findIndex((x,i)=>x===t && i+1>=state.cur);
-    const proj = list.reduce((a,x)=>a+x.p.proj,0);
-    return `<div class="team ${t===MY_TEAM?"me":""} ${t===onClock?"clock":""}"><div class="nm"><span>${TEAMS[t]}</span><small>${list.length} pick${list.length===1?"":"s"}</small></div>
+    const proj = real.reduce((a,x)=>a+x.p.proj,0);
+    return `<div class="team ${t===MY_TEAM?"me":""} ${t===onClock?"clock":""}"><div class="nm"><span>${TEAMS[t]}</span><small>${real.length} pick${real.length===1?"":"s"}</small></div>
       <div class="cnt">${["QB","RB","WR","TE","K","DEF"].map(pos=>`<span class="pos ${pos} ${c[pos]?"":"zero"}">${pos} ${c[pos]}</span>`).join("")}</div>
-      ${list.map(x=>`<div class="pl"><span class="rp">${roundPick(x.at)}</span><span>${x.p.name}</span><span class="pos ${x.p.pos}">${x.p.pos}</span></div>`).join("")||`<div class="note" style="margin:0">No picks yet.</div>`}
+      ${list.map(x=>`<div class="pl ${x.mock?"mock":""}"><span class="rp">${roundPick(x.at)}</span><span>${x.p.name}</span><span class="pos ${x.p.pos}">${x.p.pos}</span></div>`).join("")||`<div class="note" style="margin:0">No picks yet.</div>`}
       <div class="need">${needs.length?`Needs <b>${needs.join(", ")}</b>`:"Starters filled"}${nextPick>=0?`. Next pick ${roundPick(nextPick+1)}`:""}${list.length?`. ${proj.toFixed(0)} projected`:""}</div></div>`;
   }).join("");
 }

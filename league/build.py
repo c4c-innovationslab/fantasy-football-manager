@@ -217,6 +217,10 @@ def build():
     for pos in POSITIONS:
         ranked = sorted((p for p in players if p["pos"] == pos), key=lambda p: -p["proj"])
         idx = starters[pos]
+        if pos in ("K", "DEF"):
+            # ffdraft treats these as fully replaceable. Use the first one off waivers instead so the
+            # top few carry a small positive value and the late round logic has something to rank.
+            idx = len(config["teams"])
         replacement[pos] = ranked[idx]["proj"] if idx < len(ranked) else 0.0
     for p in players:
         p["vor"] = round(p["proj"] - replacement[p["pos"]], 1)
