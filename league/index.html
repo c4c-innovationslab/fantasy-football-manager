@@ -55,12 +55,13 @@
   .topbar .actions { display: flex; gap: 8px; align-items: center; }
 
   .content { flex: 1; min-height: 0; display: grid; gap: 14px; }
-  .content.draft { grid-template-columns: 300px 1fr 280px; }
+  .content.draft { grid-template-columns: 270px 1fr 330px; }
   .content.build { grid-template-columns: 1fr 1fr; }
   .content.plan { grid-template-columns: 1fr 1fr; }
   .card { background: var(--card); border-radius: var(--r); padding: 16px 18px; min-height: 0; display: flex; flex-direction: column; }
   .card.white { background: #fff; border: 1px solid var(--line); }
   .card .scroll { flex: 1; min-height: 0; overflow-y: auto; }
+  .card .scroll.wide { overflow-x: auto; }
   .stack { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
   .stack > .card { flex: 1; }
 
@@ -101,8 +102,28 @@
   .legend { font-size: 12px; color: var(--muted); margin: 0 0 8px 0; }
   .legend .fit { margin-left: 8px; }
   table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
-  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 8px; position: sticky; top: 0; background: var(--card); z-index: 1; }
-  td { padding: 6px 8px; background: #fff; vertical-align: middle; border-top: 4px solid var(--card); }
+  th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 8px; position: sticky; top: 0; background: var(--card); z-index: 1; white-space: nowrap; }
+  th.sortable { cursor: pointer; user-select: none; }
+  th.sortable:hover { color: var(--ink); }
+  th.sorted { color: var(--ink); }
+  th.sorted::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 5px; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; vertical-align: 2px; }
+  th.sorted.asc::after { border-top: none; border-bottom: 5px solid currentColor; }
+  th.num { text-align: right; }
+  td.rank { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  td.rank b { color: var(--ink); font-weight: 600; }
+  .trend { background: #fff; border: 1px solid var(--line); border-radius: var(--r2); padding: 10px 12px; margin-bottom: 8px; font-size: 12.5px; }
+  .trend .t { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .trend.hot { border-color: var(--tomato); background: #fff3ef; }
+  .trend.warm { border-color: var(--sun); background: #fffbe6; }
+  .trend.calm { border-color: var(--rain); }
+  .sc { display: grid; grid-template-columns: 38px 1fr auto; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+  .sc .bar { margin: 0; background: rgba(0,0,0,.06); }
+  .sc .bar i { background: var(--rain); }
+  .sc.tight .bar i { background: var(--tomato); }
+  .sc.watch .bar i { background: var(--sun); }
+  .sc .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td { padding: 5px 6px; background: #fff; vertical-align: middle; border-top: 4px solid var(--card); white-space: nowrap; font-size: 12.5px; }
+  td.name { max-width: 190px; overflow: hidden; text-overflow: ellipsis; }
   tr td:first-child { border-radius: 10px 0 0 10px; }
   tr td:last-child { border-radius: 0 10px 10px 0; }
   td.name { white-space: nowrap; }
@@ -117,7 +138,7 @@
   .fit { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
   .fit.steal { background: var(--tomato); } .fit.safe { background: var(--rain); } .fit.risky { background: var(--sun); }
   td.act { white-space: nowrap; text-align: right; }
-  td.act button { margin-left: 4px; }
+  td.act button { margin-left: 3px; padding: 3px 8px; }
 
   .roster .row { display: grid; grid-template-columns: 50px 1fr auto; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13px; align-items: center; }
   .roster .row .lab { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 10px; letter-spacing: .04em; }
@@ -208,15 +229,15 @@
         </div>
       </div>
       <div class="card">
-        <div class="legend">Fit at your current pick
+        <div class="legend">Click a column heading to sort. Fit at your current pick
           <span class="fit steal"></span>Should be gone, grab him
           <span class="fit safe"></span>Likely there
           <span class="fit risky"></span>Coin flip
-          <span style="margin-left:10px">Filled star is your watch list. Circle with a line is your do not draft list. VOR is value over the replacement player at that position.</span>
+          <span style="margin-left:10px">Filled star is your watch list. Circle with a line is your do not draft list. VOR is value over the replacement player at that position. Consensus is FantasyPros ADP. Pos Rk is rank at the position by projected points, with the consensus positional rank beside it.</span>
         </div>
-        <div class="scroll">
+        <div class="scroll wide">
           <table>
-            <thead><tr><th>Player</th><th>Pos</th><th>Team</th><th style="text-align:right">ADP</th><th style="text-align:right">Proj</th><th style="text-align:right">VOR</th><th></th></tr></thead>
+            <thead id="boardHead"></thead>
             <tbody id="board"></tbody>
           </table>
         </div>
@@ -227,8 +248,17 @@
           <div class="scroll">
             <div class="roster" id="roster"></div>
             <div class="needs" id="needs"></div>
-            <h2 style="margin-top:16px">Best available</h2>
+            <h2 style="margin-top:16px">Best available by VOR</h2>
             <div class="best" id="best"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Live trends</h2>
+          <div class="scroll">
+            <div id="trends"></div>
+            <h3>Positional scarcity</h3>
+            <div class="note" style="margin:0 0 6px 0">Starters left is how many players with positive value over replacement are still on the board. Red means most of them will be gone before your next pick.</div>
+            <div id="scarcity"></div>
           </div>
         </div>
       </div>
@@ -293,7 +323,7 @@ const DEFAULT_TIERS = CFG.tiers;
 const CUTS = CFG.tier_adp_cutoffs;
 const CLOCK = CFG.pick_clock_seconds || 45;
 const ROSTER_SIZE = LINEUP.length;
-let state = { cur:1, history:[], filter:"ALL", started:false, tiers: DEFAULT_TIERS.slice(), watch: WATCH.map(n=>({name:n,tier:1})), build: Array(LINEUP.length).fill(null) };
+let state = { cur:1, history:[], filter:"ALL", started:false, sort:{key:"adp",dir:1}, tiers: DEFAULT_TIERS.slice(), watch: WATCH.map(n=>({name:n,tier:1})), build: Array(LINEUP.length).fill(null) };
 state.watch.forEach(w=>{ const p=RAW.find(x=>x.name===w.name); const a=p?p.adp:999; let t=1; while(t<=CUTS.length && a>CUTS[t-1]) t++; w.tier = Math.min(t, DEFAULT_TIERS.length); });
 const SAVE_KEY = "spdraft_"+DATA.season;
 const tierName = t => state.tiers[t-1] || ("Tier "+t);
@@ -303,8 +333,8 @@ const byName = n => RAW.find(p=>p.name===n);
 const onWatch = n => state.watch.some(w=>w.name===n);
 const esc = s => s.replace(/'/g,"\\'");
 
-function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify({cur:state.cur,history:state.history,started:state.started,tiers:state.tiers,watch:state.watch,build:state.build,st:Object.fromEntries(RAW.filter(p=>p.status!=="open").map(p=>[p.key,p.status]))})); }catch(e){} }
-function load(){ try{ const s=JSON.parse(localStorage.getItem(SAVE_KEY)); if(s){ state.cur=s.cur; state.history=s.history; state.started=!!s.started; if(s.tiers) state.tiers=s.tiers; if(s.watch) state.watch=s.watch; if(s.build) state.build=s.build; if(s.st && !Array.isArray(s.st)) RAW.forEach(p=>{ if(s.st[p.key]) p.status=s.st[p.key]; });} }catch(e){} }
+function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify({cur:state.cur,history:state.history,started:state.started,sort:state.sort,tiers:state.tiers,watch:state.watch,build:state.build,st:Object.fromEntries(RAW.filter(p=>p.status!=="open").map(p=>[p.key,p.status]))})); }catch(e){} }
+function load(){ try{ const s=JSON.parse(localStorage.getItem(SAVE_KEY)); if(s){ state.cur=s.cur; state.history=s.history; state.started=!!s.started; if(s.tiers) state.tiers=s.tiers; if(s.watch) state.watch=s.watch; if(s.build) state.build=s.build; if(s.sort) state.sort=s.sort; if(s.st && !Array.isArray(s.st)) RAW.forEach(p=>{ if(s.st[p.key]) p.status=s.st[p.key]; });} }catch(e){} }
 
 const NTEAMS = Object.keys(TEAMS).length;
 function roundPick(n){ const r=Math.ceil(n/NTEAMS), p=((n-1)%NTEAMS)+1; return r+"."+String(p).padStart(2,"0"); }
@@ -383,13 +413,33 @@ function render(){
     return true;
   });
   if(q) rows = rows.filter(p=>p.name.toLowerCase().includes(q)||p.team.toLowerCase()===q);
-  rows.sort((a,b)=>a.adp-b.adp || b.proj-a.proj);
+  const COLS = [
+    {key:"name", label:"Player", cls:""},
+    {key:"pos", label:"", cls:""},
+    {key:"team", label:"Team", cls:""},
+    {key:"bye", label:"Bye", cls:"num"},
+    {key:"adp", label:"ADP", cls:"num", title:"Average draft position. League host when available, otherwise FantasyPros."},
+    {key:"consensus", label:"Cons", cls:"num", title:"FantasyPros consensus ADP"},
+    {key:"posRank", label:"Pos", cls:"num", title:"Rank at the position by projected points. The smaller number is the consensus ADP rank at the position."},
+    {key:"proj", label:"Proj", cls:"num"},
+    {key:"vor", label:"VOR", cls:"num"},
+    {key:"vorRank", label:"Rk", cls:"num", title:"Overall rank by VOR"},
+    {key:null, label:"", cls:""}
+  ];
+  $("boardHead").innerHTML = "<tr>"+COLS.map(c=>c.key?`<th class="sortable ${c.cls} ${state.sort.key===c.key?"sorted "+(state.sort.dir>0?"asc":"desc"):""}" ${c.title?`title="${c.title}"`:""} onclick="sortBy('${c.key}')">${c.label}</th>`:"<th></th>").join("")+"</tr>";
+  const sk = state.sort.key, sd = state.sort.dir;
+  rows.sort((a,b)=>{
+    let x=a[sk], y=b[sk];
+    if(x==null && y==null) return a.adp-b.adp; if(x==null) return 1; if(y==null) return -1;
+    if(typeof x==="string") return sd*x.localeCompare(y) || a.adp-b.adp;
+    return sd*(x-y) || a.adp-b.adp || b.proj-a.proj;
+  });
   $("board").innerHTML = rows.map(p=>{
     const avoid = AVOID.includes(p.name);
     const cls = p.status==="mine"?"mine":(p.status==="taken"?"taken":(avoid?"avoid":(targetNames.has(p.name)?"target":"")));
     const fit = p.status==="open"&&!avoid?`<span class="fit ${fitClass(p)}"></span>`:"";
     const w = state.watch.find(x=>x.name===p.name);
-    return `<tr class="${cls}"><td class="name"><button class="icon" title="${w?'Remove from watch list':'Add to watch list'}" onclick="toggleWatch('${esc(p.name)}')">${starSvg(!!w)}</button> ${fit}${avoid?avoidSvg:""}${p.name}${w?`<span class="chip">T${w.tier}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${p.team}</td><td class="num" title="${p.adpSource==="host"?"League host ADP":(p.adpSource==="fantasypros"?"FantasyPros ADP":"Not being drafted")}">${p.adp<999?p.adp.toFixed(1):"und"}</td><td class="num">${p.proj.toFixed(0)}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td>
+    return `<tr class="${cls}"><td class="name"><button class="icon" title="${w?'Remove from watch list':'Add to watch list'}" onclick="toggleWatch('${esc(p.name)}')">${starSvg(!!w)}</button> ${fit}${avoid?avoidSvg:""}${p.name}${w?`<span class="chip">T${w.tier}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${p.team}</td><td class="num">${p.bye||""}</td><td class="num" title="${p.adpSource==="host"?"League host ADP":(p.adpSource==="fantasypros"?"FantasyPros ADP":"Not being drafted")}">${p.adp<999?p.adp.toFixed(1):"und"}</td><td class="num">${p.consensus<999?p.consensus.toFixed(1):"und"}</td><td class="rank"><b>${p.pos}${p.posRank}</b>${p.posAdpRank?` <span title="Consensus ADP rank at the position">${p.posAdpRank}</span>`:""}</td><td class="num">${p.proj.toFixed(0)}</td><td class="num">${p.vor>0?"+":""}${p.vor.toFixed(0)}</td><td class="num">${p.vorRank}</td>
       <td class="act">${p.status==="open"?`<button class="sm" onclick="mark(RAW[${p.id}],'taken')">Taken</button><button class="sm dark" onclick="mark(RAW[${p.id}],'mine')">Mine</button>`:`<button class="sm" onclick="RAW[${p.id}].status='open';save();render()">Put back</button>`}</td></tr>`;
   }).join("");
 
@@ -406,7 +456,77 @@ function render(){
     return `<h3>${pos}</h3>`+top.map(p=>`<div class="line"><span>${p.name} <span style="color:var(--muted)">${p.adp<999?p.adp.toFixed(0):"und"}</span></span><span>${p.proj.toFixed(0)} <span style="color:var(--muted)">${p.vor>0?"+":""}${p.vor.toFixed(0)}</span> <button class="sm" onclick="mark(RAW[${p.id}],'mine')">Mine</button></span></div>`).join("");
   }).join("");
 
+  renderTrends(nm, mine);
   renderBuilder();
+}
+
+function sortBy(key){
+  const DESC_DEFAULT = new Set(["proj","vor"]);
+  if(state.sort.key===key) state.sort.dir = -state.sort.dir;
+  else state.sort = {key, dir: DESC_DEFAULT.has(key)?-1:1};
+  save(); render();
+}
+
+// Live trends. Everything here is derived from the picks recorded so far, so it updates on every mark.
+function renderTrends(nm, mine){
+  const picks = state.history.filter(h=>RAW[h.id].status!=="open").map(h=>({p:RAW[h.id], at:h.cur}));
+  const out = [];
+
+  if(!picks.length){
+    out.push(`<div class="trend calm"><div class="t">Nothing recorded yet</div>Mark players as taken and this panel will start reading the room.</div>`);
+  } else {
+    // 1. runs: what has the room taken in the last stretch
+    const window = picks.slice(-8);
+    const runCounts = {};
+    window.forEach(x=>runCounts[x.p.pos]=(runCounts[x.p.pos]||0)+1);
+    const run = Object.entries(runCounts).sort((a,b)=>b[1]-a[1])[0];
+    if(run && run[1]>=4 && window.length>=5){
+      out.push(`<div class="trend hot"><div class="t"><span class="pos ${run[0]}">${run[0]}</span>Run in progress</div>${run[1]} of the last ${window.length} picks were ${run[0]}s. Do not chase it. The position going ignored is where the value is sliding to you.</div>`);
+    } else if(run && run[1]>=3 && window.length>=5){
+      out.push(`<div class="trend warm"><div class="t"><span class="pos ${run[0]}">${run[0]}</span>Leaning ${run[0]}</div>${run[1]} of the last ${window.length} picks. Watch for it to turn into a run.</div>`);
+    }
+
+    // 2. reaches vs slides: how far ahead of ADP each position is going
+    const drift = {};
+    picks.filter(x=>x.p.adp<999).forEach(x=>{ (drift[x.p.pos]=drift[x.p.pos]||[]).push(x.p.adp - x.at); });
+    const early = Object.entries(drift).map(([pos,d])=>[pos, d.reduce((a,b)=>a+b,0)/d.length, d.length]).filter(x=>x[2]>=3).sort((a,b)=>b[1]-a[1]);
+    if(early.length){
+      const e = early[0], l = early[early.length-1];
+      if(e[1]>=6) out.push(`<div class="trend warm"><div class="t"><span class="pos ${e[0]}">${e[0]}</span>Going early</div>${e[0]}s are going ${e[1].toFixed(0)} picks ahead of ADP on average across ${e[2]} picks. Your ${e[0]} targets will not last as long as their ADP says.</div>`);
+      if(l[1]<=-6 && l[0]!==e[0]) out.push(`<div class="trend calm"><div class="t"><span class="pos ${l[0]}">${l[0]}</span>Sliding</div>${l[0]}s are lasting ${Math.abs(l[1]).toFixed(0)} picks past ADP on average. You can wait a round on ${l[0]} and still get your guy.</div>`);
+    }
+
+    // 3. steals on the board: open players whose ADP is well behind the current pick
+    const steals = RAW.filter(p=>p.status==="open"&&!AVOID.includes(p.name)&&p.adp<999&&p.adp<state.cur-8&&!["K","DEF"].includes(p.pos)).sort((a,b)=>a.adp-b.adp).slice(0,4);
+    if(steals.length) out.push(`<div class="trend hot"><div class="t">Falling to you</div>${steals.map(p=>`${p.name} <span class="pos ${p.pos}">${p.pos}</span> ADP ${p.adp.toFixed(0)}`).join("<br>")}</div>`);
+
+    // 4. your plan targets in danger before the next turn
+    if(nm && !mine){
+      const slot = slotFor(nm);
+      if(slot){
+        const open = slot.targets.map(byName).filter(p=>p&&p.status==="open");
+        const safe = open.filter(p=>p.adp>=nm-2);
+        const risky = open.filter(p=>p.adp<nm-2);
+        const tone = !open.length?"hot":(safe.length?"calm":"warm");
+        out.push(`<div class="trend ${tone}"><div class="t">Your ${roundPick(nm)} targets</div>${open.length?`${open.length} of ${slot.targets.length} still open. ${safe.length?`${safe.map(p=>p.name).join(", ")} should be there.`:"None of them are safe by ADP."} ${risky.length?`${risky.map(p=>p.name).join(", ")} ${risky.length===1?"is":"are"} likely gone.`:""}`:"Every target for that slot is gone. Best available takes over."}</div>`);
+      }
+    }
+  }
+  $("trends").innerHTML = out.join("") || `<div class="trend calm"><div class="t">Steady</div>No runs, no reaches, nothing falling. Draft the plan.</div>`;
+
+  // scarcity: positive VOR players left, and how many of them sit before your next pick by ADP
+  const goal = CFG.roster_goal;
+  $("scarcity").innerHTML = ["QB","RB","WR","TE"].map(pos=>{
+    const all = RAW.filter(p=>p.pos===pos&&p.vor>0);
+    const open = all.filter(p=>p.status==="open");
+    const gone = nm ? open.filter(p=>p.adp<nm).length : 0;
+    const left = open.length - gone;
+    const have = RAW.filter(p=>p.status==="mine"&&p.pos===pos).length;
+    const pct = all.length? open.length/all.length*100 : 0;
+    const tight = open.length && left <= 2 && have < goal[pos];
+    const watch = open.length && left <= 5 && have < goal[pos];
+    return `<div class="sc ${tight?"tight":(watch?"watch":"")}"><span class="pos ${pos}">${pos}</span><div><div class="bar"><i style="width:${pct}%"></i></div><div style="font-size:11px;color:var(--muted);margin-top:2px">${open.length} of ${all.length} starters left${nm?`, ${gone} likely gone before ${roundPick(nm)}`:""}</div></div><span class="n">${tight?"<b>tight</b>":(watch?"watch":"fine")}</span></div>`;
+  }).join("");
 }
 
 let dragName = null;

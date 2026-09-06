@@ -199,6 +199,8 @@ def build():
                 "adpSource": adp_src,
                 "proj": forecast(r, scoring),
                 "hostProj": host["proj"] if host else None,
+                # FantasyPros consensus ADP, shown next to the host ADP so you can see where the room disagrees
+                "consensus": fp_adp if fp_adp is not None else UNDRAFTED,
             }
         )
 
@@ -215,6 +217,13 @@ def build():
     players.sort(key=lambda p: (-p["vor"], p["adp"]))
     for i, p in enumerate(players):
         p["vorRank"] = i + 1
+    # positional rank by projected points, and by consensus ADP
+    for pos in POSITIONS:
+        group = [p for p in players if p["pos"] == pos]
+        for i, p in enumerate(sorted(group, key=lambda p: -p["proj"])):
+            p["posRank"] = i + 1
+        for i, p in enumerate(sorted(group, key=lambda p: (p["consensus"], p["adp"]))):
+            p["posAdpRank"] = i + 1 if p["consensus"] < UNDRAFTED else None
     players.sort(key=lambda p: (p["adp"], -p["proj"]))
     for i, p in enumerate(players):
         p["id"] = i
