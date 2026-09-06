@@ -103,11 +103,12 @@
   .legend .fit { margin-left: 8px; }
   table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
   th { text-align: left; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 8px; position: sticky; top: 0; background: var(--card); z-index: 1; white-space: nowrap; }
-  th.sortable { cursor: pointer; user-select: none; }
-  th.sortable:hover { color: var(--ink); }
+  th.sortable { user-select: none; }
   th.sorted { color: var(--ink); }
-  th.sorted::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 5px; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; vertical-align: 2px; }
-  th.sorted.asc::after { border-top: none; border-bottom: 5px solid currentColor; }
+  th .arrows { display: inline-flex; flex-direction: column; gap: 1px; vertical-align: middle; margin-left: 4px; }
+  th .arrows button { padding: 0; background: transparent; border: none; line-height: 0; color: #bdb8ac; border-radius: 3px; cursor: pointer; }
+  th .arrows button:hover { color: var(--ink); background: var(--card2); filter: none; }
+  th .arrows button.on { color: var(--tomato); }
   th.num { text-align: right; }
   td.rank { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
   td.rank b { color: var(--ink); font-weight: 600; }
@@ -229,7 +230,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="legend">Click a column heading to sort. Fit at your current pick
+        <div class="legend">Use the arrows beside a heading to sort. Fit at your current pick
           <span class="fit steal"></span>Should be gone, grab him
           <span class="fit safe"></span>Likely there
           <span class="fit risky"></span>Coin flip
@@ -426,7 +427,8 @@ function render(){
     {key:"vorRank", label:"Rk", cls:"num", title:"Overall rank by VOR"},
     {key:null, label:"", cls:""}
   ];
-  $("boardHead").innerHTML = "<tr>"+COLS.map(c=>c.key?`<th class="sortable ${c.cls} ${state.sort.key===c.key?"sorted "+(state.sort.dir>0?"asc":"desc"):""}" ${c.title?`title="${c.title}"`:""} onclick="sortBy('${c.key}')">${c.label}</th>`:"<th></th>").join("")+"</tr>";
+  const arrow = (key,dir) => `<button class="${state.sort.key===key&&state.sort.dir===dir?"on":""}" title="Sort ${dir>0?"ascending":"descending"}" onclick="sortBy('${key}',${dir})"><svg width="9" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="${dir>0?"M5 0l5 6H0z":"M5 6L0 0h10z"}"/></svg></button>`;
+  $("boardHead").innerHTML = "<tr>"+COLS.map(c=>c.key?`<th class="sortable ${c.cls} ${state.sort.key===c.key?"sorted":""}" ${c.title?`title="${c.title}"`:""}>${c.label}<span class="arrows">${arrow(c.key,1)}${arrow(c.key,-1)}</span></th>`:"<th></th>").join("")+"</tr>";
   const sk = state.sort.key, sd = state.sort.dir;
   rows.sort((a,b)=>{
     let x=a[sk], y=b[sk];
@@ -460,10 +462,8 @@ function render(){
   renderBuilder();
 }
 
-function sortBy(key){
-  const DESC_DEFAULT = new Set(["proj","vor"]);
-  if(state.sort.key===key) state.sort.dir = -state.sort.dir;
-  else state.sort = {key, dir: DESC_DEFAULT.has(key)?-1:1};
+function sortBy(key, dir){
+  state.sort = {key, dir};
   save(); render();
 }
 
