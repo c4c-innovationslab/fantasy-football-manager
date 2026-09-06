@@ -23,7 +23,7 @@ You can also open `league/index.html` straight from the file system once `league
 
 `.github/workflows/pages.yaml` publishes the `league/` folder to GitHub Pages on every push to `main` and again after each scheduled data refresh. The page lands at `https://c4c-innovationslab.github.io/fantasy-football-manager/`.
 
-One time setup. In the repo go to Settings, then Pages, and set Source to GitHub Actions. Until that is set the deploy job will fail with a message saying Pages is not enabled.
+The site works with either Pages source. With Source set to Deploy from a branch on `main`, the root `index.html` redirects to `league/` and the committed `league_data.js` is served as is. With Source set to GitHub Actions, the workflow rebuilds `league_data.js` and publishes the `league/` folder at the site root. Switching to GitHub Actions in Settings, then Pages, stops the duplicate branch build that otherwise runs on every push.
 
 ## How the pieces connect
 
