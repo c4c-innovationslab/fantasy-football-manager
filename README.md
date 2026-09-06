@@ -19,6 +19,12 @@ make serve         # same, then opens the draft room on http://localhost:8000
 
 You can also open `league/index.html` straight from the file system once `league_data.js` exists. The generated file is committed so the page works right after cloning.
 
+## Hosted draft room
+
+`.github/workflows/pages.yaml` publishes the `league/` folder to GitHub Pages on every push to `main` and again after each scheduled data refresh. The page lands at `https://c4c-innovationslab.github.io/fantasy-football-manager/`.
+
+One time setup. In the repo go to Settings, then Pages, and set Source to GitHub Actions. Until that is set the deploy job will fail with a message saying Pages is not enabled.
+
 ## How the pieces connect
 
 1. `data/main.py` scrapes the three projection sources and ADP into `data/raw`, then `data/aggregate.py` averages them into `data/processed/Projections-<year>.json`. That file has raw stat lines per player, things like passing yards, receptions and rushing touchdowns.
