@@ -1,0 +1,7 @@
+boto3
+bs4
+numpy==2.0.1
+pandas
+selenium==4.10.0
+webdriver-manager==4.0.2
+requests
