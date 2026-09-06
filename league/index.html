@@ -450,7 +450,7 @@ function startClock(){ clearInterval(clockTimer); clockLeft = CLOCK; clockTimer 
 function stopClock(){ clearInterval(clockTimer); clockTimer=null; renderTimer(); }
 function renderTimer(){ const t=$("timer"); if(!t) return; t.textContent = clockTimer||clockLeft<CLOCK ? (clockLeft<=0?"Time":clockLeft+"s") : CLOCK+"s"; const tile=t.closest(".tile"); tile.className="tile timer"+(clockLeft<=5&&clockTimer?" late":(clockLeft<=15&&clockTimer?" warn":"")); $("clockBtn").lastChild.textContent = clockTimer ? "Restart the clock" : "Start the clock"; }
 
-function mark(p, status){ state.history.push({id:p.id, prev:p.status, cur:state.cur}); p.status = status; if(state.cur<TOTAL_PICKS) state.cur++; if(clockTimer) startClock(); save(); render(); }
+function mark(p, status){ if(!p) return; state.history.push({id:p.id, prev:p.status, cur:state.cur}); p.status = status; if(state.cur<TOTAL_PICKS) state.cur++; if(clockTimer) startClock(); save(); render(); }
 function undo(){ const h=state.history.pop(); if(!h) return; RAW[h.id].status=h.prev; state.cur=h.cur; save(); render(); }
 function bump(d){ state.cur=Math.min(TOTAL_PICKS,Math.max(1,state.cur+d)); save(); render(); }
 function toggleWatch(name){ const i=state.watch.findIndex(w=>w.name===name); if(i>=0) state.watch.splice(i,1); else state.watch.push({name,tier:3}); save(); render(); }
