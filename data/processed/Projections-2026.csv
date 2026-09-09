@@ -1,477 +1,477 @@
-key,name,pos,team,bye,std,half_ppr,ppr,kick_30_39,pass_ints,df_safeties,rush_tds,reception_yds,pass_tds,df_points_allowed_per_game,df_sacks,df_ints,kick_20_29,kick_50,df_tds,kick_40_49,reception_tds,receptions,kick_extra_points,two_pts,fumbles,rush_yds,kick_0_19,pass_yds,df_fumbles
-gibbs_RB_DET,Jahmyr Gibbs,RB,DET,6.0,1,1,1,,,,7.6,292.6,,,,,,,,,1.6,36.2,,,0.1,753.1,,,
-robinson_RB_ATL,Bijan Robinson,RB,ATL,11.0,2,2,2,,,,4.2,375.1,,,,,,,,,1.6,40.2,,,0.1,725.6,,,
-nacua_WR_LAR,Puka Nacua,WR,LAR,11.0,4,3,3,,,,0.6,841.2,,,,,,,,,5.2,65.5,,,0.0,48.6,,,
-chase_WR_CIN,Ja'Marr Chase,WR,CIN,6.0,5,4,4,,,,0.0,799.8,,,,,,,,,5.8,63.7,,,0.0,11.0,,,
-mccaffrey_RB_SF,Christian McCaffrey,RB,SF,8.0,7,5,5,,,,4.7,357.9,,,,,,,,,2.6,41.6,,,0.1,592.8,,,
-smithnjigba_WR_SEA,Jaxon Smith-Njigba,WR,SEA,11.0,8,7,6,,,,0.0,830.2,,,,,,,,,4.8,61.8,,,0.0,13.5,,,
-brown_WR_DET,Amon-Ra St. Brown,WR,DET,6.0,10,8,7,,,,0.0,753.2,,,,,,,,,5.4,62.4,,,0.0,6.8,,,
-taylor_RB_IND,Jonathan Taylor,RB,IND,13.0,3,6,8,,,,6.4,204.5,,,,,,,,,0.6,26.2,,,0.1,793.0,,,
-achane_RB_MIA,De'Von Achane,RB,MIA,6.0,11,11,9,,,,2.7,273.2,,,,,,,,,1.7,35.0,,,0.1,684.5,,,
-lamb_WR_DAL,CeeDee Lamb,WR,DAL,14.0,13,12,10,,,,0.0,727.4,,,,,,,,,4.7,54.4,,,0.0,7.4,,,
-cook_RB_BUF,James Cook III,RB,BUF,7.0,9,9,11,,,,5.7,158.3,,,,,,,,,1.0,18.8,,,0.2,742.8,,,
-jefferson_WR_MIN,Justin Jefferson,WR,MIN,6.0,16,13,12,,,,0.0,720.5,,,,,,,,,3.6,58.2,,,0.0,5.6,,,
-brown_RB_CIN,Chase Brown,RB,CIN,6.0,14,14,13,,,,3.8,231.0,,,,,,,,,1.6,34.1,,,0.1,546.8,,,
-london_WR_ATL,Drake London,WR,ATL,11.0,15,15,14,,,,0.0,663.2,,,,,,,,,3.8,53.8,,,0.1,-0.0,,,
-henry_RB_BAL,Derrick Henry,RB,BAL,13.0,6,10,15,,,,6.9,110.1,,,,,,,,,0.5,11.0,,,0.1,801.4,,,
-brown_WR_NE,A.J. Brown,WR,NE,11.0,19,17,16,,,,0.0,644.0,,,,,,,,,3.7,45.6,,,0.0,0.0,,,
-rice_WR_KC,Rashee Rice,WR,KC,5.0,21,18,17,,,,0.6,567.4,,,,,,,,,4.8,48.8,,,0.0,22.6,,,
-barkley_RB_PHI,Saquon Barkley,RB,PHI,10.0,12,16,18,,,,4.8,196.0,,,,,,,,,1.0,22.7,,,0.1,686.2,,,
-pickens_WR_DAL,George Pickens,WR,DAL,14.0,18,19,19,,,,0.0,598.6,,,,,,,,,4.3,42.8,,,0.0,-0.0,,,
-olave_WR_NO,Chris Olave,WR,NO,8.0,26,22,20,,,,0.0,634.8,,,,,,,,,3.8,48.4,,,0.0,0.0,,,
-collins_WR_HOU,Nico Collins,WR,HOU,8.0,20,21,21,,,,0.0,632.1,,,,,,,,,3.8,45.8,,,0.0,6.4,,,
-walker_RB_KC,Kenneth Walker,RB,KC,5.0,17,20,22,,,,4.7,197.0,,,,,,,,,1.0,25.2,,,0.1,656.4,,,
-jeanty_RB_LV,Ashton Jeanty,RB,LV,13.0,27,24,23,,,,3.7,253.9,,,,,,,,,1.2,33.8,,,0.0,576.0,,,
-hampton_RB_LAC,Omarion Hampton,RB,LAC,7.0,23,23,24,,,,4.9,191.6,,,,,,,,,1.0,27.5,,,0.1,573.1,,,
-flowers_WR_BAL,Zay Flowers,WR,BAL,13.0,24,25,25,,,,0.0,620.3,,,,,,,,,2.7,43.4,,,0.1,30.2,,,
-nabers_WR_NYG,Malik Nabers,WR,NYG,8.0,32,26,26,,,,0.0,597.3,,,,,,,,,3.8,44.9,,,0.0,11.6,,,
-wilson_WR_NYJ,Garrett Wilson,WR,NYJ,13.0,41,28,27,,,,0.0,621.6,,,,,,,,,2.8,52.8,,,0.1,5.6,,,
-love_RB_ARI,Jeremiyah Love,RB,ARI,14.0,33,27,28,,,,3.6,253.4,,,,,,,,,1.0,33.6,,,0.2,587.4,,,
-smith_WR_PHI,DeVonta Smith,WR,PHI,10.0,39,32,29,,,,0.0,603.4,,,,,,,,,3.2,48.2,,,0.0,0.0,,,
-hall_RB_NYJ,Breece Hall,RB,NYJ,13.0,31,33,30,,,,4.2,233.4,,,,,,,,,1.6,27.3,,,0.1,614.2,,,
-mcbride_TE_ARI,Trey McBride,TE,ARI,14.0,54,44,31,,,,0.0,543.7,,,,,,,,,2.7,57.2,,,0.0,0.0,,,
-mcmillan_WR_CAR,Tetairoa McMillan,WR,CAR,5.0,34,34,32,,,,0.0,630.4,,,,,,,,,3.2,44.0,,,0.1,0.0,,,
-williams_RB_DAL,Javonte Williams,RB,DAL,14.0,25,29,33,,,,5.8,113.4,,,,,,,,,1.0,19.4,,,0.1,674.6,,,
-williams_RB_LAR,Kyren Williams,RB,LAR,11.0,22,30,34,,,,5.2,118.4,,,,,,,,,1.1,17.5,,,0.1,564.8,,,
-allen_QB_BUF,Josh Allen,QB,BUF,7.0,28,31,35,,6.5,,6.2,,13.6,,,,,,,,,,,,0.2,307.6,,2072.0,
-bowers_TE_LV,Brock Bowers,TE,LV,13.0,49,43,36,,,,0.0,532.4,,,,,,,,,3.8,52.5,,,0.0,15.0,,,
-egbuka_WR_TB,Emeka Egbuka,WR,TB,10.0,35,35,37,,,,0.0,597.0,,,,,,,,,3.8,37.1,,,0.0,6.4,,,
-etienne_RB_NO,Travis Etienne Jr.,RB,NO,8.0,36,37,38,,,,3.2,206.4,,,,,,,,,1.2,24.0,,,0.1,604.2,,,
-higgins_WR_CIN,Tee Higgins,WR,CIN,6.0,29,36,39,,,,0.0,508.4,,,,,,,,,4.4,38.6,,,0.0,0.0,,,
-skattebo_RB_NYG,Cam Skattebo,RB,NYG,8.0,37,39,40,,,,3.8,177.3,,,,,,,,,0.6,23.8,,,0.1,534.6,,,
-mcconkey_WR_LAC,Ladd McConkey,WR,LAC,7.0,45,42,41,,,,0.0,554.4,,,,,,,,,3.3,42.6,,,0.0,0.0,,,
-adams_WR_LAR,Davante Adams,WR,LAR,11.0,38,40,42,,,,0.0,530.6,,,,,,,,,5.8,36.1,,,0.0,0.0,,,
-swift_RB_CHI,D'Andre Swift,RB,CHI,10.0,40,41,43,,,,4.3,145.2,,,,,,,,,0.6,16.6,,,0.1,524.4,,,
-waddle_WR_DEN,Jaylen Waddle,WR,DEN,10.0,48,47,44,,,,0.0,523.0,,,,,,,,,3.2,40.6,,,0.0,6.6,,,
-williams_WR_DET,Jameson Williams,WR,DET,6.0,30,38,45,,,,0.5,545.2,,,,,,,,,3.2,33.8,,,0.0,23.7,,,
-irving_RB_TB,Bucky Irving,RB,TB,10.0,47,45,46,,,,2.7,159.2,,,,,,,,,1.1,19.8,,,0.1,529.6,,,
-moore_WR_BUF,DJ Moore,WR,BUF,7.0,51,48,47,,,,0.0,494.2,,,,,,,,,3.7,35.3,,,0.1,20.4,,,
-mclaurin_WR_WSH,Terry McLaurin,WR,WSH,7.0,42,46,48,,,,0.0,549.0,,,,,,,,,3.2,40.2,,,0.0,0.0,,,
-judkins_RB_CLE,Quinshon Judkins,RB,CLE,11.0,50,50,49,,,,3.8,117.7,,,,,,,,,0.5,17.2,,,0.1,649.4,,,
-burden_WR_CHI,Luther Burden III,WR,CHI,10.0,57,51,50,,,,0.0,504.8,,,,,,,,,2.7,40.3,,,0.0,25.5,,,
-maye_QB_NE,Drake Maye,QB,NE,11.0,43,53,51,,5.8,,2.1,,14.1,,,,,,,,,,,,0.3,281.6,,2150.0,
-montgomery_RB_HOU,David Montgomery,RB,HOU,8.0,53,56,52,,,,3.8,119.8,,,,,,,,,0.5,16.8,,,0.1,526.6,,,
-tuten_RB_JAX,Bhayshul Tuten,RB,JAX,7.0,52,52,53,,,,3.8,129.4,,,,,,,,,0.6,17.4,,,0.2,521.0,,,
-loveland_TE_CHI,Colston Loveland,TE,CHI,10.0,69,60,54,,,,0.0,482.6,,,,,,,,,3.2,43.0,,,0.0,0.0,,,
-burrow_QB_CIN,Joe Burrow,QB,CIN,6.0,55,55,55,,6.0,,1.0,,17.6,,,,,,,,,,,,0.1,99.2,,2193.0,
-odunze_WR_CHI,Rome Odunze,WR,CHI,10.0,44,49,56,,,,0.0,545.2,,,,,,,,,4.2,31.9,,,0.0,0.2,,,
-jackson_QB_BAL,Lamar Jackson,QB,BAL,13.0,56,58,57,,5.3,,2.1,,13.9,,,,,,,,,,,,0.3,353.4,,2043.5,
-watson_WR_GB,Christian Watson,WR,GB,11.0,46,54,58,,,,0.0,465.2,,,,,,,,,3.7,29.6,,,0.0,6.8,,,
-evans_WR_SF,Mike Evans,WR,SF,8.0,59,57,59,,,,0.0,469.2,,,,,,,,,3.2,30.4,,,0.0,0.0,,,
-stevenson_RB_NE,Rhamondre Stevenson,RB,NE,11.0,61,65,60,,,,3.7,186.6,,,,,,,,,1.0,22.6,,,0.2,404.3,,,
-sutton_WR_DEN,Courtland Sutton,WR,DEN,10.0,64,61,61,,,,0.0,471.2,,,,,,,,,4.2,36.6,,,0.0,0.0,,,
-washington_WR_JAX,Parker Washington,WR,JAX,7.0,65,63,62,,,,0.0,449.0,,,,,,,,,2.7,33.7,,,0.0,19.6,,,
-warren_RB_PIT,Jaylen Warren,RB,PIT,9.0,66,69,63,,,,2.7,169.4,,,,,,,,,0.6,24.2,,,0.1,431.5,,,
-henderson_RB_NE,TreVeyon Henderson,RB,NE,11.0,60,67,64,,,,3.0,127.6,,,,,,,,,0.5,18.1,,,0.0,402.8,,,
-metcalf_WR_PIT,DK Metcalf,WR,PIT,9.0,63,66,65,,,,0.0,498.3,,,,,,,,,3.2,34.3,,,0.0,0.3,,,
-prescott_QB_DAL,Dak Prescott,QB,DAL,14.0,68,64,66,,6.4,,1.0,,16.0,,,,,,,,,,,,0.1,99.2,,2185.5,
-harrison_WR_ARI,Marvin Harrison Jr.,WR,ARI,14.0,67,68,67,,,,0.0,504.0,,,,,,,,,2.7,36.3,,,0.0,0.0,,,
-warren_TE_IND,Tyler Warren,TE,IND,13.0,82,72,68,,,,0.0,471.4,,,,,,,,,3.2,44.6,,,0.0,14.0,,,
-price_RB_SEA,Jadarian Price,RB,SEA,11.0,62,59,69,,,,4.2,112.3,,,,,,,,,0.6,14.1,,,0.2,488.5,,,
-pollard_RB_TEN,Tony Pollard,RB,TEN,9.0,70,71,70,,,,2.8,97.8,,,,,,,,,0.0,16.0,,,0.1,549.2,,,
-pierce_WR_IND,Alec Pierce,WR,IND,13.0,58,62,71,,,,0.0,500.4,,,,,,,,,2.7,31.4,,,0.0,0.0,,,
-thomas_WR_JAX,Brian Thomas Jr.,WR,JAX,7.0,72,70,72,,,,0.0,455.0,,,,,,,,,2.7,30.2,,,0.0,12.3,,,
-fannin_TE_CLE,Harold Fannin Jr.,TE,CLE,11.0,95,76,73,,,,0.0,436.7,,,,,,,,,1.8,44.7,,,0.1,21.0,,,
-daniels_QB_WSH,Jayden Daniels,QB,WSH,7.0,73,73,74,,5.4,,2.6,,11.6,,,,,,,,,,,,0.1,355.6,,2009.0,
-stafford_QB_LAR,Matthew Stafford,QB,LAR,11.0,74,74,75,,0.4,,0.0,,1.9,,,,,,,,,,,,0.1,2.2,,230.0,
-dowdle_RB_PIT,Rico Dowdle,RB,PIT,9.0,78,81,76,,,,3.2,113.0,,,,,,,,,0.6,15.6,,,0.1,523.4,,,
-wilson_WR_ARI,Michael Wilson,WR,ARI,14.0,77,75,77,,,,0.0,453.8,,,,,,,,,1.6,37.3,,,0.0,0.0,,,
-hurts_QB_PHI,Jalen Hurts,QB,PHI,10.0,76,78,78,,4.6,,4.8,,12.4,,,,,,,,,,,,0.2,234.2,,1999.5,
-pittman_WR_PIT,Michael Pittman Jr.,WR,PIT,9.0,94,82,79,,,,0.0,451.5,,,,,,,,,2.2,46.2,,,0.0,0.0,,,
-godwin_WR_TB,Chris Godwin Jr.,WR,TB,10.0,83,80,80,,,,0.0,51.1,,,,,,,,,0.3,4.4,,,0.0,0.1,,,
-hubbard_RB_CAR,Chuba Hubbard,RB,CAR,5.0,81,87,81,,,,2.2,156.8,,,,,,,,,0.6,21.6,,,0.1,408.8,,,
-tate_WR_TEN,Carnell Tate,WR,TEN,9.0,75,77,82,,,,0.0,535.8,,,,,,,,,2.2,39.2,,,0.1,0.2,,,
-seahawks_DST_SEA,Seahawks,DST,SEA,11.0,84,86,83,,,0.0,,,,19.0,22.9,6.8,,,1.6,,,,,,3.9,,,,3.9
-pitts_TE_ATL,Kyle Pitts Sr.,TE,ATL,11.0,126,97,84,,,,0.0,453.8,,,,,,,,,1.6,42.2,,,0.0,0.0,,,
-purdy_QB_SF,Brock Purdy,QB,SF,8.0,85,90,85,,7.6,,1.6,,14.2,,,,,,,,,,,,0.3,148.5,,2203.0,
-williams_QB_CHI,Caleb Williams,QB,CHI,10.0,90,89,86,,5.3,,1.0,,13.4,,,,,,,,,,,,0.1,203.2,,2039.0,
-broncos_DST_DEN,Broncos,DST,DEN,10.0,96,94,87,,,0.0,,,,20.3,24.7,7.0,,,1.0,,,,,,3.7,,,,3.7
-dobbins_RB_DEN,J.K. Dobbins,RB,DEN,10.0,71,79,88,,,,3.6,68.0,,,,,,,,,0.5,11.1,,,0.1,509.2,,,
-robinson_WR_TEN,Wan'Dale Robinson,WR,TEN,9.0,111,95,89,,,,0.0,436.6,,,,,,,,,1.2,42.0,,,0.0,11.2,,,
-reed_WR_GB,Jayden Reed,WR,GB,11.0,87,85,90,,,,0.0,37.7,,,,,,,,,0.2,3.6,,,0.0,7.3,,,
-brooks_RB_CAR,Jonathon Brooks,RB,CAR,5.0,91,92,91,,,,2.2,145.6,,,,,,,,,0.6,19.2,,,0.1,437.8,,,
-meyers_WR_JAX,Jakobi Meyers,WR,JAX,7.0,97,96,92,,,,0.0,404.6,,,,,,,,,2.6,36.9,,,0.0,16.4,,,
-kittle_TE_SF,George Kittle,TE,SF,8.0,100,93,93,,,,0.0,440.2,,,,,,,,,3.2,40.8,,,0.0,0.0,,,
-lawrence_QB_JAX,Trevor Lawrence,QB,JAX,7.0,93,88,94,,6.9,,2.7,,13.4,,,,,,,,,,,,0.2,176.2,,2075.0,
-gainwell_RB_TB,Kenny Gainwell,RB,TB,10.0,128,116,95,,,,2.6,184.4,,,,,,,,,1.0,27.8,,,0.1,278.6,,,
-johnston_WR_LAC,Quentin Johnston,WR,LAC,7.0,80,83,96,,,,0.0,53.1,,,,,,,,,0.7,3.8,,,0.1,0.5,,,
-jacobs_RB_GB,Josh Jacobs,RB,GB,11.0,79,84,97,,,,8.0,183.0,,,,,,,,,1.0,24.0,,,,717.0,,,
-downs_WR_IND,Josh Downs,WR,IND,13.0,107,102,98,,,,0.0,39.1,,,,,,,,,0.3,3.8,,,0.0,0.1,,,
-harvey_RB_DEN,RJ Harvey,RB,DEN,10.0,123,112,99,,,,0.2,17.6,,,,,,,,,0.2,2.6,,,0.1,28.1,,,
-diggs_WR_WSH,Stefon Diggs,WR,WSH,7.0,105,105,100,,,,0.0,403.6,,,,,,,,,2.1,39.2,,,0.0,0.0,,,
-addison_WR_MIN,Jordan Addison,WR,MIN,6.0,86,91,101,,,,0.1,41.1,,,,,,,,,0.3,3.0,,,0.0,4.2,,,
-texans_DST_HOU,Texans,DST,HOU,8.0,103,103,102,,,0.0,,,,19.9,23.0,6.5,,,1.1,,,,,,6.0,,,,6.0
-shakir_WR_BUF,Khalil Shakir,WR,BUF,7.0,115,115,103,,,,0.0,34.5,,,,,,,,,0.2,3.5,,,0.0,0.2,,,
-rams_DST_LAR,Rams,DST,LAR,11.0,110,111,104,,,0.0,,,,20.6,23.7,6.6,,,1.1,,,,,,4.4,,,,4.4
-laporta_TE_DET,Sam LaPorta,TE,DET,6.0,122,104,105,,,,0.0,420.0,,,,,,,,,2.7,41.1,,,0.0,0.0,,,
-golden_WR_GB,Matthew Golden,WR,GB,11.0,98,99,106,,,,0.0,40.3,,,,,,,,,0.2,3.2,,,0.0,3.3,,,
-goff_QB_DET,Jared Goff,QB,DET,6.0,108,101,107,,0.6,,0.0,,2.2,,,,,,,,,,,,0.2,2.8,,252.0,
-herbert_QB_LAC,Justin Herbert,QB,LAC,7.0,113,108,108,,5.8,,1.1,,14.1,,,,,,,,,,,,0.1,220.8,,2052.0,
-mahomes_QB_KC,Patrick Mahomes,QB,KC,5.0,112,107,109,,0.8,,0.2,,1.4,,,,,,,,,,,,0.0,26.8,,185.0,
-kraft_TE_GB,Tucker Kraft,TE,GB,11.0,88,113,110,,,,0.0,409.5,,,,,,,,,2.2,35.7,,,0.0,8.0,,,
-jones_RB_MIN,Aaron Jones Sr.,RB,MIN,6.0,116,106,111,,,,1.6,180.1,,,,,,,,,1.0,24.6,,,0.1,347.3,,,
-worthy_WR_KC,Xavier Worthy,WR,KC,5.0,92,98,112,,,,0.1,32.3,,,,,,,,,0.2,2.8,,,0.0,9.3,,,
-kelce_TE_KC,Travis Kelce,TE,KC,5.0,152,136,113,,,,,40.9,,,,,,,,,0.3,4.2,,,0.0,,,,
-doubs_WR_NE,Romeo Doubs,WR,NE,11.0,102,100,114,,,,0.0,42.7,,,,,,,,,0.3,3.5,,,0.0,0.0,,,
-monangai_RB_CHI,Kyle Monangai,RB,CHI,10.0,104,110,115,,,,3.2,114.0,,,,,,,,,0.5,13.7,,,0.1,432.5,,,
-mason_RB_MIN,Jordan Mason,RB,MIN,6.0,99,119,116,,,,0.4,4.6,,,,,,,,,0.0,1.1,,,0.1,48.7,,,
-nix_QB_DEN,Bo Nix,QB,DEN,10.0,120,117,117,,0.5,,0.1,,1.2,,,,,,,,,,,,0.1,16.3,,186.0,
-lloyd_RB_GB,MarShawn Lloyd,RB,GB,11.0,119,120,118,,,,2.7,77.8,,,,,,,,,0.5,11.0,,,0.2,338.8,,,
-croskeymerritt_RB_WSH,Jacory Croskey-Merritt,RB,WSH,7.0,89,109,119,,,,0.3,3.6,,,,,,,,,0.0,0.5,,,0.1,46.8,,,
-samuel_WR_SF,Deebo Samuel Sr.,WR,SF,8.0,101,118,120,,,,0.1,36.0,,,,,,,,,0.3,3.7,,,0.0,6.5,,,
-vikings_DST_MIN,Vikings,DST,MIN,6.0,124,114,121,,,0.0,,,,21.0,21.1,5.8,,,1.1,,,,,,4.9,,,,4.9
-concepcion_WR_CLE,KC Concepcion,WR,CLE,11.0,118,121,122,,,,0.0,46.7,,,,,,,,,0.2,4.3,,,0.2,0.5,,,
-dart_QB_NYG,Jaxson Dart,QB,NYG,8.0,129,130,123,,5.4,,3.2,,11.2,,,,,,,,,,,,0.1,291.9,,1938.5,
-coker_WR_CAR,Jalen Coker,WR,CAR,5.0,117,123,124,,,,0.0,50.3,,,,,,,,,0.4,3.7,,,0.1,0.0,,,
-goedert_TE_PHI,Dallas Goedert,TE,PHI,10.0,114,122,125,,,,,48.4,,,,,,,,,0.8,4.1,,,0.0,,,,
-corum_RB_LAR,Blake Corum,RB,LAR,11.0,106,124,126,,,,0.3,2.1,,,,,,,,,0.0,0.4,,,0.0,50.6,,,
-stribling_WR_SF,De'Zhaun Stribling,WR,SF,8.0,121,128,127,,,,0.0,47.4,,,,,,,,,0.2,3.4,,,0.1,0.7,,,
-patriots_DST_NE,Patriots,DST,NE,11.0,127,126,128,,,0.0,,,,24.8,21.6,6.9,,,1.1,,,,,,3.4,,,,3.4
-aubrey_K_DAL,Brandon Aubrey,K,DAL,14.0,134,134,129,0.6,,,,,,,,,0.5,4.7,,5.8,,,24.4,,,,0.0,,
-eagles_DST_PHI,Eagles,DST,PHI,10.0,136,138,130,,,0.1,,,,19.1,21.0,6.4,,,1.1,,,,,,3.9,,,,3.9
-shaheed_WR_SEA,Rashid Shaheed,WR,SEA,11.0,109,125,131,,,,0.5,347.4,,,,,,,,,1.6,23.2,,,0.1,46.0,,,
-spears_RB_TEN,Tyjae Spears,RB,TEN,9.0,161,155,132,,,,0.3,20.6,,,,,,,,,0.0,3.0,,,0.0,19.4,,,
-murray_QB_MIN,Kyler Murray,QB,MIN,6.0,140,135,133,,1.1,,0.2,,1.5,,,,,,,,,,,,0.2,26.4,,195.0,
-white_RB_WSH,Rachaad White,RB,WSH,7.0,139,132,134,,,,2.6,137.2,,,,,,,,,1.0,20.6,,,0.0,302.4,,,
-mayfield_QB_TB,Baker Mayfield,QB,TB,10.0,149,142,135,,0.9,,0.1,,1.7,,,,,,,,,,,,0.2,26.9,,240.0,
-lions_DST_DET,Lions,DST,DET,6.0,133,141,136,,,0.0,,,,20.8,21.8,6.4,,,1.1,,,,,,4.9,,,,4.9
-jeudy_WR_CLE,Jerry Jeudy,WR,CLE,11.0,132,131,137,,,,0.0,383.4,,,,,,,,,1.6,28.0,,,0.1,0.1,,,
-lemon_WR_PHI,Makai Lemon,WR,PHI,10.0,125,127,138,,,,0.0,38.5,,,,,,,,,0.2,2.5,,,0.1,0.9,,,
-andrews_TE_BAL,Mark Andrews,TE,BAL,13.0,137,145,139,,,,,35.4,,,,,,,,,0.5,3.5,,,0.0,,,,
-tucker_WR_LV,Tre Tucker,WR,LV,13.0,130,137,140,,,,0.0,349.8,,,,,,,,,1.7,25.8,,,0.0,30.2,,,
-ferguson_TE_DAL,Jake Ferguson,TE,DAL,14.0,160,159,141,,,,,37.6,,,,,,,,,0.4,4.5,,,0.1,,,,
-likely_TE_NYG,Isaiah Likely,TE,NYG,8.0,138,140,142,,,,,53.7,,,,,,,,,0.4,4.0,,,0.1,,,,
-allen_WR_IND,Keenan Allen,WR,IND,13.0,156,158,143,,,,0.0,37.1,,,,,,,,,0.2,3.5,,,0.0,0.0,,,
-fairbairn_K_HOU,Ka'imi Fairbairn,K,HOU,8.0,150,133,144,0.6,,,,,,,,,0.5,5.2,,5.8,,,16.7,,,,0.0,,
-shough_QB_NO,Tyler Shough,QB,NO,8.0,159,152,145,,0.9,,0.2,,1.4,,,,,,,,,,,,0.2,19.7,,229.0,
-boston_WR_CLE,Denzel Boston,WR,CLE,11.0,142,147,146,,,,0.0,368.0,,,,,,,,,1.6,29.4,,,0.1,0.2,,,
-steelers_DST_PIT,Steelers,DST,PIT,9.0,146,146,147,,,0.0,,,,19.3,22.6,6.3,,,1.1,,,,,,5.4,,,,5.4
-love_QB_GB,Jordan Love,QB,GB,11.0,155,154,148,,5.8,,0.5,,13.2,,,,,,,,,,,,0.1,111.4,,2112.0,
-myers_K_SEA,Jason Myers,K,SEA,11.0,141,129,149,0.7,,,,,,,,,0.4,4.6,,5.3,,,23.0,,,,0.0,,
-mcmillan_WR_TB,Jalen McMillan,WR,TB,10.0,135,139,150,,,,0.0,38.0,,,,,,,,,0.3,2.7,,,0.0,1.9,,,
-marks_RB_HOU,Woody Marks,RB,HOU,8.0,148,144,151,,,,0.2,9.8,,,,,,,,,0.2,1.1,,,0.0,37.8,,,
-harris_RB_NYG,Najee Harris,RB,NYG,8.0,484,490,152,,,,1.1,40.4,,,,,,,,,0.0,6.3,,,0.0,227.1,,,
-jennings_WR_MIN,Jauan Jennings,WR,MIN,6.0,151,169,153,,,,0.0,35.2,,,,,,,,,0.4,3.1,,,0.0,0.0,,,
-chargers_DST_LAC,Chargers,DST,LAC,7.0,164,156,154,,,0.0,,,,21.1,22.2,6.9,,,1.1,,,,,,4.3,,,,4.3
-darnold_QB_SEA,Sam Darnold,QB,SEA,11.0,172,171,155,,0.8,,0.0,,1.8,,,,,,,,,,,,0.3,8.0,,233.0,
-kincaid_TE_BUF,Dalton Kincaid,TE,BUF,7.0,143,157,157,,,,,41.4,,,,,,,,,0.3,3.1,,,0.0,,,,
-dicker_K_LAC,Cameron Dicker,K,LAC,7.0,157,149,158,0.9,,,,,,,,,0.6,4.7,,5.4,,,22.5,,,,0.0,,
-johnson_RB_KC,Emmett Johnson,RB,KC,5.0,179,195,159,,,,0.1,1.2,,,,,,,,,0.0,0.1,,,0.0,7.7,,,
-tyson_WR_NO,Jordyn Tyson,WR,NO,8.0,938,938,160,,,,0.0,484.0,,,,,,,,,3.0,36.0,,,,0.0,,,
-mevis_K_LAR,Harrison Mevis,K,LAR,11.0,158,150,161,0.4,,,,,,,,,0.4,4.1,,4.8,,,29.0,,,,0.0,,
-barner_TE_SEA,AJ Barner,TE,SEA,11.0,234,243,162,,,,,26.7,,,,,,,,,0.4,2.8,,,0.0,,,,
-mendoza_QB_LV,Fernando Mendoza,QB,LV,13.0,667,672,163,,5.5,,1.0,,7.0,,,,,,,,,,,,0.0,113.2,,1532.2,
-boswell_K_PIT,Chris Boswell,K,PIT,9.0,266,274,164,0.5,,,,,,,,,0.4,0.3,,0.6,,,2.4,,,,0.0,,
-bates_K_DET,Jake Bates,K,DET,6.0,165,160,165,0.6,,,,,,,,,0.4,4.2,,4.8,,,26.2,,,,0.0,,
-branch_WR_ATL,Zachariah Branch,WR,ATL,11.0,271,279,166,,,,0.0,27.4,,,,,,,,,0.1,1.9,,,0.1,0.7,,,
-butker_K_KC,Harrison Butker,K,KC,5.0,173,165,168,0.6,,,,,,,,,0.6,4.2,,5.2,,,21.4,,,,0.0,,
-washington_RB_LV,Mike Washington Jr.,RB,LV,13.0,176,190,169,,,,0.4,15.2,,,,,,,,,0.1,1.9,,,0.1,40.4,,,
-washington_WR_MIA,Malik Washington,WR,MIA,6.0,170,162,170,,,,0.1,21.8,,,,,,,,,0.2,3.0,,,0.1,4.4,,,
-james_RB_SF,Jordan James,RB,SF,8.0,550,555,171,,,,0.2,12.9,,,,,,,,,0.1,1.4,,,0.1,28.2,,,
-jaguars_DST_JAX,Jaguars,DST,JAX,7.0,166,179,172,,,0.0,,,,20.8,22.0,6.9,,,1.1,,,,,,3.8,,,,3.8
-ridley_WR_TEN,Calvin Ridley,WR,TEN,9.0,144,143,173,,,,0.0,365.2,,,,,,,,,1.6,23.0,,,0.0,16.6,,,
-johnson_TE_NO,Juwan Johnson,TE,NO,8.0,175,164,174,,,,,53.0,,,,,,,,,0.2,4.2,,,0.1,,,,
-little_K_JAX,Cam Little,K,JAX,7.0,178,175,175,0.5,,,,,,,,,0.4,4.2,,4.8,,,21.5,,,,0.0,,
-allen_WR_KC,Cyrus Allen,WR,KC,5.0,221,230,176,,,,0.0,245.0,,,,,,,,,2.0,19.0,,,,0.0,,,
-bateman_WR_BAL,Rashod Bateman,WR,BAL,13.0,145,153,177,,,,0.0,323.9,,,,,,,,,2.2,20.2,,,0.0,0.0,,,
-reichard_K_MIN,Will Reichard,K,MIN,6.0,201,163,178,0.6,,,,,,,,,0.5,4.2,,4.8,,,18.2,,,,0.0,,
-allgeier_RB_ARI,Tyler Allgeier,RB,ARI,14.0,186,174,179,,,,0.3,5.4,,,,,,,,,0.0,0.8,,,0.0,28.4,,,
-singleton_RB_TEN,Nicholas Singleton,RB,TEN,9.0,860,863,180,,,,0.6,15.6,,,,,,,,,0.0,2.0,,,0.0,44.9,,,
-coleman_RB_DEN,Jonah Coleman,RB,DEN,10.0,174,177,181,,,,0.0,1.2,,,,,,,,,0.0,0.2,,,0.0,7.2,,,
-henry_TE_NE,Hunter Henry,TE,NE,11.0,131,180,182,,,,,36.9,,,,,,,,,0.2,3.3,,,0.0,,,,
-stroud_QB_HOU,C.J. Stroud,QB,HOU,8.0,169,188,183,,0.8,,0.1,,1.6,,,,,,,,,,,,0.1,16.8,,206.0,
-holani_RB_SEA,George Holani,RB,SEA,11.0,514,519,184,,,,0.1,1.7,,,,,,,,,0.0,0.2,,,0.0,6.5,,,
-nailor_WR_LV,Jalen Nailor,WR,LV,13.0,153,168,185,,,,0.0,323.0,,,,,,,,,1.7,23.5,,,0.0,5.7,,,
-rodriguez_RB_JAX,Chris Rodriguez Jr.,RB,JAX,7.0,163,178,186,,,,0.5,1.2,,,,,,,,,0.0,0.1,,,0.0,36.6,,,
-mclaughlin_K_TB,Chase McLaughlin,K,TB,10.0,167,166,187,0.4,,,,,,,,,0.4,0.3,,0.4,,,2.5,,,,0.0,,
-packers_DST_GB,Packers,DST,GB,11.0,743,747,188,,,0.0,,,,21.8,3.8,1.1,,,0.2,,,,,,0.8,,,,0.8
-jones_QB_IND,Daniel Jones,QB,IND,13.0,203,185,189,,0.7,,0.2,,1.4,,,,,,,,,,,,0.2,9.2,,211.0,
-boutte_WR_HOU,Kayshon Boutte,WR,HOU,8.0,154,167,190,,,,0.0,32.3,,,,,,,,,0.3,2.1,,,0.0,0.0,,,
-cowboys_DST_DAL,Cowboys,DST,DAL,14.0,348,355,191,,,0.0,,,,24.7,21.2,5.9,,,1.1,,,,,,3.8,,,,3.8
-wicks_WR_PHI,Dontayvion Wicks,WR,PHI,10.0,199,194,192,,,,0.0,273.5,,,,,,,,,1.6,21.2,,,0.0,0.2,,,
-sampson_RB_CLE,Dylan Sampson,RB,CLE,11.0,825,206,193,,,,0.1,19.4,,,,,,,,,0.2,2.7,,,0.1,15.7,,,
-hill_RB_BAL,Justice Hill,RB,BAL,13.0,505,511,194,,,,1.1,180.5,,,,,,,,,1.0,20.2,,,0.0,143.6,,,
-mitchell_RB_LAC,Keaton Mitchell,RB,LAC,7.0,686,161,196,,,,0.1,4.9,,,,,,,,,0.0,0.7,,,0.0,32.5,,,
-falcons_DST_ATL,Falcons,DST,ATL,11.0,204,192,197,,,0.1,,,,25.6,20.9,6.3,,,1.0,,,,,,3.8,,,,3.8
-strange_TE_JAX,Brenton Strange,TE,JAX,7.0,893,187,199,,,,0.0,321.1,,,,,,,,,2.2,31.4,,,0.0,0.0,,,
-kupp_WR_SEA,Cooper Kupp,WR,SEA,11.0,181,173,200,,,,0.0,39.4,,,,,,,,,0.2,3.4,,,0.0,0.2,,,
-lane_WR_BAL,Ja'Kobi Lane,WR,BAL,13.0,177,176,201,,,,0.0,39.0,,,,,,,,,0.5,2.6,,,0.1,1.0,,,
-allen_RB_NYJ,Braelon Allen,RB,NYJ,13.0,162,172,202,,,,1.7,48.7,,,,,,,,,0.0,7.0,,,0.2,188.8,,,
-bass_K_BUF,Tyler Bass,K,BUF,7.0,236,245,203,0.3,,,,,,,,,0.4,0.2,,0.3,,,2.0,,,,0.0,,
-bills_DST_BUF,Bills,DST,BUF,7.0,189,196,204,,,0.0,,,,25.2,21.6,6.4,,,1.1,,,,,,3.8,,,,3.8
-bears_DST_CHI,Bears,DST,CHI,10.0,240,249,205,,,0.0,,,,23.9,20.1,7.0,,,1.1,,,,,,5.4,,,,5.4
-bigsby_RB_PHI,Tank Bigsby,RB,PHI,10.0,171,199,206,,,,1.6,15.7,,,,,,,,,0.0,2.1,,,0.0,206.9,,,
-chiefs_DST_KC,Chiefs,DST,KC,5.0,320,327,207,,,0.0,,,,20.2,21.2,6.3,,,1.0,,,,,,3.8,,,,3.8
-tracy_RB_NYG,Tyrone Tracy Jr.,RB,NYG,8.0,168,209,208,,,,0.1,9.0,,,,,,,,,0.1,1.1,,,0.1,33.0,,,
-lutz_K_DEN,Wil Lutz,K,DEN,10.0,194,202,209,0.5,,,,,,,,,0.4,0.2,,0.3,,,2.0,,,,0.0,,
-willis_QB_MIA,Malik Willis,QB,MIA,6.0,195,189,210,,5.4,,1.6,,7.3,,,,,,,,,,,,0.3,292.4,,1877.0,
-ravens_DST_BAL,Ravens,DST,BAL,13.0,180,186,211,,,0.0,,,,21.6,23.0,6.4,,,1.0,,,,,,4.4,,,,4.4
-vele_WR_NO,Devaughn Vele,WR,NO,8.0,198,214,212,,,,0.0,289.0,,,,,,,,,1.6,25.8,,,0.0,0.0,,,
-santos_K_CHI,Cairo Santos,K,CHI,10.0,196,184,213,0.5,,,,,,,,,0.4,4.2,,4.8,,,21.0,,,,0.0,,
-smack_K_GB,Trey Smack,K,GB,11.0,205,200,214,0.5,,,,,,,,,0.4,4.1,,5.2,,,21.4,,,,0.0,,
-douglas_WR_MIA,Caleb Douglas,WR,MIA,6.0,182,205,215,,,,0.0,303.6,,,,,,,,,1.1,22.6,,,0.1,0.3,,,
-mitchell_WR_NYJ,Adonai Mitchell,WR,NYJ,13.0,188,181,216,,,,0.0,328.1,,,,,,,,,2.1,22.2,,,0.1,5.4,,,
-bernard_WR_PIT,Germie Bernard,WR,PIT,9.0,257,265,217,,,,0.0,30.2,,,,,,,,,0.2,2.5,,,0.1,0.7,,,
-loop_K_BAL,Tyler Loop,K,BAL,13.0,197,191,218,0.6,,,,,,,,,0.5,4.0,,4.7,,,23.4,,,,0.0,,
-black_RB_SF,Kaelon Black,RB,SF,8.0,192,182,219,,,,1.1,34.5,,,,,,,,,0.0,4.4,,,0.1,172.4,,,
-browns_DST_CLE,Browns,DST,CLE,11.0,202,204,220,,,0.0,,,,24.3,21.8,5.9,,,1.0,,,,,,3.8,,,,3.8
-perine_RB_CIN,Samaje Perine,RB,CIN,6.0,757,761,221,,,,1.6,73.4,,,,,,,,,0.5,10.0,,,0.2,232.6,,,
-ferguson_TE_LAR,Terrance Ferguson,TE,LAR,11.0,426,203,223,,,,0.0,304.5,,,,,,,,,2.6,23.9,,,0.0,0.0,,,
-davis_RB_DAL,Malik Davis,RB,DAL,14.0,362,369,224,,,,0.2,4.4,,,,,,,,,0.0,0.5,,,0.0,39.9,,,
-young_QB_CAR,Bryce Young,QB,CAR,5.0,1019,1019,225,,0.9,,0.3,,1.6,,,,,,,,,,,,0.1,19.9,,219.0,
-beckham_WR_NYG,Odell Beckham Jr.,WR,NYG,8.0,243,252,226,,,,0.0,113.0,,,,,,,,,1.0,9.0,,,,0.0,,,
-borregales_K_NE,Andy Borregales,K,NE,11.0,265,273,227,0.4,,,,,,,,,0.3,3.6,,4.2,,,22.0,,,,0.0,,
-noel_WR_HOU,Jaylin Noel,WR,HOU,8.0,723,727,228,,,,0.0,301.4,,,,,,,,,1.6,26.6,,,0.0,11.4,,,
-mcpherson_K_CIN,Evan McPherson,K,CIN,6.0,184,193,230,0.5,,,,,,,,,0.4,4.2,,4.8,,,23.5,,,,0.0,,
-hockenson_TE_MIN,T.J. Hockenson,TE,MIN,6.0,511,148,231,,,,,28.9,,,,,,,,,0.2,3.3,,,0.0,,,,
-jets_DST_NYJ,Jets,DST,NYJ,13.0,556,561,234,,,0.1,,,,25.5,20.8,5.7,,,1.6,,,,,,4.8,,,,4.8
-sadiq_TE_NYJ,Kenyon Sadiq,TE,NYJ,13.0,822,826,235,,,,0.0,329.3,,,,,,,,,2.2,31.5,,,0.1,0.0,,,
-giants_DST_NYG,Giants,DST,NYG,8.0,453,459,236,,,0.1,,,,25.8,21.0,5.8,,,1.1,,,,,,3.4,,,,3.4
-dulcich_TE_MIA,Greg Dulcich,TE,MIA,6.0,393,400,237,,,,0.0,311.6,,,,,,,,,1.1,27.9,,,0.1,0.0,,,
-fields_WR_NYG,Malachi Fields,WR,NYG,8.0,185,211,238,,,,0.0,26.6,,,,,,,,,0.3,1.9,,,0.1,0.8,,,
-ward_QB_TEN,Cam Ward,QB,TEN,9.0,956,956,239,,0.4,,0.2,,1.9,,,,,,,,,,,,0.3,8.3,,211.0,
-teslaa_WR_DET,Isaac TeSlaa,WR,DET,6.0,906,208,240,,,,0.0,162.5,,,,,,,,,1.6,12.8,,,0.0,0.0,,,
-brissett_QB_ARI,Jacoby Brissett,QB,ARI,14.0,276,201,241,,0.8,,0.1,,1.3,,,,,,,,,,,,0.3,15.6,,214.0,
-elliott_K_PHI,Jake Elliott,K,PHI,10.0,404,411,242,0.6,,,,,,,,,0.4,0.2,,0.6,,,2.8,,,,0.0,,
-franklin_WR_DEN,Troy Franklin,WR,DEN,10.0,442,448,243,,,,0.0,123.6,,,,,,,,,1.1,10.2,,,0.0,5.8,,,
-davis_RB_BUF,Ray Davis,RB,BUF,7.0,361,368,244,,,,0.5,30.4,,,,,,,,,0.0,4.0,,,0.0,73.7,,,
-okonkwo_TE_WSH,Chig Okonkwo,TE,WSH,7.0,731,735,245,,,,,32.0,,,,,,,,,0.1,2.7,,,0.0,,,,
-schultz_TE_HOU,Dalton Schultz,TE,HOU,8.0,838,841,246,,,,,37.8,,,,,,,,,0.2,4.0,,,0.0,,,,
-rodgers_QB_PIT,Aaron Rodgers,QB,PIT,9.0,806,810,247,,5.8,,0.6,,10.8,,,,,,,,,,,,0.1,52.2,,1974.5,
-titans_DST_TEN,Titans,DST,TEN,9.0,918,207,248,,,0.0,,,,25.7,22.6,6.4,,,1.6,,,,,,3.9,,,,3.9
-buccaneers_DST_TB,Buccaneers,DST,TB,10.0,294,301,249,,,0.0,,,,28.2,2.4,0.9,,,0.2,,,,,,0.7,,,,0.7
-bengals_DST_CIN,Bengals,DST,CIN,6.0,250,258,250,,,0.0,,,,23.3,20.9,6.4,,,1.1,,,,,,3.3,,,,3.3
-commanders_DST_WSH,Commanders,DST,WSH,7.0,332,339,252,,,,,,,27.6,42.0,11.0,,,2.0,,,,,,9.0,,,,9.0
-legette_WR_CAR,Xavier Legette,WR,CAR,5.0,624,629,253,,,,0.0,22.4,,,,,,,,,0.2,2.1,,,0.0,0.5,,,
-saints_DST_NO,Saints,DST,NO,8.0,823,827,254,,,0.1,,,,27.6,20.5,6.4,,,1.0,,,,,,3.3,,,,3.3
-waller_TE_CAR,Darren Waller,TE,CAR,5.0,183,210,255,,,,0.0,251.8,,,,,,,,,2.2,22.9,,,0.0,0.0,,,
-coleman_WR_BUF,Keon Coleman,WR,BUF,7.0,193,213,256,,,,0.0,338.0,,,,,,,,,3.0,24.0,,,,0.0,,,
-abdullah_RB_JAX,Ameer Abdullah,RB,JAX,,208,217,259,,,,0.0,3.0,,,,,,,,,0.0,0.4,,,0.0,3.7,,,
-adkins_TE_DEN,Nate Adkins,TE,DEN,,209,218,260,,,,,5.7,,,,,,,,,0.1,0.9,,,0.0,,,,
-ali_RB_BAL,Rasheen Ali,RB,BAL,,213,222,264,,,,0.0,15.6,,,,,,,,,0.0,2.2,,,0.0,32.4,,,
-all_TE_CIN,Erick All,TE,CIN,,215,224,266,,,,,18.0,,,,,,,,,0.1,2.0,,,0.0,,,,
-allen_RB_JAX,LeQuint Allen,RB,JAX,,218,227,269,,,,0.0,2.7,,,,,,,,,0.0,0.5,,,0.0,11.5,,,
-allen_RB_WSH,Kaytron Allen,RB,WSH,,219,228,270,,,,0.0,15.0,,,,,,,,,0.0,2.0,,,0.0,30.2,,,
-allen_TE_LAR,Davis Allen,TE,LAR,,220,229,271,,,,,13.7,,,,,,,,,0.2,1.6,,,0.0,,,,
-arroyo_TE_SEA,Elijah Arroyo,TE,SEA,,224,233,274,,,,,6.5,,,,,,,,,0.0,0.6,,,0.0,,,,
-ayomanor_WR_TEN,Elic Ayomanor,WR,TEN,,228,237,278,,,,0.0,36.0,,,,,,,,,0.5,2.6,,,0.0,0.0,,,
-badie_RB_DEN,Tyler Badie,RB,DEN,,231,240,281,,,,0.0,3.4,,,,,,,,,0.0,0.5,,,0.0,2.7,,,
-bagent_QB_CHI,Tyson Bagent,QB,CHI,,232,241,282,,0.0,,0.0,,0.0,,,,,,,,,,,,0.0,0.9,,9.9,
-bates_TE_WSH,John Bates,TE,WSH,,238,247,286,,,,0.0,72.6,,,,,,,,,0.6,7.6,,,0.0,0.0,,,
-bech_WR_LV,Jack Bech,WR,LV,,241,250,288,,,,0.0,315.0,,,,,,,,,1.0,28.0,,,,0.0,,,
-beck_RB_NYJ,Andrew Beck,RB,NYJ,,242,251,289,,,,0.0,15.8,,,,,,,,,0.0,2.2,,,0.0,0.2,,,
-bell_WR_BUF,Skyler Bell,WR,BUF,,245,254,291,,,,0.0,163.0,,,,,,,,,1.0,12.0,,,,0.0,,,
-bellinger_TE_TEN,Daniel Bellinger,TE,TEN,,249,257,294,,,,,21.0,,,,,,,,,0.2,1.6,,,0.0,,,,
-bennett_QB_LAR,Stetson Bennett,QB,LAR,,251,259,295,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.5,,7.7,
-benson_WR_LV,Malik Benson,WR,LV,,253,261,297,,,,0.0,162.0,,,,,,,,,0.6,13.2,,,0.1,0.3,,,
-bentley_TE_DEN,Dallen Bentley,TE,DEN,,255,263,299,,,,,5.5,,,,,,,,,0.0,0.7,,,0.0,,,,
-boerkircher_TE_JAX,Nate Boerkircher,TE,JAX,,263,271,306,,,,,12.7,,,,,,,,,0.1,1.2,,,0.0,,,,
-bond_WR_CLE,Isaiah Bond,WR,CLE,,264,272,307,,,,0.0,89.5,,,,,,,,,0.6,6.3,,,0.0,13.0,,,
-bourne_WR_ARI,Kendrick Bourne,WR,ARI,,267,275,308,,,,0.0,239.0,,,,,,,,,1.0,23.0,,,,0.0,,,
-brooks_RB_CIN,Tahj Brooks,RB,CIN,,278,285,317,,,,1.0,0.0,,,,,,,,,0.0,0.0,,,,128.0,,,
-brooks_RB_GB,Christopher Brooks,RB,GB,,279,286,318,,,,0.2,5.3,,,,,,,,,0.0,0.9,,,0.0,30.1,,,
-brooks_RB_HOU,British Brooks,RB,HOU,,280,287,319,,,,0.0,0.1,,,,,,,,,0.0,0.0,,,0.0,13.4,,,
-brown_WR_PHI,Marquise Brown,WR,PHI,,288,295,327,,,,0.0,96.4,,,,,,,,,0.7,7.8,,,0.0,0.0,,,
-brown_WR_WSH,Dyami Brown,WR,WSH,,289,296,328,,,,0.0,216.0,,,,,,,,,2.0,16.0,,,,0.0,,,
-bryant_WR_DEN,Pat Bryant,WR,DEN,,293,300,332,,,,0.0,320.0,,,,,,,,,2.0,28.0,,,,0.0,,,
-burks_WR_WSH,Treylon Burks,WR,WSH,,296,303,334,,,,0.0,217.0,,,,,,,,,1.0,15.0,,,,0.0,,,
-burton_RB_CLE,Michael Burton,RB,CLE,,297,304,335,,,,0.1,2.2,,,,,,,,,0.0,0.4,,,0.0,0.5,,,
-cameron_WR_JAX,Josh Cameron,WR,JAX,,302,309,340,,,,0.0,40.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-cardinals_DST_ARI,Cardinals,DST,ARI,,306,313,344,,,0.1,,,,29.8,19.8,6.4,,,1.0,,,,,,4.4,,,,4.4
-carlson_K_NO,Daniel Carlson,K,NO,,308,315,346,0.5,,,,,,,,,0.4,0.3,,0.4,,,2.0,,,,0.0,,
-claiborne_RB_MIN,Demond Claiborne,RB,MIN,,325,332,362,,,,0.0,15.1,,,,,,,,,0.0,2.6,,,0.0,33.6,,,
-coleman_WR_MIA,Kevin Coleman Jr.,WR,MIA,,327,334,364,,,,0.0,352.0,,,,,,,,,1.0,27.0,,,,0.0,,,
-colts_DST_IND,Colts,DST,IND,,331,338,368,,,0.0,,,,24.7,20.7,6.3,,,1.0,,,,,,3.4,,,,3.4
-conklin_TE_DET,Tyler Conklin,TE,DET,,333,340,369,,,,0.0,35.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-cook_QB_MIA,Brady Cook,QB,MIA,,338,345,374,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.0,,7.8,
-cooper_WR_NYJ,Omar Cooper Jr.,WR,NYJ,,342,349,378,,,,0.0,37.1,,,,,,,,,0.3,2.9,,,0.1,0.8,,,
-cooper_WR_PHI,Darius Cooper,WR,PHI,,343,350,379,,,,0.0,38.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-cousins_QB_LV,Kirk Cousins,QB,LV,,346,353,382,,0.8,,0.1,,1.6,,,,,,,,,,,,0.1,1.8,,204.0,
-cuevas_TE_BAL,Josh Cuevas,TE,BAL,,352,359,387,,,,0.0,20.9,,,,,,,,,0.0,1.8,,,0.0,0.0,,,
-dalton_QB_PHI,Andy Dalton,QB,PHI,,358,365,393,,0.0,,0.0,,0.1,,,,,,,,,,,,0.1,1.5,,9.2,
-daniels_QB_TB,Jalon Daniels,QB,TB,,359,366,394,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.7,,7.3,
-davis_RB_NYJ,Isaiah Davis,RB,NYJ,,363,370,396,,,,0.1,4.3,,,,,,,,,0.0,0.5,,,0.0,10.5,,,
-delp_TE_NO,Oscar Delp,TE,NO,,371,378,403,,,,,6.6,,,,,,,,,0.0,0.6,,,0.0,,,,
-demercado_RB_DAL,Emari Demercado,RB,DAL,,373,380,405,,,,0.5,15.2,,,,,,,,,0.0,2.2,,,0.0,70.4,,,
-devito_QB_NE,Tommy DeVito,QB,NE,,374,381,406,,0.0,,0.0,,0.0,,,,,,,,,,,,0.0,1.1,,8.3,
-dike_WR_TEN,Chimere Dike,WR,TEN,,376,383,408,,,,0.5,69.6,,,,,,,,,0.8,6.9,,,0.1,25.4,,,
-dillon_RB_CAR,AJ Dillon,RB,CAR,,377,384,409,,,,0.0,1.5,,,,,,,,,0.0,0.2,,,0.0,9.8,,,
-dobbs_QB_DET,Joshua Dobbs,QB,DET,,382,389,414,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,3.8,,71.8,
-dolphins_DST_MIA,Dolphins,DST,MIA,,384,391,416,,,0.1,,,,25.6,20.6,6.4,,,1.1,,,,,,3.3,,,,3.3
-dulin_WR_IND,Ashton Dulin,WR,IND,,394,401,425,,,,0.0,79.2,,,,,,,,,0.6,5.7,,,0.0,14.8,,,
-durham_TE_TB,Payne Durham,TE,TB,,395,402,426,,,,,5.5,,,,,,,,,0.1,0.5,,,0.0,,,,
-endries_TE_CIN,Jack Endries,TE,CIN,,405,412,435,,,,,7.3,,,,,,,,,0.1,0.7,,,0.0,,,,
-engram_TE_DEN,Evan Engram,TE,DEN,,406,413,436,,,,0.0,244.7,,,,,,,,,1.0,25.2,,,0.0,0.0,,,
-ers_DST_SF,49ers,DST,SF,,407,414,437,,,0.0,,,,25.3,20.0,5.7,,,1.0,,,,,,4.8,,,,4.8
-estime_RB_NO,Audric Estime,RB,NO,,411,418,441,,,,0.0,1.4,,,,,,,,,0.0,0.2,,,0.0,7.4,,,
-evans_TE_CAR,Mitchell Evans,TE,CAR,,414,421,444,,,,,9.6,,,,,,,,,0.1,1.0,,,0.0,,,,
-ewers_QB_JAX,Quinn Ewers,QB,JAX,,416,423,446,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,2.5,,83.6,
-fant_TE_NO,Noah Fant,TE,NO,,421,428,451,,,,0.0,92.9,,,,,,,,,0.6,10.8,,,0.2,0.0,,,
-farrell_TE_SF,Luke Farrell,TE,SF,,422,429,452,,,,0.0,36.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-felton_WR_MIN,Tai Felton,WR,MIN,,424,431,454,,,,0.0,37.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-fidone_TE_NYG,Thomas Fidone II,TE,NYG,,427,433,456,,,,,6.2,,,,,,,,,0.1,0.6,,,0.0,,,,
-fields_QB_KC,Justin Fields,QB,KC,,428,434,457,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.3,,7.4,
-fitzgerald_K_CAR,Ryan Fitzgerald,K,CAR,,432,438,461,0.5,,,,,,,,,0.4,4.0,,4.8,,,15.6,,,,0.0,,
-flacco_QB_CIN,Joe Flacco,QB,CIN,,434,440,463,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.9,,10.4,
-folk_K_ATL,Nick Folk,K,ATL,,437,443,466,0.4,,,,,,,,,0.4,4.2,,4.7,,,16.5,,,,0.0,,
-freiermuth_TE_PIT,Pat Freiermuth,TE,PIT,,445,451,473,,,,,30.1,,,,,,,,,0.3,2.7,,,0.0,,,,
-gadsden_TE_LAC,Oronde Gadsden II,TE,LAC,,447,453,475,,,,0.0,179.1,,,,,,,,,1.6,16.2,,,0.0,0.0,,,
-gay_K_LV,Matt Gay,K,LV,,451,457,479,0.4,,,,,,,,,0.4,4.2,,4.8,,,14.8,,,,0.0,,
-gesicki_TE_CIN,Mike Gesicki,TE,CIN,,452,458,480,,,,0.0,192.6,,,,,,,,,2.1,19.4,,,0.0,0.0,,,
-giddens_RB_IND,DJ Giddens,RB,IND,,455,461,482,,,,0.0,14.8,,,,,,,,,0.0,2.0,,,0.0,30.1,,,
-gilliam_RB_NE,Reggie Gilliam,RB,NE,,456,462,483,,,,0.0,30.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-gordon_RB_MIA,Ollie Gordon II,RB,MIA,,461,467,488,,,,0.1,0.2,,,,,,,,,0.0,0.1,,,0.0,4.2,,,
-granson_TE_TEN,Kylen Granson,TE,TEN,,468,474,495,,,,,5.2,,,,,,,,,0.0,0.6,,,0.0,,,,
-gray_TE_KC,Noah Gray,TE,KC,,470,476,497,,,,,7.0,,,,,,,,,0.0,0.8,,,0.0,,,,
-grupe_K_NYJ,Blake Grupe,K,NYJ,,477,483,504,0.6,,,,,,,,,0.5,4.2,,4.7,,,15.4,,,,0.0,,
-hawes_TE_BUF,Jackson Hawes,TE,BUF,,490,496,516,,,,,6.4,,,,,,,,,0.1,0.5,,,0.0,,,,
-heidenreich_RB_PIT,Eli Heidenreich,RB,PIT,,492,498,518,,,,0.1,1.2,,,,,,,,,0.0,0.1,,,0.0,7.6,,,
-helm_TE_TEN,Gunnar Helm,TE,TEN,,493,499,519,,,,,23.9,,,,,,,,,0.2,2.7,,,0.0,,,,
-heyward_RB_LV,Connor Heyward,RB,LV,,498,504,524,,,,,6.8,,,,,,,,,0.1,1.0,,,0.0,,,,
-hibner_TE_BAL,Matthew Hibner,TE,BAL,,500,506,526,,,,0.0,20.9,,,,,,,,,0.0,1.8,,,0.0,0.0,,,
-higbee_TE_LAR,Tyler Higbee,TE,LAR,,502,508,528,,,,,28.3,,,,,,,,,0.2,2.5,,,0.0,,,,
-higgins_TE_ARI,Elijah Higgins,TE,ARI,,503,509,529,,,,0.0,97.2,,,,,,,,,0.6,11.1,,,0.0,0.0,,,
-hollins_WR_NE,Mack Hollins,WR,NE,,517,522,540,,,,0.0,260.0,,,,,,,,,2.0,22.0,,,,0.0,,,
-hooper_TE_ATL,Austin Hooper,TE,ATL,,520,525,543,,,,0.0,98.2,,,,,,,,,0.6,11.2,,,0.0,0.0,,,
-horton_WR_SEA,Tory Horton,WR,SEA,,525,530,548,,,,0.0,163.8,,,,,,,,,1.2,12.2,,,0.0,0.2,,,
-howell_QB_DAL,Sam Howell,QB,DAL,,528,533,551,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.9,,9.6,
-huntley_QB_BAL,Tyler Huntley,QB,BAL,,535,540,558,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,5.3,,68.5,
-hurst_WR_TB,Ted Hurst,WR,TB,,537,542,560,,,,0.0,161.8,,,,,,,,,1.1,12.6,,,0.1,0.4,,,
-hutchinson_WR_HOU,Xavier Hutchinson,WR,HOU,,538,543,561,,,,0.0,28.1,,,,,,,,,0.2,2.4,,,0.0,1.1,,,
-ingold_RB_LAC,Alec Ingold,RB,LAC,,540,545,563,,,,0.0,2.7,,,,,,,,,0.0,0.3,,,0.0,1.4,,,
-iosivas_WR_CIN,Andrei Iosivas,WR,CIN,,542,547,565,,,,0.0,152.0,,,,,,,,,1.1,13.0,,,0.0,5.8,,,
-johnson_RB_BUF,Ty Johnson,RB,BUF,,559,564,580,,,,0.1,14.9,,,,,,,,,0.1,1.3,,,0.0,12.9,,,
-johnson_RB_CHI,Roschon Johnson,RB,CHI,,561,566,582,,,,0.2,1.1,,,,,,,,,0.0,0.2,,,0.0,7.3,,,
-johnson_RB_GB,Kaleb Johnson,RB,GB,,562,567,583,,,,0.0,10.0,,,,,,,,,0.0,1.0,,,,33.0,,,
-johnson_TE_NYG,Theo Johnson,TE,NYG,,567,572,588,,,,,25.1,,,,,,,,,0.3,2.1,,,0.0,,,,
-johnson_WR_TB,Kameron Johnson,WR,TB,,573,578,594,,,,0.0,0.0,,,,,,,,,0.0,0.0,,,,12.0,,,
-joly_TE_MIA,Justin Joly,TE,MIA,,574,579,595,,,,,5.5,,,,,,,,,0.0,0.6,,,0.0,,,,
-jones_QB_SF,Mac Jones,QB,SF,,576,581,597,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.1,,9.3,
-juszczyk_RB_SF,Kyle Juszczyk,RB,SF,,585,590,606,,,,0.0,87.6,,,,,,,,,0.6,10.8,,,0.0,9.6,,,
-kacmarek_TE_MIA,Will Kacmarek,TE,MIA,,586,591,607,,,,0.0,97.8,,,,,,,,,0.6,10.2,,,0.1,0.0,,,
-kieft_TE_TB,Ko Kieft,TE,TB,,594,599,615,,,,0.0,20.5,,,,,,,,,0.0,2.2,,,0.0,0.0,,,
-kiner_RB_NE,Corey Kiner,RB,NE,,596,601,617,,,,0.0,6.8,,,,,,,,,0.0,0.9,,,0.0,19.2,,,
-klare_TE_LAR,Max Klare,TE,LAR,,600,605,621,,,,,7.2,,,,,,,,,0.1,0.7,,,0.0,,,,
-klein_TE_HOU,Marlin Klein,TE,HOU,,601,606,622,,,,0.0,27.6,,,,,,,,,0.0,3.0,,,0.1,0.0,,,
-klubnik_QB_NYJ,Cade Klubnik,QB,NYJ,,602,607,623,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,3.8,,75.2,
-kmet_TE_CHI,Cole Kmet,TE,CHI,,603,608,624,,,,,14.4,,,,,,,,,0.1,1.3,,,0.0,,,,
-knight_RB_ARI,Zonovan Knight,RB,ARI,,604,609,625,,,,0.1,1.2,,,,,,,,,0.0,0.2,,,0.0,5.5,,,
-knox_TE_BUF,Dawson Knox,TE,BUF,,605,610,626,,,,,21.3,,,,,,,,,0.1,1.8,,,0.0,,,,
-kolar_TE_LAC,Charlie Kolar,TE,LAC,,607,612,628,,,,0.0,85.8,,,,,,,,,0.6,8.3,,,0.0,0.0,,,
-koziol_TE_JAX,Tanner Koziol,TE,JAX,,608,613,629,,,,0.0,21.4,,,,,,,,,0.0,2.3,,,0.0,0.0,,,
-lance_QB_LAC,Trey Lance,QB,LAC,,615,620,636,,0.5,,0.0,,0.5,,,,,,,,,,,,0.0,4.2,,78.6,
-lance_WR_NO,Bryce Lance,WR,NO,,616,621,637,,,,0.0,126.6,,,,,,,,,0.6,9.6,,,0.1,0.3,,,
-laube_RB_LV,Dylan Laube,RB,LV,,623,628,644,,,,0.1,2.8,,,,,,,,,0.0,0.4,,,0.3,7.7,,,
-leonard_QB_IND,Riley Leonard,QB,IND,,625,630,645,,1.0,,0.0,,1.0,,,,,,,,,,,,,5.0,,158.0,
-lock_QB_SEA,Drew Lock,QB,SEA,,629,634,649,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,3.1,,71.5,
-long_TE_ARI,Hunter Long,TE,ARI,,632,637,652,,,,0.0,19.0,,,,,,,,,0.0,2.3,,,0.0,0.0,,,
-luepke_RB_DAL,Hunter Luepke,RB,DAL,,635,640,655,,,,0.0,4.0,,,,,,,,,0.0,0.5,,,0.0,5.6,,,
-manhertz_TE_NYG,Chris Manhertz,TE,NYG,,639,644,659,,,,0.0,10.6,,,,,,,,,0.0,1.2,,,0.0,0.0,,,
-mariota_QB_WSH,Marcus Mariota,QB,WSH,,640,645,660,,0.1,,0.0,,0.1,,,,,,,,,,,,0.0,0.3,,17.4,
-mayer_TE_LV,Michael Mayer,TE,LV,,649,654,669,,,,0.0,193.6,,,,,,,,,0.6,19.9,,,0.0,0.0,,,
-mccarthy_QB_MIN,J.J. McCarthy,QB,MIN,,651,656,671,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.0,,7.6,
-mccord_QB_MIA,Kyle McCord,QB,MIA,,652,657,672,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,3.2,,80.4,
-mcgowan_RB_IND,Seth McGowan,RB,IND,,656,661,676,,,,0.1,1.4,,,,,,,,,0.0,0.1,,,0.0,7.6,,,
-mckee_QB_PHI,Tanner McKee,QB,PHI,,658,663,678,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.0,,8.5,
-miller_RB_NO,Kendre Miller,RB,NO,,671,676,690,,,,0.1,12.4,,,,,,,,,0.0,1.7,,,0.0,57.0,,,
-mills_QB_HOU,Davis Mills,QB,HOU,,676,681,695,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,2.6,,77.2,
-milroe_QB_SEA,Jalen Milroe,QB,SEA,,677,682,696,,0.0,,0.0,,0.0,,,,,,,,,,,,0.0,0.8,,5.1,
-mims_WR_DEN,Marvin Mims Jr.,WR,DEN,,681,686,700,,,,0.0,273.0,,,,,,,,,2.0,24.0,,,,45.0,,,
-mingo_WR_DAL,Jonathan Mingo,WR,DAL,,682,687,701,,,,0.0,41.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-minshew_QB_ARI,Gardner Minshew,QB,ARI,,683,688,702,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,2.0,,74.8,
-mooney_WR_NYG,Darnell Mooney,WR,NYG,,694,698,712,,,,0.0,167.5,,,,,,,,,1.0,11.4,,,0.0,6.0,,,
-moreau_TE_HOU,Foster Moreau,TE,HOU,,702,706,720,,,,,6.9,,,,,,,,,0.1,0.6,,,0.0,,,,
-mundt_TE_PHI,Johnny Mundt,TE,PHI,,710,714,728,,,,0.0,20.0,,,,,,,,,0.0,1.7,,,0.0,0.0,,,
-njoku_TE_LAC,David Njoku,TE,LAC,,722,726,740,,,,0.0,222.2,,,,,,,,,2.2,21.4,,,0.0,0.0,,,
-nwangwu_RB_NYJ,Kene Nwangwu,RB,NYJ,,724,728,741,,,,0.0,0.2,,,,,,,,,0.0,0.0,,,0.0,4.0,,,
-ogletree_TE_IND,Andrew Ogletree,TE,IND,,728,732,745,,,,0.0,20.0,,,,,,,,,0.0,2.2,,,0.0,0.0,,,
-oliver_TE_MIN,Josh Oliver,TE,MIN,,734,738,750,,,,0.0,82.3,,,,,,,,,0.6,9.2,,,0.0,0.0,,,
-otton_TE_TB,Cade Otton,TE,TB,,738,742,754,,,,0.0,241.5,,,,,,,,,1.1,24.4,,,0.0,0.0,,,
-palmer_WR_BUF,Joshua Palmer,WR,BUF,,745,749,759,,,,0.0,231.0,,,,,,,,,1.0,19.0,,,,0.0,,,
-panthers_DST_CAR,Panthers,DST,CAR,,748,752,762,,,0.0,,,,24.7,19.4,5.8,,,1.0,,,,,,2.7,,,,2.7
-parkinson_TE_LAR,Colby Parkinson,TE,LAR,,750,754,764,,,,,24.7,,,,,,,,,0.3,2.5,,,0.0,,,,
-patterson_K_MIA,Riley Patterson,K,MIA,,752,756,766,0.5,,,,,,,,,0.4,4.1,,4.8,,,13.2,,,,0.0,,
-payton_QB_PHI,Cole Payton,QB,PHI,,754,758,768,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.7,,6.9,
-pickett_QB_CAR,Kenny Pickett,QB,CAR,,760,764,773,,0.0,,0.0,,0.6,,,,,,,,,,,,0.0,2.8,,80.9,
-pineiro_K_SF,Eddy Pineiro,K,SF,,764,768,777,0.4,,,,,,,,,0.3,4.6,,5.2,,,21.9,,,,0.0,,
-raiders_DST_LV,Raiders,DST,LV,,779,783,792,,,0.0,,,,24.0,20.2,6.0,,,1.1,,,,,,3.8,,,,3.8
-raridon_TE_NE,Eli Raridon,TE,NE,,780,784,793,,,,,12.7,,,,,,,,,0.1,1.3,,,0.0,,,,
-rattler_QB_NO,Spencer Rattler,QB,NO,,781,785,794,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,4.0,,81.1,
-raymond_WR_CHI,Kalif Raymond,WR,CHI,,782,786,795,,,,0.0,187.0,,,,,,,,,1.0,19.0,,,,27.0,,,
-ricard_RB_NYG,Patrick Ricard,RB,NYG,,793,797,806,,,,0.0,27.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-richardson_QB_IND,Anthony Richardson,QB,IND,,796,800,809,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.1,,8.9,
-robinson_WR_SF,Demarcus Robinson,WR,SF,,805,809,818,,,,0.0,25.6,,,,,,,,,0.2,1.8,,,0.0,0.3,,,
-roush_TE_CHI,Sam Roush,TE,CHI,,809,813,821,,,,0.0,20.5,,,,,,,,,0.0,2.3,,,0.0,0.0,,,
-ruckert_TE_NYJ,Jeremy Ruckert,TE,NYJ,,813,817,825,,,,,14.0,,,,,,,,,0.1,1.7,,,0.0,,,,
-rudolph_QB_PIT,Mason Rudolph,QB,PIT,,814,818,826,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.1,,8.0,
-rush_QB_ATL,Cooper Rush,QB,ATL,,816,820,828,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,0.3,,8.7,
-ryan_TE_CLE,Carsen Ryan,TE,CLE,,819,823,831,,,,0.0,34.0,,,,,,,,,0.0,4.0,,,,0.0,,,
-ryland_K_ARI,Chad Ryland,K,ARI,,820,824,832,0.5,,,,,,,,,0.4,4.2,,4.8,,,14.0,,,,0.0,,
-sample_TE_CIN,Drew Sample,TE,CIN,,824,828,834,,,,,6.0,,,,,,,,,0.1,0.7,,,0.0,,,,
-sanders_QB_CLE,Shedeur Sanders,QB,CLE,,829,832,838,,0.2,,0.0,,0.2,,,,,,,,,,,,0.0,3.5,,36.6,
-sanders_RB_CLE,Raheim Sanders,RB,CLE,,830,833,839,,,,0.1,0.9,,,,,,,,,0.0,0.1,,,0.0,5.8,,,
-sanders_TE_CAR,Ja'Tavion Sanders,TE,CAR,,832,835,841,,,,,12.9,,,,,,,,,0.1,1.6,,,0.0,,,,
-saubert_TE_SEA,Eric Saubert,TE,SEA,,833,836,842,,,,0.0,34.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-sauls_K_NYG,Ben Sauls,K,NYG,,834,837,843,0.4,,,,,,,,,0.3,0.1,,0.3,,,1.6,,,,0.0,,
-saylors_RB_DET,Jacob Saylors,RB,DET,,835,838,844,,,,0.1,6.2,,,,,,,,,0.0,0.6,,,0.0,9.9,,,
-schoonmaker_TE_DAL,Luke Schoonmaker,TE,DAL,,836,839,845,,,,,7.9,,,,,,,,,0.1,0.9,,,0.0,,,,
-sharp_TE_TB,Bauer Sharp,TE,TB,,844,847,852,,,,,6.9,,,,,,,,,0.1,0.6,,,0.0,,,,
-shipley_RB_PHI,Will Shipley,RB,PHI,,849,852,857,,,,0.0,2.5,,,,,,,,,0.0,0.3,,,0.0,6.8,,,
-shrader_K_IND,Spencer Shrader,K,IND,,851,854,859,0.6,,,,,,,,,0.5,4.0,,4.7,,,19.2,,,,0.0,,
-simpson_QB_LAR,Ty Simpson,QB,LAR,,855,858,863,,0.0,,0.0,,0.2,,,,,,,,,,,,0.0,1.8,,25.5,
-singletary_RB_NYG,Devin Singletary,RB,NYG,,859,862,867,,,,0.1,0.6,,,,,,,,,0.0,0.1,,,0.0,8.2,,,
-sinnott_TE_WSH,Ben Sinnott,TE,WSH,,861,864,868,,,,,6.2,,,,,,,,,0.1,0.6,,,0.0,,,,
-skowronek_WR_PIT,Ben Skowronek,WR,PIT,,863,866,870,,,,0.0,17.0,,,,,,,,,0.0,2.0,,,,0.0,,,
-slye_K_TEN,Joey Slye,K,TEN,,867,870,873,0.7,,,,,,,,,0.6,4.2,,4.8,,,15.8,,,,0.0,,
-smith_QB_NYJ,Geno Smith,QB,NYJ,,871,874,877,,7.4,,0.6,,10.9,,,,,,,,,,,,0.1,118.0,,2016.0,
-smith_RB_KC,Brashard Smith,RB,KC,,872,875,878,,,,0.0,7.1,,,,,,,,,0.1,1.1,,,0.0,11.4,,,
-smith_TE_GB,Jonnu Smith,TE,GB,,873,876,879,,,,0.0,79.7,,,,,,,,,0.5,8.7,,,0.0,10.0,,,
-smith_WR_NYJ,Arian Smith,WR,NYJ,,877,880,883,,,,0.0,0.0,,,,,,,,,0.0,0.0,,,,24.0,,,
-smythe_TE_BAL,Durham Smythe,TE,BAL,,882,885,888,,,,,4.7,,,,,,,,,0.0,0.5,,,0.0,,,,
-spannford_TE_DAL,Brevyn Spann-Ford,TE,DAL,,885,888,891,,,,,6.3,,,,,,,,,0.1,0.6,,,0.0,,,,
-stevens_K_WSH,Drew Stevens,K,WSH,,887,890,893,0.4,,,,,,,,,0.4,0.1,,0.4,,,1.6,,,,0.0,,
-stidham_QB_DEN,Jarrett Stidham,QB,DEN,,889,892,895,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.0,,7.6,
-stover_TE_HOU,Cade Stover,TE,HOU,,891,894,897,,,,0.0,69.8,,,,,,,,,0.6,8.4,,,0.0,10.0,,,
-stowers_TE_PHI,Eli Stowers,TE,PHI,,892,895,898,,,,,21.7,,,,,,,,,0.2,1.9,,,0.1,,,,
-szmyt_K_CLE,Andre Szmyt,K,CLE,,896,898,901,0.5,,,,,,,,,0.3,4.1,,4.6,,,12.9,,,,0.0,,
-tagovailoa_QB_ATL,Tua Tagovailoa,QB,ATL,,897,899,902,,4.2,,0.0,,5.6,,,,,,,,,,,,0.1,23.6,,1192.0,
-taylor_QB_GB,Tyrod Taylor,QB,GB,,900,902,905,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,7.0,,72.4,
-taylor_TE_NYJ,Mason Taylor,TE,NYJ,,903,905,908,,,,,32.9,,,,,,,,,0.3,3.6,,,0.0,,,,
-team_DST_WSH,Team,DST,WSH,,905,907,910,,,0.0,,,,26.8,2.8,0.3,,,0.1,,,,,,0.4,,,,0.4
-thomas_TE_LV,Ian Thomas,TE,LV,,908,909,912,,,,0.0,20.9,,,,,,,,,0.0,2.4,,,0.0,0.0,,,
-thomas_WR_CHI,Zavion Thomas,WR,CHI,,909,910,913,,,,0.0,91.3,,,,,,,,,0.6,7.6,,,0.1,0.4,,,
-thornton_WR_KC,Tyquan Thornton,WR,KC,,912,913,916,,,,0.0,28.9,,,,,,,,,0.2,1.4,,,0.0,0.0,,,
-tolbert_WR_MIA,Jalen Tolbert,WR,MIA,,920,920,923,,,,0.0,21.7,,,,,,,,,0.2,2.0,,,0.0,0.0,,,
-tonges_TE_SF,Jake Tonges,TE,SF,,921,921,924,,,,,5.7,,,,,,,,,0.1,0.7,,,0.0,,,,
-traore_TE_MIA,Seydou Traore,TE,MIA,,925,925,928,,,,,5.5,,,,,,,,,0.0,0.6,,,0.0,,,,
-trautman_TE_DEN,Adam Trautman,TE,DEN,,927,927,930,,,,0.0,83.0,,,,,,,,,0.6,8.8,,,0.0,0.0,,,
-tremayne_WR_CAR,Brycen Tremayne,WR,CAR,,929,929,932,,,,0.0,36.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-tremble_TE_CAR,Tommy Tremble,TE,CAR,,930,930,933,,,,0.0,94.8,,,,,,,,,0.6,9.7,,,0.0,0.0,,,
-trubisky_QB_TEN,Mitch Trubisky,QB,TEN,,932,932,935,,0.5,,0.0,,0.6,,,,,,,,,,,,0.0,1.2,,80.8,
-tucker_RB_TB,Sean Tucker,RB,TB,,933,933,936,,,,0.1,0.4,,,,,,,,,0.0,0.1,,,0.0,9.8,,,
-turpin_WR_DAL,KaVontae Turpin,WR,DAL,,937,937,940,,,,0.0,227.0,,,,,,,,,2.0,18.0,,,,103.0,,,
-vaki_RB_DET,Sione Vaki,RB,DET,,941,941,943,,,,0.0,9.0,,,,,,,,,0.0,1.0,,,,44.0,,,
-vidal_RB_LAC,Kimani Vidal,RB,LAC,,946,946,948,,,,0.2,9.8,,,,,,,,,0.1,1.0,,,0.0,22.8,,,
-virgil_WR_ARI,Reggie Virgil,WR,ARI,,947,947,949,,,,0.0,39.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-walker_WR_BAL,Devontez Walker,WR,BAL,,952,952,954,,,,0.0,209.0,,,,,,,,,1.0,14.0,,,,0.0,,,
-walker_WR_CHI,Jahdae Walker,WR,CHI,,953,953,955,,,,0.0,31.5,,,,,,,,,0.2,2.4,,,0.0,0.2,,,
-washington_TE_PIT,Darnell Washington,TE,PIT,,960,960,961,,,,,22.6,,,,,,,,,0.1,2.0,,,0.1,,,,
-watson_QB_CLE,Deshaun Watson,QB,CLE,,964,964,965,,2.3,,0.6,,3.0,,,,,,,,,,,,0.3,72.0,,714.0,
-wetjen_WR_PIT,Kaden Wetjen,WR,PIT,,978,978,979,,,,0.0,0.0,,,,,,,,,0.0,0.0,,,,12.0,,,
-whiteheart_TE_CLE,Blake Whiteheart,TE,CLE,,983,983,984,,,,,2.6,,,,,,,,,0.0,0.4,,,0.0,,,,
-whyle_TE_GB,Josh Whyle,TE,GB,,985,985,986,,,,,4.4,,,,,,,,,0.0,0.5,,,0.0,,,,
-wiley_TE_KC,Jared Wiley,TE,KC,,987,987,988,,,,,4.8,,,,,,,,,0.0,0.6,,,0.0,,,,
-williams_WR_CIN,Ke'Shawn Williams,WR,CIN,,991,991,992,,,,0.0,0.0,,,,,,,,,0.0,0.0,,,,0.0,,,
-williams_WR_GB,Savion Williams,WR,GB,,992,992,993,,,,0.0,149.0,,,,,,,,,1.0,13.0,,,,46.0,,,
-williams_WR_NE,Kyle Williams,WR,NE,,993,993,994,,,,0.0,232.0,,,,,,,,,1.0,16.0,,,,22.0,,,
-williams_WR_NYJ,Isaiah Williams,WR,NYJ,,994,994,995,,,,0.0,114.0,,,,,,,,,0.0,12.0,,,,13.0,,,
-williams_WR_WSH,Antonio Williams,WR,WSH,,995,995,996,,,,0.0,33.0,,,,,,,,,0.1,2.3,,,0.1,0.8,,,
-wilson_RB_SEA,Emanuel Wilson,RB,SEA,,1002,1002,1003,,,,0.1,7.9,,,,,,,,,0.0,1.0,,,0.0,41.3,,,
-winston_QB_NYG,Jameis Winston,QB,NYG,,1007,1007,1008,,0.0,,0.0,,0.1,,,,,,,,,,,,0.0,1.4,,8.8,
-woerner_TE_ATL,Charlie Woerner,TE,ATL,,1008,1008,1009,,,,0.0,22.6,,,,,,,,,0.0,2.7,,,0.0,0.0,,,
-woods_TE_NYJ,Jelani Woods,TE,NYJ,,1010,1010,1011,,,,,3.5,,,,,,,,,0.1,0.4,,,0.0,,,,
-wright_RB_MIA,Jaylen Wright,RB,MIA,,1013,1013,1014,,,,0.1,3.0,,,,,,,,,0.0,0.4,,,0.1,20.1,,,
-wright_TE_DET,Brock Wright,TE,DET,,1016,1016,1017,,,,,29.0,,,,,,,,,0.4,3.2,,,0.0,,,,
-young_WR_LV,Dareke Young,WR,LV,,1020,1020,1020,,,,0.0,38.0,,,,,,,,,0.0,3.0,,,,0.0,,,
-zaccheaus_WR_ATL,Olamide Zaccheaus,WR,ATL,,1023,1023,1023,,,,0.0,82.2,,,,,,,,,0.6,8.2,,,0.0,0.5,,,
-zvada_K_NYG,Dominic Zvada,K,NYG,,1026,1026,1026,0.1,,,,,,,,,0.1,0.0,,0.1,,,0.6,,,,0.0,,
+key,name,pos,team,bye,std,half_ppr,ppr,reception_yds,df_ints,pass_yds,pass_ints,kick_30_39,kick_20_29,df_fumbles,receptions,kick_50,reception_tds,pass_tds,rush_yds,fumbles,kick_40_49,kick_0_19,two_pts,df_sacks,kick_extra_points,df_tds,df_safeties,df_points_allowed_per_game,rush_tds
+gibbs_RB_DET,Jahmyr Gibbs,RB,DET,6.0,1,1,1,292.6,,,,,,,36.2,,1.6,,753.1,0.1,,,,,,,,,7.6
+robinson_RB_ATL,Bijan Robinson,RB,ATL,11.0,2,2,2,375.1,,,,,,,40.2,,1.6,,725.6,0.1,,,,,,,,,4.2
+nacua_WR_LAR,Puka Nacua,WR,LAR,11.0,4,3,3,841.2,,,,,,,65.5,,5.2,,48.6,0.0,,,,,,,,,0.6
+chase_WR_CIN,Ja'Marr Chase,WR,CIN,6.0,5,4,4,799.8,,,,,,,63.7,,5.8,,11.0,0.0,,,,,,,,,0.0
+mccaffrey_RB_SF,Christian McCaffrey,RB,SF,8.0,7,5,5,357.9,,,,,,,41.6,,2.6,,592.8,0.1,,,,,,,,,4.7
+smithnjigba_WR_SEA,Jaxon Smith-Njigba,WR,SEA,11.0,8,7,6,830.2,,,,,,,61.8,,4.8,,13.5,0.0,,,,,,,,,0.0
+brown_WR_DET,Amon-Ra St. Brown,WR,DET,6.0,10,8,7,753.2,,,,,,,62.4,,5.4,,6.8,0.0,,,,,,,,,0.0
+taylor_RB_IND,Jonathan Taylor,RB,IND,13.0,3,6,8,204.5,,,,,,,26.2,,0.6,,793.0,0.1,,,,,,,,,6.4
+achane_RB_MIA,De'Von Achane,RB,MIA,6.0,11,11,9,273.2,,,,,,,35.0,,1.7,,684.5,0.1,,,,,,,,,2.7
+lamb_WR_DAL,CeeDee Lamb,WR,DAL,14.0,13,12,10,727.4,,,,,,,54.4,,4.7,,7.4,0.0,,,,,,,,,0.0
+cook_RB_BUF,James Cook III,RB,BUF,7.0,9,9,11,158.3,,,,,,,18.8,,1.0,,742.8,0.2,,,,,,,,,5.7
+jefferson_WR_MIN,Justin Jefferson,WR,MIN,6.0,16,13,12,720.5,,,,,,,58.2,,3.6,,5.6,0.0,,,,,,,,,0.0
+brown_RB_CIN,Chase Brown,RB,CIN,6.0,14,14,13,231.0,,,,,,,34.1,,1.6,,546.8,0.1,,,,,,,,,3.8
+london_WR_ATL,Drake London,WR,ATL,11.0,15,15,14,663.2,,,,,,,53.8,,3.8,,-0.0,0.1,,,,,,,,,0.0
+henry_RB_BAL,Derrick Henry,RB,BAL,13.0,6,10,15,110.1,,,,,,,11.0,,0.5,,801.4,0.1,,,,,,,,,6.9
+brown_WR_NE,A.J. Brown,WR,NE,11.0,19,17,16,644.0,,,,,,,45.6,,3.7,,0.0,0.0,,,,,,,,,0.0
+rice_WR_KC,Rashee Rice,WR,KC,5.0,21,18,17,567.4,,,,,,,48.8,,4.8,,22.6,0.0,,,,,,,,,0.6
+barkley_RB_PHI,Saquon Barkley,RB,PHI,10.0,12,16,18,196.0,,,,,,,22.7,,1.0,,686.2,0.1,,,,,,,,,4.8
+pickens_WR_DAL,George Pickens,WR,DAL,14.0,18,19,19,598.6,,,,,,,42.8,,4.3,,-0.0,0.0,,,,,,,,,0.0
+olave_WR_NO,Chris Olave,WR,NO,8.0,26,22,20,634.8,,,,,,,48.4,,3.8,,0.0,0.0,,,,,,,,,0.0
+collins_WR_HOU,Nico Collins,WR,HOU,8.0,20,21,21,632.1,,,,,,,45.8,,3.8,,6.4,0.0,,,,,,,,,0.0
+walker_RB_KC,Kenneth Walker,RB,KC,5.0,17,20,22,197.0,,,,,,,25.2,,1.0,,656.4,0.1,,,,,,,,,4.7
+jeanty_RB_LV,Ashton Jeanty,RB,LV,13.0,27,24,23,253.9,,,,,,,33.8,,1.2,,576.0,0.0,,,,,,,,,3.7
+hampton_RB_LAC,Omarion Hampton,RB,LAC,7.0,23,23,24,191.6,,,,,,,27.5,,1.0,,573.1,0.1,,,,,,,,,4.9
+flowers_WR_BAL,Zay Flowers,WR,BAL,13.0,24,25,25,620.3,,,,,,,43.4,,2.7,,30.2,0.1,,,,,,,,,0.0
+nabers_WR_NYG,Malik Nabers,WR,NYG,8.0,32,26,26,597.3,,,,,,,44.9,,3.8,,11.6,0.0,,,,,,,,,0.0
+wilson_WR_NYJ,Garrett Wilson,WR,NYJ,13.0,41,28,27,621.6,,,,,,,52.8,,2.8,,5.6,0.1,,,,,,,,,0.0
+love_RB_ARI,Jeremiyah Love,RB,ARI,14.0,33,27,28,253.4,,,,,,,33.6,,1.0,,587.4,0.2,,,,,,,,,3.6
+smith_WR_PHI,DeVonta Smith,WR,PHI,10.0,39,32,29,603.4,,,,,,,48.2,,3.2,,0.0,0.0,,,,,,,,,0.0
+hall_RB_NYJ,Breece Hall,RB,NYJ,13.0,31,33,30,233.4,,,,,,,27.3,,1.6,,614.2,0.1,,,,,,,,,4.2
+mcbride_TE_ARI,Trey McBride,TE,ARI,14.0,54,44,31,543.7,,,,,,,57.2,,2.7,,0.0,0.0,,,,,,,,,0.0
+mcmillan_WR_CAR,Tetairoa McMillan,WR,CAR,5.0,34,34,32,630.4,,,,,,,44.0,,3.2,,0.0,0.1,,,,,,,,,0.0
+williams_RB_DAL,Javonte Williams,RB,DAL,14.0,25,29,33,113.4,,,,,,,19.4,,1.0,,674.6,0.1,,,,,,,,,5.8
+williams_RB_LAR,Kyren Williams,RB,LAR,11.0,22,30,34,118.4,,,,,,,17.5,,1.1,,564.8,0.1,,,,,,,,,5.2
+allen_QB_BUF,Josh Allen,QB,BUF,7.0,28,31,35,,,2072.0,6.5,,,,,,,13.6,307.6,0.2,,,,,,,,,6.2
+bowers_TE_LV,Brock Bowers,TE,LV,13.0,49,43,36,532.4,,,,,,,52.5,,3.8,,15.0,0.0,,,,,,,,,0.0
+egbuka_WR_TB,Emeka Egbuka,WR,TB,10.0,35,35,37,597.0,,,,,,,37.1,,3.8,,6.4,0.0,,,,,,,,,0.0
+etienne_RB_NO,Travis Etienne Jr.,RB,NO,8.0,36,37,38,206.4,,,,,,,24.0,,1.2,,604.2,0.1,,,,,,,,,3.2
+higgins_WR_CIN,Tee Higgins,WR,CIN,6.0,29,36,39,508.4,,,,,,,38.6,,4.4,,0.0,0.0,,,,,,,,,0.0
+skattebo_RB_NYG,Cam Skattebo,RB,NYG,8.0,37,39,40,177.3,,,,,,,23.8,,0.6,,534.6,0.1,,,,,,,,,3.8
+mcconkey_WR_LAC,Ladd McConkey,WR,LAC,7.0,45,42,41,554.4,,,,,,,42.6,,3.3,,0.0,0.0,,,,,,,,,0.0
+adams_WR_LAR,Davante Adams,WR,LAR,11.0,38,40,42,530.6,,,,,,,36.1,,5.8,,0.0,0.0,,,,,,,,,0.0
+swift_RB_CHI,D'Andre Swift,RB,CHI,10.0,40,41,43,145.2,,,,,,,16.6,,0.6,,524.4,0.1,,,,,,,,,4.3
+waddle_WR_DEN,Jaylen Waddle,WR,DEN,10.0,48,47,44,523.0,,,,,,,40.6,,3.2,,6.6,0.0,,,,,,,,,0.0
+williams_WR_DET,Jameson Williams,WR,DET,6.0,30,38,45,545.2,,,,,,,33.8,,3.2,,23.7,0.0,,,,,,,,,0.5
+irving_RB_TB,Bucky Irving,RB,TB,10.0,47,45,46,159.2,,,,,,,19.8,,1.1,,529.6,0.1,,,,,,,,,2.7
+moore_WR_BUF,DJ Moore,WR,BUF,7.0,51,48,47,494.2,,,,,,,35.3,,3.7,,20.4,0.1,,,,,,,,,0.0
+mclaurin_WR_WSH,Terry McLaurin,WR,WSH,7.0,42,46,48,549.0,,,,,,,40.2,,3.2,,0.0,0.0,,,,,,,,,0.0
+judkins_RB_CLE,Quinshon Judkins,RB,CLE,11.0,50,50,49,117.7,,,,,,,17.2,,0.5,,649.4,0.1,,,,,,,,,3.8
+burden_WR_CHI,Luther Burden III,WR,CHI,10.0,57,51,50,504.8,,,,,,,40.3,,2.7,,25.5,0.0,,,,,,,,,0.0
+maye_QB_NE,Drake Maye,QB,NE,11.0,43,53,51,,,2150.0,5.8,,,,,,,14.1,281.6,0.3,,,,,,,,,2.1
+montgomery_RB_HOU,David Montgomery,RB,HOU,8.0,53,56,52,119.8,,,,,,,16.8,,0.5,,526.6,0.1,,,,,,,,,3.8
+tuten_RB_JAX,Bhayshul Tuten,RB,JAX,7.0,52,52,53,129.4,,,,,,,17.4,,0.6,,521.0,0.2,,,,,,,,,3.8
+loveland_TE_CHI,Colston Loveland,TE,CHI,10.0,69,60,54,482.6,,,,,,,43.0,,3.2,,0.0,0.0,,,,,,,,,0.0
+burrow_QB_CIN,Joe Burrow,QB,CIN,6.0,55,55,55,,,2193.0,6.0,,,,,,,17.6,99.2,0.1,,,,,,,,,1.0
+odunze_WR_CHI,Rome Odunze,WR,CHI,10.0,44,49,56,545.2,,,,,,,31.9,,4.2,,0.2,0.0,,,,,,,,,0.0
+jackson_QB_BAL,Lamar Jackson,QB,BAL,13.0,56,58,57,,,2043.5,5.3,,,,,,,13.9,353.4,0.3,,,,,,,,,2.1
+watson_WR_GB,Christian Watson,WR,GB,11.0,46,54,58,465.2,,,,,,,29.6,,3.7,,6.8,0.0,,,,,,,,,0.0
+evans_WR_SF,Mike Evans,WR,SF,8.0,59,57,59,469.2,,,,,,,30.4,,3.2,,0.0,0.0,,,,,,,,,0.0
+stevenson_RB_NE,Rhamondre Stevenson,RB,NE,11.0,61,65,60,186.6,,,,,,,22.6,,1.0,,404.3,0.2,,,,,,,,,3.7
+sutton_WR_DEN,Courtland Sutton,WR,DEN,10.0,64,61,61,471.2,,,,,,,36.6,,4.2,,0.0,0.0,,,,,,,,,0.0
+washington_WR_JAX,Parker Washington,WR,JAX,7.0,65,63,62,449.0,,,,,,,33.7,,2.7,,19.6,0.0,,,,,,,,,0.0
+warren_RB_PIT,Jaylen Warren,RB,PIT,9.0,66,69,63,169.4,,,,,,,24.2,,0.6,,431.5,0.1,,,,,,,,,2.7
+henderson_RB_NE,TreVeyon Henderson,RB,NE,11.0,60,67,64,127.6,,,,,,,18.1,,0.5,,402.8,0.0,,,,,,,,,3.0
+metcalf_WR_PIT,DK Metcalf,WR,PIT,9.0,63,66,65,498.3,,,,,,,34.3,,3.2,,0.3,0.0,,,,,,,,,0.0
+prescott_QB_DAL,Dak Prescott,QB,DAL,14.0,68,64,66,,,2185.5,6.4,,,,,,,16.0,99.2,0.1,,,,,,,,,1.0
+harrison_WR_ARI,Marvin Harrison Jr.,WR,ARI,14.0,67,68,67,504.0,,,,,,,36.3,,2.7,,0.0,0.0,,,,,,,,,0.0
+warren_TE_IND,Tyler Warren,TE,IND,13.0,82,72,68,471.4,,,,,,,44.6,,3.2,,14.0,0.0,,,,,,,,,0.0
+price_RB_SEA,Jadarian Price,RB,SEA,11.0,62,59,69,112.3,,,,,,,14.1,,0.6,,488.5,0.2,,,,,,,,,4.2
+pollard_RB_TEN,Tony Pollard,RB,TEN,9.0,70,71,70,97.8,,,,,,,16.0,,0.0,,549.2,0.1,,,,,,,,,2.8
+pierce_WR_IND,Alec Pierce,WR,IND,13.0,58,62,71,500.4,,,,,,,31.4,,2.7,,0.0,0.0,,,,,,,,,0.0
+thomas_WR_JAX,Brian Thomas Jr.,WR,JAX,7.0,72,70,72,455.0,,,,,,,30.2,,2.7,,12.3,0.0,,,,,,,,,0.0
+fannin_TE_CLE,Harold Fannin Jr.,TE,CLE,11.0,95,76,73,436.7,,,,,,,44.7,,1.8,,21.0,0.1,,,,,,,,,0.0
+daniels_QB_WSH,Jayden Daniels,QB,WSH,7.0,73,73,74,,,2009.0,5.4,,,,,,,11.6,355.6,0.1,,,,,,,,,2.6
+stafford_QB_LAR,Matthew Stafford,QB,LAR,11.0,74,74,75,,,230.0,0.4,,,,,,,1.9,2.2,0.1,,,,,,,,,0.0
+dowdle_RB_PIT,Rico Dowdle,RB,PIT,9.0,78,81,76,113.0,,,,,,,15.6,,0.6,,523.4,0.1,,,,,,,,,3.2
+wilson_WR_ARI,Michael Wilson,WR,ARI,14.0,77,75,77,453.8,,,,,,,37.3,,1.6,,0.0,0.0,,,,,,,,,0.0
+hurts_QB_PHI,Jalen Hurts,QB,PHI,10.0,76,78,78,,,1999.5,4.6,,,,,,,12.4,234.2,0.2,,,,,,,,,4.8
+pittman_WR_PIT,Michael Pittman Jr.,WR,PIT,9.0,94,82,79,451.5,,,,,,,46.2,,2.2,,0.0,0.0,,,,,,,,,0.0
+godwin_WR_TB,Chris Godwin Jr.,WR,TB,10.0,83,80,80,51.1,,,,,,,4.4,,0.3,,0.1,0.0,,,,,,,,,0.0
+hubbard_RB_CAR,Chuba Hubbard,RB,CAR,5.0,81,87,81,156.8,,,,,,,21.6,,0.6,,408.8,0.1,,,,,,,,,2.2
+tate_WR_TEN,Carnell Tate,WR,TEN,9.0,75,77,82,535.8,,,,,,,39.2,,2.2,,0.2,0.1,,,,,,,,,0.0
+seahawks_DST_SEA,Seahawks,DST,SEA,11.0,84,86,83,,6.8,,,,,3.9,,,,,,3.9,,,,22.9,,1.6,0.0,19.0,
+pitts_TE_ATL,Kyle Pitts Sr.,TE,ATL,11.0,126,97,84,453.8,,,,,,,42.2,,1.6,,0.0,0.0,,,,,,,,,0.0
+purdy_QB_SF,Brock Purdy,QB,SF,8.0,85,90,85,,,2203.0,7.6,,,,,,,14.2,148.5,0.3,,,,,,,,,1.6
+williams_QB_CHI,Caleb Williams,QB,CHI,10.0,90,89,86,,,2039.0,5.3,,,,,,,13.4,203.2,0.1,,,,,,,,,1.0
+broncos_DST_DEN,Broncos,DST,DEN,10.0,96,94,87,,7.0,,,,,3.7,,,,,,3.7,,,,24.7,,1.0,0.0,20.3,
+dobbins_RB_DEN,J.K. Dobbins,RB,DEN,10.0,71,79,88,68.0,,,,,,,11.1,,0.5,,509.2,0.1,,,,,,,,,3.6
+robinson_WR_TEN,Wan'Dale Robinson,WR,TEN,9.0,111,95,89,436.6,,,,,,,42.0,,1.2,,11.2,0.0,,,,,,,,,0.0
+reed_WR_GB,Jayden Reed,WR,GB,11.0,87,85,90,37.7,,,,,,,3.6,,0.2,,7.3,0.0,,,,,,,,,0.0
+brooks_RB_CAR,Jonathon Brooks,RB,CAR,5.0,91,92,91,145.6,,,,,,,19.2,,0.6,,437.8,0.1,,,,,,,,,2.2
+meyers_WR_JAX,Jakobi Meyers,WR,JAX,7.0,97,96,92,404.6,,,,,,,36.9,,2.6,,16.4,0.0,,,,,,,,,0.0
+kittle_TE_SF,George Kittle,TE,SF,8.0,100,93,93,440.2,,,,,,,40.8,,3.2,,0.0,0.0,,,,,,,,,0.0
+lawrence_QB_JAX,Trevor Lawrence,QB,JAX,7.0,93,88,94,,,2075.0,6.9,,,,,,,13.4,176.2,0.2,,,,,,,,,2.7
+gainwell_RB_TB,Kenny Gainwell,RB,TB,10.0,128,116,95,184.4,,,,,,,27.8,,1.0,,278.6,0.1,,,,,,,,,2.6
+johnston_WR_LAC,Quentin Johnston,WR,LAC,7.0,80,83,96,53.1,,,,,,,3.8,,0.7,,0.5,0.1,,,,,,,,,0.0
+jacobs_RB_GB,Josh Jacobs,RB,GB,11.0,79,84,97,183.0,,,,,,,24.0,,1.0,,717.0,,,,,,,,,,8.0
+downs_WR_IND,Josh Downs,WR,IND,13.0,107,102,98,39.1,,,,,,,3.8,,0.3,,0.1,0.0,,,,,,,,,0.0
+harvey_RB_DEN,RJ Harvey,RB,DEN,10.0,123,112,99,17.6,,,,,,,2.6,,0.2,,28.1,0.1,,,,,,,,,0.2
+diggs_WR_WSH,Stefon Diggs,WR,WSH,7.0,105,105,100,403.6,,,,,,,39.2,,2.1,,0.0,0.0,,,,,,,,,0.0
+addison_WR_MIN,Jordan Addison,WR,MIN,6.0,86,91,101,41.1,,,,,,,3.0,,0.3,,4.2,0.0,,,,,,,,,0.1
+texans_DST_HOU,Texans,DST,HOU,8.0,103,103,102,,6.5,,,,,6.0,,,,,,6.0,,,,23.0,,1.1,0.0,19.9,
+shakir_WR_BUF,Khalil Shakir,WR,BUF,7.0,115,115,103,34.5,,,,,,,3.5,,0.2,,0.2,0.0,,,,,,,,,0.0
+rams_DST_LAR,Rams,DST,LAR,11.0,110,111,104,,6.6,,,,,4.4,,,,,,4.4,,,,23.7,,1.1,0.0,20.6,
+laporta_TE_DET,Sam LaPorta,TE,DET,6.0,122,104,105,420.0,,,,,,,41.1,,2.7,,0.0,0.0,,,,,,,,,0.0
+golden_WR_GB,Matthew Golden,WR,GB,11.0,98,99,106,40.3,,,,,,,3.2,,0.2,,3.3,0.0,,,,,,,,,0.0
+goff_QB_DET,Jared Goff,QB,DET,6.0,108,101,107,,,252.0,0.6,,,,,,,2.2,2.8,0.2,,,,,,,,,0.0
+herbert_QB_LAC,Justin Herbert,QB,LAC,7.0,113,108,108,,,2052.0,5.8,,,,,,,14.1,220.8,0.1,,,,,,,,,1.1
+mahomes_QB_KC,Patrick Mahomes,QB,KC,5.0,112,107,109,,,185.0,0.8,,,,,,,1.4,26.8,0.0,,,,,,,,,0.2
+kraft_TE_GB,Tucker Kraft,TE,GB,11.0,88,113,110,409.5,,,,,,,35.7,,2.2,,8.0,0.0,,,,,,,,,0.0
+jones_RB_MIN,Aaron Jones Sr.,RB,MIN,6.0,116,106,111,180.1,,,,,,,24.6,,1.0,,347.3,0.1,,,,,,,,,1.6
+worthy_WR_KC,Xavier Worthy,WR,KC,5.0,92,98,112,32.3,,,,,,,2.8,,0.2,,9.3,0.0,,,,,,,,,0.1
+kelce_TE_KC,Travis Kelce,TE,KC,5.0,152,136,113,40.9,,,,,,,4.2,,0.3,,,0.0,,,,,,,,,
+doubs_WR_NE,Romeo Doubs,WR,NE,11.0,102,100,114,42.7,,,,,,,3.5,,0.3,,0.0,0.0,,,,,,,,,0.0
+monangai_RB_CHI,Kyle Monangai,RB,CHI,10.0,104,110,115,114.0,,,,,,,13.7,,0.5,,432.5,0.1,,,,,,,,,3.2
+mason_RB_MIN,Jordan Mason,RB,MIN,6.0,99,119,116,4.6,,,,,,,1.1,,0.0,,48.7,0.1,,,,,,,,,0.4
+nix_QB_DEN,Bo Nix,QB,DEN,10.0,120,117,117,,,186.0,0.5,,,,,,,1.2,16.3,0.1,,,,,,,,,0.1
+lloyd_RB_GB,MarShawn Lloyd,RB,GB,11.0,119,120,118,77.8,,,,,,,11.0,,0.5,,338.8,0.2,,,,,,,,,2.7
+croskeymerritt_RB_WSH,Jacory Croskey-Merritt,RB,WSH,7.0,89,109,119,3.6,,,,,,,0.5,,0.0,,46.8,0.1,,,,,,,,,0.3
+samuel_WR_SF,Deebo Samuel Sr.,WR,SF,8.0,101,118,120,36.0,,,,,,,3.7,,0.3,,6.5,0.0,,,,,,,,,0.1
+vikings_DST_MIN,Vikings,DST,MIN,6.0,124,114,121,,5.8,,,,,4.9,,,,,,4.9,,,,21.1,,1.1,0.0,21.0,
+concepcion_WR_CLE,KC Concepcion,WR,CLE,11.0,118,121,122,46.7,,,,,,,4.3,,0.2,,0.5,0.2,,,,,,,,,0.0
+dart_QB_NYG,Jaxson Dart,QB,NYG,8.0,129,130,123,,,1938.5,5.4,,,,,,,11.2,291.9,0.1,,,,,,,,,3.2
+coker_WR_CAR,Jalen Coker,WR,CAR,5.0,117,123,124,50.3,,,,,,,3.7,,0.4,,0.0,0.1,,,,,,,,,0.0
+goedert_TE_PHI,Dallas Goedert,TE,PHI,10.0,114,122,125,48.4,,,,,,,4.1,,0.8,,,0.0,,,,,,,,,
+corum_RB_LAR,Blake Corum,RB,LAR,11.0,106,124,126,2.1,,,,,,,0.4,,0.0,,50.6,0.0,,,,,,,,,0.3
+stribling_WR_SF,De'Zhaun Stribling,WR,SF,8.0,121,128,127,47.4,,,,,,,3.4,,0.2,,0.7,0.1,,,,,,,,,0.0
+patriots_DST_NE,Patriots,DST,NE,11.0,127,126,128,,6.9,,,,,3.4,,,,,,3.5,,,,21.6,,1.1,0.0,24.8,
+aubrey_K_DAL,Brandon Aubrey,K,DAL,14.0,134,134,129,,,,,0.6,0.5,,,4.7,,,,,5.8,0.0,,,24.4,,,,
+eagles_DST_PHI,Eagles,DST,PHI,10.0,136,138,130,,6.4,,,,,3.9,,,,,,3.9,,,,21.0,,1.1,0.1,19.1,
+shaheed_WR_SEA,Rashid Shaheed,WR,SEA,11.0,109,125,131,347.4,,,,,,,23.2,,1.6,,46.0,0.1,,,,,,,,,0.5
+spears_RB_TEN,Tyjae Spears,RB,TEN,9.0,161,155,132,20.6,,,,,,,3.0,,0.0,,19.4,0.0,,,,,,,,,0.3
+murray_QB_MIN,Kyler Murray,QB,MIN,6.0,140,135,133,,,195.0,1.1,,,,,,,1.5,26.4,0.2,,,,,,,,,0.2
+white_RB_WSH,Rachaad White,RB,WSH,7.0,139,132,134,137.2,,,,,,,20.6,,1.0,,302.4,0.0,,,,,,,,,2.6
+mayfield_QB_TB,Baker Mayfield,QB,TB,10.0,149,142,135,,,240.0,0.9,,,,,,,1.7,26.9,0.2,,,,,,,,,0.1
+lions_DST_DET,Lions,DST,DET,6.0,133,141,136,,6.4,,,,,4.9,,,,,,4.9,,,,21.8,,1.1,0.0,20.8,
+jeudy_WR_CLE,Jerry Jeudy,WR,CLE,11.0,132,131,137,383.4,,,,,,,28.0,,1.6,,0.1,0.1,,,,,,,,,0.0
+lemon_WR_PHI,Makai Lemon,WR,PHI,10.0,125,127,138,38.5,,,,,,,2.5,,0.2,,0.9,0.1,,,,,,,,,0.0
+andrews_TE_BAL,Mark Andrews,TE,BAL,13.0,137,145,139,35.4,,,,,,,3.5,,0.5,,,0.0,,,,,,,,,
+tucker_WR_LV,Tre Tucker,WR,LV,13.0,130,137,140,349.8,,,,,,,25.8,,1.7,,30.2,0.0,,,,,,,,,0.0
+ferguson_TE_DAL,Jake Ferguson,TE,DAL,14.0,160,159,141,37.6,,,,,,,4.5,,0.4,,,0.1,,,,,,,,,
+likely_TE_NYG,Isaiah Likely,TE,NYG,8.0,138,140,142,53.7,,,,,,,4.0,,0.4,,,0.1,,,,,,,,,
+allen_WR_IND,Keenan Allen,WR,IND,13.0,156,158,143,37.1,,,,,,,3.5,,0.2,,0.0,0.0,,,,,,,,,0.0
+fairbairn_K_HOU,Ka'imi Fairbairn,K,HOU,8.0,150,133,144,,,,,0.6,0.5,,,5.2,,,,,5.8,0.0,,,16.7,,,,
+shough_QB_NO,Tyler Shough,QB,NO,8.0,159,152,145,,,229.0,0.9,,,,,,,1.4,19.7,0.2,,,,,,,,,0.2
+boston_WR_CLE,Denzel Boston,WR,CLE,11.0,142,147,146,368.0,,,,,,,29.4,,1.6,,0.2,0.1,,,,,,,,,0.0
+steelers_DST_PIT,Steelers,DST,PIT,9.0,146,146,147,,6.3,,,,,5.4,,,,,,5.4,,,,22.6,,1.1,0.0,19.3,
+love_QB_GB,Jordan Love,QB,GB,11.0,155,154,148,,,2112.0,5.8,,,,,,,13.2,111.4,0.1,,,,,,,,,0.5
+myers_K_SEA,Jason Myers,K,SEA,11.0,141,129,149,,,,,0.7,0.4,,,4.6,,,,,5.3,0.0,,,23.0,,,,
+mcmillan_WR_TB,Jalen McMillan,WR,TB,10.0,135,139,150,38.0,,,,,,,2.7,,0.3,,1.9,0.0,,,,,,,,,0.0
+marks_RB_HOU,Woody Marks,RB,HOU,8.0,148,144,151,9.8,,,,,,,1.1,,0.2,,37.8,0.0,,,,,,,,,0.2
+harris_RB_NYG,Najee Harris,RB,NYG,8.0,484,490,152,40.4,,,,,,,6.3,,0.0,,227.1,0.0,,,,,,,,,1.1
+jennings_WR_MIN,Jauan Jennings,WR,MIN,6.0,151,169,153,35.2,,,,,,,3.1,,0.4,,0.0,0.0,,,,,,,,,0.0
+chargers_DST_LAC,Chargers,DST,LAC,7.0,164,156,154,,6.9,,,,,4.3,,,,,,4.3,,,,22.2,,1.1,0.0,21.1,
+darnold_QB_SEA,Sam Darnold,QB,SEA,11.0,172,171,155,,,233.0,0.8,,,,,,,1.8,8.0,0.3,,,,,,,,,0.0
+kincaid_TE_BUF,Dalton Kincaid,TE,BUF,7.0,143,157,157,41.4,,,,,,,3.1,,0.3,,,0.0,,,,,,,,,
+dicker_K_LAC,Cameron Dicker,K,LAC,7.0,157,149,158,,,,,0.9,0.6,,,4.7,,,,,5.4,0.0,,,22.5,,,,
+johnson_RB_KC,Emmett Johnson,RB,KC,5.0,179,195,159,1.2,,,,,,,0.1,,0.0,,7.7,0.0,,,,,,,,,0.1
+tyson_WR_NO,Jordyn Tyson,WR,NO,8.0,938,938,160,484.0,,,,,,,36.0,,3.0,,0.0,,,,,,,,,,0.0
+mevis_K_LAR,Harrison Mevis,K,LAR,11.0,158,150,161,,,,,0.4,0.4,,,4.1,,,,,4.8,0.0,,,29.0,,,,
+barner_TE_SEA,AJ Barner,TE,SEA,11.0,234,243,162,26.7,,,,,,,2.8,,0.4,,,0.0,,,,,,,,,
+mendoza_QB_LV,Fernando Mendoza,QB,LV,13.0,667,672,163,,,1532.2,5.5,,,,,,,7.0,113.2,0.0,,,,,,,,,1.0
+boswell_K_PIT,Chris Boswell,K,PIT,9.0,266,274,164,,,,,0.5,0.4,,,0.3,,,,,0.6,0.0,,,2.4,,,,
+bates_K_DET,Jake Bates,K,DET,6.0,165,160,165,,,,,0.6,0.4,,,4.2,,,,,4.8,0.0,,,26.2,,,,
+branch_WR_ATL,Zachariah Branch,WR,ATL,11.0,271,279,166,27.4,,,,,,,1.9,,0.1,,0.7,0.1,,,,,,,,,0.0
+butker_K_KC,Harrison Butker,K,KC,5.0,173,165,168,,,,,0.6,0.6,,,4.2,,,,,5.2,0.0,,,21.4,,,,
+washington_RB_LV,Mike Washington Jr.,RB,LV,13.0,176,190,169,15.2,,,,,,,1.9,,0.1,,40.4,0.1,,,,,,,,,0.4
+washington_WR_MIA,Malik Washington,WR,MIA,6.0,170,162,170,21.8,,,,,,,3.0,,0.2,,4.4,0.1,,,,,,,,,0.1
+james_RB_SF,Jordan James,RB,SF,8.0,550,555,171,12.9,,,,,,,1.4,,0.1,,28.2,0.1,,,,,,,,,0.2
+jaguars_DST_JAX,Jaguars,DST,JAX,7.0,166,179,172,,6.9,,,,,3.8,,,,,,3.8,,,,22.0,,1.1,0.0,20.8,
+ridley_WR_TEN,Calvin Ridley,WR,TEN,9.0,144,143,173,365.2,,,,,,,23.0,,1.6,,16.6,0.0,,,,,,,,,0.0
+johnson_TE_NO,Juwan Johnson,TE,NO,8.0,175,164,174,53.0,,,,,,,4.2,,0.2,,,0.1,,,,,,,,,
+little_K_JAX,Cam Little,K,JAX,7.0,178,175,175,,,,,0.5,0.4,,,4.2,,,,,4.8,0.0,,,21.5,,,,
+allen_WR_KC,Cyrus Allen,WR,KC,5.0,221,230,176,245.0,,,,,,,19.0,,2.0,,0.0,,,,,,,,,,0.0
+bateman_WR_BAL,Rashod Bateman,WR,BAL,13.0,145,153,177,323.9,,,,,,,20.2,,2.2,,0.0,0.0,,,,,,,,,0.0
+reichard_K_MIN,Will Reichard,K,MIN,6.0,201,163,178,,,,,0.6,0.5,,,4.2,,,,,4.8,0.0,,,18.2,,,,
+allgeier_RB_ARI,Tyler Allgeier,RB,ARI,14.0,186,174,179,5.4,,,,,,,0.8,,0.0,,28.4,0.0,,,,,,,,,0.3
+singleton_RB_TEN,Nicholas Singleton,RB,TEN,9.0,860,863,180,15.6,,,,,,,2.0,,0.0,,44.9,0.0,,,,,,,,,0.6
+coleman_RB_DEN,Jonah Coleman,RB,DEN,10.0,174,177,181,1.2,,,,,,,0.2,,0.0,,7.2,0.0,,,,,,,,,0.0
+henry_TE_NE,Hunter Henry,TE,NE,11.0,131,180,182,36.9,,,,,,,3.3,,0.2,,,0.0,,,,,,,,,
+stroud_QB_HOU,C.J. Stroud,QB,HOU,8.0,169,188,183,,,206.0,0.8,,,,,,,1.6,16.8,0.1,,,,,,,,,0.1
+holani_RB_SEA,George Holani,RB,SEA,11.0,514,519,184,1.7,,,,,,,0.2,,0.0,,6.5,0.0,,,,,,,,,0.1
+nailor_WR_LV,Jalen Nailor,WR,LV,13.0,153,168,185,323.0,,,,,,,23.5,,1.7,,5.7,0.0,,,,,,,,,0.0
+rodriguez_RB_JAX,Chris Rodriguez Jr.,RB,JAX,7.0,163,178,186,1.2,,,,,,,0.1,,0.0,,36.6,0.0,,,,,,,,,0.5
+mclaughlin_K_TB,Chase McLaughlin,K,TB,10.0,167,166,187,,,,,0.4,0.4,,,0.3,,,,,0.4,0.0,,,2.5,,,,
+packers_DST_GB,Packers,DST,GB,11.0,743,747,188,,1.1,,,,,0.8,,,,,,0.8,,,,3.8,,0.2,0.0,21.8,
+jones_QB_IND,Daniel Jones,QB,IND,13.0,203,185,189,,,211.0,0.7,,,,,,,1.4,9.2,0.2,,,,,,,,,0.2
+boutte_WR_HOU,Kayshon Boutte,WR,HOU,8.0,154,167,190,32.3,,,,,,,2.1,,0.3,,0.0,0.0,,,,,,,,,0.0
+cowboys_DST_DAL,Cowboys,DST,DAL,14.0,348,355,191,,5.9,,,,,3.8,,,,,,3.8,,,,21.2,,1.1,0.0,24.7,
+wicks_WR_PHI,Dontayvion Wicks,WR,PHI,10.0,199,194,192,273.5,,,,,,,21.2,,1.6,,0.2,0.0,,,,,,,,,0.0
+sampson_RB_CLE,Dylan Sampson,RB,CLE,11.0,825,206,193,19.4,,,,,,,2.7,,0.2,,15.7,0.1,,,,,,,,,0.1
+hill_RB_BAL,Justice Hill,RB,BAL,13.0,505,511,194,180.5,,,,,,,20.2,,1.0,,143.6,0.0,,,,,,,,,1.1
+mitchell_RB_LAC,Keaton Mitchell,RB,LAC,7.0,686,161,196,4.9,,,,,,,0.7,,0.0,,32.5,0.0,,,,,,,,,0.1
+falcons_DST_ATL,Falcons,DST,ATL,11.0,204,192,197,,6.3,,,,,3.8,,,,,,3.8,,,,20.9,,1.0,0.1,25.6,
+strange_TE_JAX,Brenton Strange,TE,JAX,7.0,893,187,199,321.1,,,,,,,31.4,,2.2,,0.0,0.0,,,,,,,,,0.0
+kupp_WR_SEA,Cooper Kupp,WR,SEA,11.0,181,173,200,39.4,,,,,,,3.4,,0.2,,0.2,0.0,,,,,,,,,0.0
+lane_WR_BAL,Ja'Kobi Lane,WR,BAL,13.0,177,176,201,39.0,,,,,,,2.6,,0.5,,1.0,0.1,,,,,,,,,0.0
+allen_RB_NYJ,Braelon Allen,RB,NYJ,13.0,162,172,202,48.7,,,,,,,7.0,,0.0,,188.8,0.2,,,,,,,,,1.7
+bass_K_BUF,Tyler Bass,K,BUF,7.0,236,245,203,,,,,0.3,0.4,,,0.2,,,,,0.3,0.0,,,2.0,,,,
+bills_DST_BUF,Bills,DST,BUF,7.0,189,196,204,,6.4,,,,,3.8,,,,,,3.8,,,,21.6,,1.1,0.0,25.2,
+bears_DST_CHI,Bears,DST,CHI,10.0,240,249,205,,7.0,,,,,5.4,,,,,,5.4,,,,20.1,,1.1,0.0,23.9,
+bigsby_RB_PHI,Tank Bigsby,RB,PHI,10.0,171,199,206,15.7,,,,,,,2.1,,0.0,,206.9,0.0,,,,,,,,,1.6
+chiefs_DST_KC,Chiefs,DST,KC,5.0,320,327,207,,6.3,,,,,3.8,,,,,,3.8,,,,21.2,,1.0,0.0,20.2,
+tracy_RB_NYG,Tyrone Tracy Jr.,RB,NYG,8.0,168,209,208,9.0,,,,,,,1.1,,0.1,,33.0,0.1,,,,,,,,,0.1
+lutz_K_DEN,Wil Lutz,K,DEN,10.0,194,202,209,,,,,0.5,0.4,,,0.2,,,,,0.3,0.0,,,2.0,,,,
+willis_QB_MIA,Malik Willis,QB,MIA,6.0,195,189,210,,,1877.0,5.4,,,,,,,7.3,292.4,0.3,,,,,,,,,1.6
+ravens_DST_BAL,Ravens,DST,BAL,13.0,180,186,211,,6.4,,,,,4.4,,,,,,4.4,,,,23.0,,1.0,0.0,21.6,
+vele_WR_NO,Devaughn Vele,WR,NO,8.0,198,214,212,289.0,,,,,,,25.8,,1.6,,0.0,0.0,,,,,,,,,0.0
+santos_K_CHI,Cairo Santos,K,CHI,10.0,196,184,213,,,,,0.5,0.4,,,4.2,,,,,4.8,0.0,,,21.0,,,,
+smack_K_GB,Trey Smack,K,GB,11.0,205,200,214,,,,,0.5,0.4,,,4.1,,,,,5.2,0.0,,,21.4,,,,
+douglas_WR_MIA,Caleb Douglas,WR,MIA,6.0,182,205,215,303.6,,,,,,,22.6,,1.1,,0.3,0.1,,,,,,,,,0.0
+mitchell_WR_NYJ,Adonai Mitchell,WR,NYJ,13.0,188,181,216,328.1,,,,,,,22.2,,2.1,,5.4,0.1,,,,,,,,,0.0
+bernard_WR_PIT,Germie Bernard,WR,PIT,9.0,257,265,217,30.2,,,,,,,2.5,,0.2,,0.7,0.1,,,,,,,,,0.0
+loop_K_BAL,Tyler Loop,K,BAL,13.0,197,191,218,,,,,0.6,0.5,,,4.0,,,,,4.7,0.0,,,23.4,,,,
+black_RB_SF,Kaelon Black,RB,SF,8.0,192,182,219,34.5,,,,,,,4.4,,0.0,,172.4,0.1,,,,,,,,,1.1
+browns_DST_CLE,Browns,DST,CLE,11.0,202,204,220,,5.9,,,,,3.8,,,,,,3.8,,,,21.8,,1.0,0.0,24.3,
+perine_RB_CIN,Samaje Perine,RB,CIN,6.0,757,761,221,73.4,,,,,,,10.0,,0.5,,232.6,0.2,,,,,,,,,1.6
+ferguson_TE_LAR,Terrance Ferguson,TE,LAR,11.0,426,203,223,304.5,,,,,,,23.9,,2.6,,0.0,0.0,,,,,,,,,0.0
+davis_RB_DAL,Malik Davis,RB,DAL,14.0,362,369,224,4.4,,,,,,,0.5,,0.0,,39.9,0.0,,,,,,,,,0.2
+young_QB_CAR,Bryce Young,QB,CAR,5.0,1019,1019,225,,,219.0,0.9,,,,,,,1.6,19.9,0.1,,,,,,,,,0.3
+beckham_WR_NYG,Odell Beckham Jr.,WR,NYG,8.0,243,252,226,113.0,,,,,,,9.0,,1.0,,0.0,,,,,,,,,,0.0
+borregales_K_NE,Andy Borregales,K,NE,11.0,265,273,227,,,,,0.4,0.3,,,3.6,,,,,4.2,0.0,,,22.0,,,,
+noel_WR_HOU,Jaylin Noel,WR,HOU,8.0,723,727,228,301.4,,,,,,,26.6,,1.6,,11.4,0.0,,,,,,,,,0.0
+mcpherson_K_CIN,Evan McPherson,K,CIN,6.0,184,193,230,,,,,0.5,0.4,,,4.2,,,,,4.8,0.0,,,23.5,,,,
+hockenson_TE_MIN,T.J. Hockenson,TE,MIN,6.0,511,148,231,28.9,,,,,,,3.3,,0.2,,,0.0,,,,,,,,,
+jets_DST_NYJ,Jets,DST,NYJ,13.0,556,561,234,,5.7,,,,,4.8,,,,,,4.8,,,,20.8,,1.6,0.1,25.5,
+sadiq_TE_NYJ,Kenyon Sadiq,TE,NYJ,13.0,822,826,235,329.3,,,,,,,31.5,,2.2,,0.0,0.1,,,,,,,,,0.0
+giants_DST_NYG,Giants,DST,NYG,8.0,453,459,236,,5.8,,,,,3.4,,,,,,3.4,,,,21.0,,1.1,0.1,25.8,
+dulcich_TE_MIA,Greg Dulcich,TE,MIA,6.0,393,400,237,311.6,,,,,,,27.9,,1.1,,0.0,0.1,,,,,,,,,0.0
+fields_WR_NYG,Malachi Fields,WR,NYG,8.0,185,211,238,26.6,,,,,,,1.9,,0.3,,0.8,0.1,,,,,,,,,0.0
+ward_QB_TEN,Cam Ward,QB,TEN,9.0,956,956,239,,,211.0,0.4,,,,,,,1.9,8.3,0.3,,,,,,,,,0.2
+teslaa_WR_DET,Isaac TeSlaa,WR,DET,6.0,906,208,240,162.5,,,,,,,12.8,,1.6,,0.0,0.0,,,,,,,,,0.0
+brissett_QB_ARI,Jacoby Brissett,QB,ARI,14.0,276,201,241,,,214.0,0.8,,,,,,,1.3,15.6,0.3,,,,,,,,,0.1
+elliott_K_PHI,Jake Elliott,K,PHI,10.0,404,411,242,,,,,0.6,0.4,,,0.2,,,,,0.6,0.0,,,2.8,,,,
+franklin_WR_DEN,Troy Franklin,WR,DEN,10.0,442,448,243,123.6,,,,,,,10.2,,1.1,,5.8,0.0,,,,,,,,,0.0
+davis_RB_BUF,Ray Davis,RB,BUF,7.0,361,368,244,30.4,,,,,,,4.0,,0.0,,73.7,0.0,,,,,,,,,0.5
+okonkwo_TE_WSH,Chig Okonkwo,TE,WSH,7.0,731,735,245,32.0,,,,,,,2.7,,0.1,,,0.0,,,,,,,,,
+schultz_TE_HOU,Dalton Schultz,TE,HOU,8.0,838,841,246,37.8,,,,,,,4.0,,0.2,,,0.0,,,,,,,,,
+rodgers_QB_PIT,Aaron Rodgers,QB,PIT,9.0,806,810,247,,,1974.5,5.8,,,,,,,10.8,52.2,0.1,,,,,,,,,0.6
+titans_DST_TEN,Titans,DST,TEN,9.0,918,207,248,,6.4,,,,,3.9,,,,,,3.9,,,,22.6,,1.6,0.0,25.7,
+buccaneers_DST_TB,Buccaneers,DST,TB,10.0,294,301,249,,0.9,,,,,0.7,,,,,,0.7,,,,2.4,,0.2,0.0,28.2,
+bengals_DST_CIN,Bengals,DST,CIN,6.0,250,258,250,,6.4,,,,,3.3,,,,,,3.3,,,,20.9,,1.1,0.0,23.3,
+commanders_DST_WSH,Commanders,DST,WSH,7.0,332,339,252,,11.0,,,,,9.0,,,,,,9.0,,,,42.0,,2.0,,27.6,
+legette_WR_CAR,Xavier Legette,WR,CAR,5.0,624,629,253,22.4,,,,,,,2.1,,0.2,,0.5,0.0,,,,,,,,,0.0
+saints_DST_NO,Saints,DST,NO,8.0,823,827,254,,6.4,,,,,3.3,,,,,,3.3,,,,20.5,,1.0,0.1,27.6,
+waller_TE_CAR,Darren Waller,TE,CAR,5.0,183,210,255,251.8,,,,,,,22.9,,2.2,,0.0,0.0,,,,,,,,,0.0
+coleman_WR_BUF,Keon Coleman,WR,BUF,7.0,193,213,256,338.0,,,,,,,24.0,,3.0,,0.0,,,,,,,,,,0.0
+abdullah_RB_JAX,Ameer Abdullah,RB,JAX,,208,217,259,3.0,,,,,,,0.4,,0.0,,3.7,0.0,,,,,,,,,0.0
+adkins_TE_DEN,Nate Adkins,TE,DEN,,209,218,260,5.7,,,,,,,0.9,,0.1,,,0.0,,,,,,,,,
+ali_RB_BAL,Rasheen Ali,RB,BAL,,213,222,264,15.6,,,,,,,2.2,,0.0,,32.4,0.0,,,,,,,,,0.0
+all_TE_CIN,Erick All,TE,CIN,,215,224,266,18.0,,,,,,,2.0,,0.1,,,0.0,,,,,,,,,
+allen_RB_JAX,LeQuint Allen,RB,JAX,,218,227,269,2.7,,,,,,,0.5,,0.0,,11.5,0.0,,,,,,,,,0.0
+allen_RB_WSH,Kaytron Allen,RB,WSH,,219,228,270,15.0,,,,,,,2.0,,0.0,,30.2,0.0,,,,,,,,,0.0
+allen_TE_LAR,Davis Allen,TE,LAR,,220,229,271,13.7,,,,,,,1.6,,0.2,,,0.0,,,,,,,,,
+arroyo_TE_SEA,Elijah Arroyo,TE,SEA,,224,233,274,6.5,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+ayomanor_WR_TEN,Elic Ayomanor,WR,TEN,,228,237,278,36.0,,,,,,,2.6,,0.5,,0.0,0.0,,,,,,,,,0.0
+badie_RB_DEN,Tyler Badie,RB,DEN,,231,240,281,3.4,,,,,,,0.5,,0.0,,2.7,0.0,,,,,,,,,0.0
+bagent_QB_CHI,Tyson Bagent,QB,CHI,,232,241,282,,,9.9,0.0,,,,,,,0.0,0.9,0.0,,,,,,,,,0.0
+bates_TE_WSH,John Bates,TE,WSH,,238,247,286,72.6,,,,,,,7.6,,0.6,,0.0,0.0,,,,,,,,,0.0
+bech_WR_LV,Jack Bech,WR,LV,,241,250,288,315.0,,,,,,,28.0,,1.0,,0.0,,,,,,,,,,0.0
+beck_RB_NYJ,Andrew Beck,RB,NYJ,,242,251,289,15.8,,,,,,,2.2,,0.0,,0.2,0.0,,,,,,,,,0.0
+bell_WR_BUF,Skyler Bell,WR,BUF,,245,254,291,163.0,,,,,,,12.0,,1.0,,0.0,,,,,,,,,,0.0
+bellinger_TE_TEN,Daniel Bellinger,TE,TEN,,249,257,294,21.0,,,,,,,1.6,,0.2,,,0.0,,,,,,,,,
+bennett_QB_LAR,Stetson Bennett,QB,LAR,,251,259,295,,,7.7,0.0,,,,,,,0.1,0.5,0.0,,,,,,,,,0.0
+benson_WR_LV,Malik Benson,WR,LV,,253,261,297,162.0,,,,,,,13.2,,0.6,,0.3,0.1,,,,,,,,,0.0
+bentley_TE_DEN,Dallen Bentley,TE,DEN,,255,263,299,5.5,,,,,,,0.7,,0.0,,,0.0,,,,,,,,,
+boerkircher_TE_JAX,Nate Boerkircher,TE,JAX,,263,271,306,12.7,,,,,,,1.2,,0.1,,,0.0,,,,,,,,,
+bond_WR_CLE,Isaiah Bond,WR,CLE,,264,272,307,89.5,,,,,,,6.3,,0.6,,13.0,0.0,,,,,,,,,0.0
+bourne_WR_ARI,Kendrick Bourne,WR,ARI,,267,275,308,239.0,,,,,,,23.0,,1.0,,0.0,,,,,,,,,,0.0
+brooks_RB_CIN,Tahj Brooks,RB,CIN,,278,285,317,0.0,,,,,,,0.0,,0.0,,128.0,,,,,,,,,,1.0
+brooks_RB_GB,Christopher Brooks,RB,GB,,279,286,318,5.3,,,,,,,0.9,,0.0,,30.1,0.0,,,,,,,,,0.2
+brooks_RB_HOU,British Brooks,RB,HOU,,280,287,319,0.1,,,,,,,0.0,,0.0,,13.4,0.0,,,,,,,,,0.0
+brown_WR_PHI,Marquise Brown,WR,PHI,,288,295,327,96.4,,,,,,,7.8,,0.7,,0.0,0.0,,,,,,,,,0.0
+brown_WR_WSH,Dyami Brown,WR,WSH,,289,296,328,216.0,,,,,,,16.0,,2.0,,0.0,,,,,,,,,,0.0
+bryant_WR_DEN,Pat Bryant,WR,DEN,,293,300,332,320.0,,,,,,,28.0,,2.0,,0.0,,,,,,,,,,0.0
+burks_WR_WSH,Treylon Burks,WR,WSH,,296,303,334,217.0,,,,,,,15.0,,1.0,,0.0,,,,,,,,,,0.0
+burton_RB_CLE,Michael Burton,RB,CLE,,297,304,335,2.2,,,,,,,0.4,,0.0,,0.5,0.0,,,,,,,,,0.1
+cameron_WR_JAX,Josh Cameron,WR,JAX,,302,309,340,40.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+cardinals_DST_ARI,Cardinals,DST,ARI,,306,313,344,,6.4,,,,,4.4,,,,,,4.4,,,,19.8,,1.0,0.1,29.8,
+carlson_K_NO,Daniel Carlson,K,NO,,308,315,346,,,,,0.5,0.4,,,0.3,,,,,0.4,0.0,,,2.0,,,,
+claiborne_RB_MIN,Demond Claiborne,RB,MIN,,325,332,362,15.1,,,,,,,2.6,,0.0,,33.6,0.0,,,,,,,,,0.0
+coleman_WR_MIA,Kevin Coleman Jr.,WR,MIA,,327,334,364,352.0,,,,,,,27.0,,1.0,,0.0,,,,,,,,,,0.0
+colts_DST_IND,Colts,DST,IND,,331,338,368,,6.3,,,,,3.4,,,,,,3.4,,,,20.7,,1.0,0.0,24.7,
+conklin_TE_DET,Tyler Conklin,TE,DET,,333,340,369,35.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+cook_QB_MIA,Brady Cook,QB,MIA,,338,345,374,,,7.8,0.0,,,,,,,0.1,1.0,0.0,,,,,,,,,0.0
+cooper_WR_NYJ,Omar Cooper Jr.,WR,NYJ,,342,349,378,37.1,,,,,,,2.9,,0.3,,0.8,0.1,,,,,,,,,0.0
+cooper_WR_PHI,Darius Cooper,WR,PHI,,343,350,379,38.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+cousins_QB_LV,Kirk Cousins,QB,LV,,346,353,382,,,204.0,0.8,,,,,,,1.6,1.8,0.1,,,,,,,,,0.1
+cuevas_TE_BAL,Josh Cuevas,TE,BAL,,352,359,387,20.9,,,,,,,1.8,,0.0,,0.0,0.0,,,,,,,,,0.0
+dalton_QB_PHI,Andy Dalton,QB,PHI,,358,365,393,,,9.2,0.0,,,,,,,0.1,1.5,0.1,,,,,,,,,0.0
+daniels_QB_TB,Jalon Daniels,QB,TB,,359,366,394,,,7.3,0.0,,,,,,,0.1,0.7,0.0,,,,,,,,,0.0
+davis_RB_NYJ,Isaiah Davis,RB,NYJ,,363,370,396,4.3,,,,,,,0.5,,0.0,,10.5,0.0,,,,,,,,,0.1
+delp_TE_NO,Oscar Delp,TE,NO,,371,378,403,6.6,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+demercado_RB_DAL,Emari Demercado,RB,DAL,,373,380,405,15.2,,,,,,,2.2,,0.0,,70.4,0.0,,,,,,,,,0.5
+devito_QB_NE,Tommy DeVito,QB,NE,,374,381,406,,,8.3,0.0,,,,,,,0.0,1.1,0.0,,,,,,,,,0.0
+dike_WR_TEN,Chimere Dike,WR,TEN,,376,383,408,69.6,,,,,,,6.9,,0.8,,25.4,0.1,,,,,,,,,0.5
+dillon_RB_CAR,AJ Dillon,RB,CAR,,377,384,409,1.5,,,,,,,0.2,,0.0,,9.8,0.0,,,,,,,,,0.0
+dobbs_QB_DET,Joshua Dobbs,QB,DET,,382,389,414,,,71.8,0.5,,,,,,,0.6,3.8,0.0,,,,,,,,,0.0
+dolphins_DST_MIA,Dolphins,DST,MIA,,384,391,416,,6.4,,,,,3.3,,,,,,3.3,,,,20.6,,1.1,0.1,25.6,
+dulin_WR_IND,Ashton Dulin,WR,IND,,394,401,425,79.2,,,,,,,5.7,,0.6,,14.8,0.0,,,,,,,,,0.0
+durham_TE_TB,Payne Durham,TE,TB,,395,402,426,5.5,,,,,,,0.5,,0.1,,,0.0,,,,,,,,,
+endries_TE_CIN,Jack Endries,TE,CIN,,405,412,435,7.3,,,,,,,0.7,,0.1,,,0.0,,,,,,,,,
+engram_TE_DEN,Evan Engram,TE,DEN,,406,413,436,244.7,,,,,,,25.2,,1.0,,0.0,0.0,,,,,,,,,0.0
+ers_DST_SF,49ers,DST,SF,,407,414,437,,5.7,,,,,4.8,,,,,,4.8,,,,20.0,,1.0,0.0,25.3,
+estime_RB_NO,Audric Estime,RB,NO,,411,418,441,1.4,,,,,,,0.2,,0.0,,7.4,0.0,,,,,,,,,0.0
+evans_TE_CAR,Mitchell Evans,TE,CAR,,414,421,444,9.6,,,,,,,1.0,,0.1,,,0.0,,,,,,,,,
+ewers_QB_JAX,Quinn Ewers,QB,JAX,,416,423,446,,,83.6,0.5,,,,,,,0.6,2.5,0.0,,,,,,,,,0.0
+fant_TE_NO,Noah Fant,TE,NO,,421,428,451,92.9,,,,,,,10.8,,0.6,,0.0,0.2,,,,,,,,,0.0
+farrell_TE_SF,Luke Farrell,TE,SF,,422,429,452,36.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+felton_WR_MIN,Tai Felton,WR,MIN,,424,431,454,37.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+fidone_TE_NYG,Thomas Fidone II,TE,NYG,,427,433,456,6.2,,,,,,,0.6,,0.1,,,0.0,,,,,,,,,
+fields_QB_KC,Justin Fields,QB,KC,,428,434,457,,,7.4,0.0,,,,,,,0.1,1.3,0.0,,,,,,,,,0.0
+fitzgerald_K_CAR,Ryan Fitzgerald,K,CAR,,432,438,461,,,,,0.5,0.4,,,4.0,,,,,4.8,0.0,,,15.6,,,,
+flacco_QB_CIN,Joe Flacco,QB,CIN,,434,440,463,,,10.4,0.0,,,,,,,0.1,0.9,0.0,,,,,,,,,0.0
+folk_K_ATL,Nick Folk,K,ATL,,437,443,466,,,,,0.4,0.4,,,4.2,,,,,4.7,0.0,,,16.5,,,,
+freiermuth_TE_PIT,Pat Freiermuth,TE,PIT,,445,451,473,30.1,,,,,,,2.7,,0.3,,,0.0,,,,,,,,,
+gadsden_TE_LAC,Oronde Gadsden II,TE,LAC,,447,453,475,179.1,,,,,,,16.2,,1.6,,0.0,0.0,,,,,,,,,0.0
+gay_K_LV,Matt Gay,K,LV,,451,457,479,,,,,0.4,0.4,,,4.2,,,,,4.8,0.0,,,14.8,,,,
+gesicki_TE_CIN,Mike Gesicki,TE,CIN,,452,458,480,192.6,,,,,,,19.4,,2.1,,0.0,0.0,,,,,,,,,0.0
+giddens_RB_IND,DJ Giddens,RB,IND,,455,461,482,14.8,,,,,,,2.0,,0.0,,30.1,0.0,,,,,,,,,0.0
+gilliam_RB_NE,Reggie Gilliam,RB,NE,,456,462,483,30.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+gordon_RB_MIA,Ollie Gordon II,RB,MIA,,461,467,488,0.2,,,,,,,0.1,,0.0,,4.2,0.0,,,,,,,,,0.1
+granson_TE_TEN,Kylen Granson,TE,TEN,,468,474,495,5.2,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+gray_TE_KC,Noah Gray,TE,KC,,470,476,497,7.0,,,,,,,0.8,,0.0,,,0.0,,,,,,,,,
+grupe_K_NYJ,Blake Grupe,K,NYJ,,477,483,504,,,,,0.6,0.5,,,4.2,,,,,4.7,0.0,,,15.4,,,,
+hawes_TE_BUF,Jackson Hawes,TE,BUF,,490,496,516,6.4,,,,,,,0.5,,0.1,,,0.0,,,,,,,,,
+heidenreich_RB_PIT,Eli Heidenreich,RB,PIT,,492,498,518,1.2,,,,,,,0.1,,0.0,,7.6,0.0,,,,,,,,,0.1
+helm_TE_TEN,Gunnar Helm,TE,TEN,,493,499,519,23.9,,,,,,,2.7,,0.2,,,0.0,,,,,,,,,
+heyward_RB_LV,Connor Heyward,RB,LV,,498,504,524,6.8,,,,,,,1.0,,0.1,,,0.0,,,,,,,,,
+hibner_TE_BAL,Matthew Hibner,TE,BAL,,500,506,526,20.9,,,,,,,1.8,,0.0,,0.0,0.0,,,,,,,,,0.0
+higbee_TE_LAR,Tyler Higbee,TE,LAR,,502,508,528,28.3,,,,,,,2.5,,0.2,,,0.0,,,,,,,,,
+higgins_TE_ARI,Elijah Higgins,TE,ARI,,503,509,529,97.2,,,,,,,11.1,,0.6,,0.0,0.0,,,,,,,,,0.0
+hollins_WR_NE,Mack Hollins,WR,NE,,517,522,540,260.0,,,,,,,22.0,,2.0,,0.0,,,,,,,,,,0.0
+hooper_TE_ATL,Austin Hooper,TE,ATL,,520,525,543,98.2,,,,,,,11.2,,0.6,,0.0,0.0,,,,,,,,,0.0
+horton_WR_SEA,Tory Horton,WR,SEA,,525,530,548,163.8,,,,,,,12.2,,1.2,,0.2,0.0,,,,,,,,,0.0
+howell_QB_DAL,Sam Howell,QB,DAL,,528,533,551,,,9.6,0.0,,,,,,,0.1,0.9,0.0,,,,,,,,,0.0
+huntley_QB_BAL,Tyler Huntley,QB,BAL,,535,540,558,,,68.5,0.5,,,,,,,0.6,5.3,0.0,,,,,,,,,0.0
+hurst_WR_TB,Ted Hurst,WR,TB,,537,542,560,161.8,,,,,,,12.6,,1.1,,0.4,0.1,,,,,,,,,0.0
+hutchinson_WR_HOU,Xavier Hutchinson,WR,HOU,,538,543,561,28.1,,,,,,,2.4,,0.2,,1.1,0.0,,,,,,,,,0.0
+ingold_RB_LAC,Alec Ingold,RB,LAC,,540,545,563,2.7,,,,,,,0.3,,0.0,,1.4,0.0,,,,,,,,,0.0
+iosivas_WR_CIN,Andrei Iosivas,WR,CIN,,542,547,565,152.0,,,,,,,13.0,,1.1,,5.8,0.0,,,,,,,,,0.0
+johnson_RB_BUF,Ty Johnson,RB,BUF,,559,564,580,14.9,,,,,,,1.3,,0.1,,12.9,0.0,,,,,,,,,0.1
+johnson_RB_CHI,Roschon Johnson,RB,CHI,,561,566,582,1.1,,,,,,,0.2,,0.0,,7.3,0.0,,,,,,,,,0.2
+johnson_RB_GB,Kaleb Johnson,RB,GB,,562,567,583,10.0,,,,,,,1.0,,0.0,,33.0,,,,,,,,,,0.0
+johnson_TE_NYG,Theo Johnson,TE,NYG,,567,572,588,25.1,,,,,,,2.1,,0.3,,,0.0,,,,,,,,,
+johnson_WR_TB,Kameron Johnson,WR,TB,,573,578,594,0.0,,,,,,,0.0,,0.0,,12.0,,,,,,,,,,0.0
+joly_TE_MIA,Justin Joly,TE,MIA,,574,579,595,5.5,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+jones_QB_SF,Mac Jones,QB,SF,,576,581,597,,,9.3,0.0,,,,,,,0.1,1.1,0.0,,,,,,,,,0.0
+juszczyk_RB_SF,Kyle Juszczyk,RB,SF,,585,590,606,87.6,,,,,,,10.8,,0.6,,9.6,0.0,,,,,,,,,0.0
+kacmarek_TE_MIA,Will Kacmarek,TE,MIA,,586,591,607,97.8,,,,,,,10.2,,0.6,,0.0,0.1,,,,,,,,,0.0
+kieft_TE_TB,Ko Kieft,TE,TB,,594,599,615,20.5,,,,,,,2.2,,0.0,,0.0,0.0,,,,,,,,,0.0
+kiner_RB_NE,Corey Kiner,RB,NE,,596,601,617,6.8,,,,,,,0.9,,0.0,,19.2,0.0,,,,,,,,,0.0
+klare_TE_LAR,Max Klare,TE,LAR,,600,605,621,7.2,,,,,,,0.7,,0.1,,,0.0,,,,,,,,,
+klein_TE_HOU,Marlin Klein,TE,HOU,,601,606,622,27.6,,,,,,,3.0,,0.0,,0.0,0.1,,,,,,,,,0.0
+klubnik_QB_NYJ,Cade Klubnik,QB,NYJ,,602,607,623,,,75.2,0.5,,,,,,,0.6,3.8,0.0,,,,,,,,,0.0
+kmet_TE_CHI,Cole Kmet,TE,CHI,,603,608,624,14.4,,,,,,,1.3,,0.1,,,0.0,,,,,,,,,
+knight_RB_ARI,Zonovan Knight,RB,ARI,,604,609,625,1.2,,,,,,,0.2,,0.0,,5.5,0.0,,,,,,,,,0.1
+knox_TE_BUF,Dawson Knox,TE,BUF,,605,610,626,21.3,,,,,,,1.8,,0.1,,,0.0,,,,,,,,,
+kolar_TE_LAC,Charlie Kolar,TE,LAC,,607,612,628,85.8,,,,,,,8.3,,0.6,,0.0,0.0,,,,,,,,,0.0
+koziol_TE_JAX,Tanner Koziol,TE,JAX,,608,613,629,21.4,,,,,,,2.3,,0.0,,0.0,0.0,,,,,,,,,0.0
+lance_QB_LAC,Trey Lance,QB,LAC,,615,620,636,,,78.6,0.5,,,,,,,0.5,4.2,0.0,,,,,,,,,0.0
+lance_WR_NO,Bryce Lance,WR,NO,,616,621,637,126.6,,,,,,,9.6,,0.6,,0.3,0.1,,,,,,,,,0.0
+laube_RB_LV,Dylan Laube,RB,LV,,623,628,644,2.8,,,,,,,0.4,,0.0,,7.7,0.3,,,,,,,,,0.1
+leonard_QB_IND,Riley Leonard,QB,IND,,625,630,645,,,158.0,1.0,,,,,,,1.0,5.0,,,,,,,,,,0.0
+lock_QB_SEA,Drew Lock,QB,SEA,,629,634,649,,,71.5,0.5,,,,,,,0.6,3.1,0.0,,,,,,,,,0.0
+long_TE_ARI,Hunter Long,TE,ARI,,632,637,652,19.0,,,,,,,2.3,,0.0,,0.0,0.0,,,,,,,,,0.0
+luepke_RB_DAL,Hunter Luepke,RB,DAL,,635,640,655,4.0,,,,,,,0.5,,0.0,,5.6,0.0,,,,,,,,,0.0
+manhertz_TE_NYG,Chris Manhertz,TE,NYG,,639,644,659,10.6,,,,,,,1.2,,0.0,,0.0,0.0,,,,,,,,,0.0
+mariota_QB_WSH,Marcus Mariota,QB,WSH,,640,645,660,,,17.4,0.1,,,,,,,0.1,0.3,0.0,,,,,,,,,0.0
+mayer_TE_LV,Michael Mayer,TE,LV,,649,654,669,193.6,,,,,,,19.9,,0.6,,0.0,0.0,,,,,,,,,0.0
+mccarthy_QB_MIN,J.J. McCarthy,QB,MIN,,651,656,671,,,7.6,0.0,,,,,,,0.1,1.0,0.0,,,,,,,,,0.0
+mccord_QB_MIA,Kyle McCord,QB,MIA,,652,657,672,,,80.4,0.5,,,,,,,0.6,3.2,0.0,,,,,,,,,0.0
+mcgowan_RB_IND,Seth McGowan,RB,IND,,656,661,676,1.4,,,,,,,0.1,,0.0,,7.6,0.0,,,,,,,,,0.1
+mckee_QB_PHI,Tanner McKee,QB,PHI,,658,663,678,,,8.5,0.0,,,,,,,0.1,1.0,0.0,,,,,,,,,0.0
+miller_RB_NO,Kendre Miller,RB,NO,,671,676,690,12.4,,,,,,,1.7,,0.0,,57.0,0.0,,,,,,,,,0.1
+mills_QB_HOU,Davis Mills,QB,HOU,,676,681,695,,,77.2,0.5,,,,,,,0.6,2.6,0.0,,,,,,,,,0.0
+milroe_QB_SEA,Jalen Milroe,QB,SEA,,677,682,696,,,5.1,0.0,,,,,,,0.0,0.8,0.0,,,,,,,,,0.0
+mims_WR_DEN,Marvin Mims Jr.,WR,DEN,,681,686,700,273.0,,,,,,,24.0,,2.0,,45.0,,,,,,,,,,0.0
+mingo_WR_DAL,Jonathan Mingo,WR,DAL,,682,687,701,41.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+minshew_QB_ARI,Gardner Minshew,QB,ARI,,683,688,702,,,74.8,0.5,,,,,,,0.6,2.0,0.0,,,,,,,,,0.0
+mooney_WR_NYG,Darnell Mooney,WR,NYG,,694,698,712,167.5,,,,,,,11.4,,1.0,,6.0,0.0,,,,,,,,,0.0
+moreau_TE_HOU,Foster Moreau,TE,HOU,,702,706,720,6.9,,,,,,,0.6,,0.1,,,0.0,,,,,,,,,
+mundt_TE_PHI,Johnny Mundt,TE,PHI,,710,714,728,20.0,,,,,,,1.7,,0.0,,0.0,0.0,,,,,,,,,0.0
+njoku_TE_LAC,David Njoku,TE,LAC,,722,726,740,222.2,,,,,,,21.4,,2.2,,0.0,0.0,,,,,,,,,0.0
+nwangwu_RB_NYJ,Kene Nwangwu,RB,NYJ,,724,728,741,0.2,,,,,,,0.0,,0.0,,4.0,0.0,,,,,,,,,0.0
+ogletree_TE_IND,Andrew Ogletree,TE,IND,,728,732,745,20.0,,,,,,,2.2,,0.0,,0.0,0.0,,,,,,,,,0.0
+oliver_TE_MIN,Josh Oliver,TE,MIN,,734,738,750,82.3,,,,,,,9.2,,0.6,,0.0,0.0,,,,,,,,,0.0
+otton_TE_TB,Cade Otton,TE,TB,,738,742,754,241.5,,,,,,,24.4,,1.1,,0.0,0.0,,,,,,,,,0.0
+palmer_WR_BUF,Joshua Palmer,WR,BUF,,745,749,759,231.0,,,,,,,19.0,,1.0,,0.0,,,,,,,,,,0.0
+panthers_DST_CAR,Panthers,DST,CAR,,748,752,762,,5.8,,,,,2.7,,,,,,2.7,,,,19.4,,1.0,0.0,24.7,
+parkinson_TE_LAR,Colby Parkinson,TE,LAR,,750,754,764,24.7,,,,,,,2.5,,0.3,,,0.0,,,,,,,,,
+patterson_K_MIA,Riley Patterson,K,MIA,,752,756,766,,,,,0.5,0.4,,,4.1,,,,,4.8,0.0,,,13.2,,,,
+payton_QB_PHI,Cole Payton,QB,PHI,,754,758,768,,,6.9,0.0,,,,,,,0.1,0.7,0.0,,,,,,,,,0.0
+pickett_QB_CAR,Kenny Pickett,QB,CAR,,760,764,773,,,80.9,0.0,,,,,,,0.6,2.8,0.0,,,,,,,,,0.0
+pineiro_K_SF,Eddy Pineiro,K,SF,,764,768,777,,,,,0.4,0.3,,,4.6,,,,,5.2,0.0,,,21.9,,,,
+raiders_DST_LV,Raiders,DST,LV,,779,783,792,,6.0,,,,,3.8,,,,,,3.8,,,,20.2,,1.1,0.0,24.0,
+raridon_TE_NE,Eli Raridon,TE,NE,,780,784,793,12.7,,,,,,,1.3,,0.1,,,0.0,,,,,,,,,
+rattler_QB_NO,Spencer Rattler,QB,NO,,781,785,794,,,81.1,0.5,,,,,,,0.6,4.0,0.0,,,,,,,,,0.0
+raymond_WR_CHI,Kalif Raymond,WR,CHI,,782,786,795,187.0,,,,,,,19.0,,1.0,,27.0,,,,,,,,,,0.0
+ricard_RB_NYG,Patrick Ricard,RB,NYG,,793,797,806,27.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+richardson_QB_IND,Anthony Richardson,QB,IND,,796,800,809,,,8.9,0.0,,,,,,,0.1,1.1,0.0,,,,,,,,,0.0
+robinson_WR_SF,Demarcus Robinson,WR,SF,,805,809,818,25.6,,,,,,,1.8,,0.2,,0.3,0.0,,,,,,,,,0.0
+roush_TE_CHI,Sam Roush,TE,CHI,,809,813,821,20.5,,,,,,,2.3,,0.0,,0.0,0.0,,,,,,,,,0.0
+ruckert_TE_NYJ,Jeremy Ruckert,TE,NYJ,,813,817,825,14.0,,,,,,,1.7,,0.1,,,0.0,,,,,,,,,
+rudolph_QB_PIT,Mason Rudolph,QB,PIT,,814,818,826,,,8.0,0.0,,,,,,,0.1,1.1,0.0,,,,,,,,,0.0
+rush_QB_ATL,Cooper Rush,QB,ATL,,816,820,828,,,8.7,0.0,,,,,,,0.1,0.3,0.0,,,,,,,,,0.0
+ryan_TE_CLE,Carsen Ryan,TE,CLE,,819,823,831,34.0,,,,,,,4.0,,0.0,,0.0,,,,,,,,,,0.0
+ryland_K_ARI,Chad Ryland,K,ARI,,820,824,832,,,,,0.5,0.4,,,4.2,,,,,4.8,0.0,,,14.0,,,,
+sample_TE_CIN,Drew Sample,TE,CIN,,824,828,834,6.0,,,,,,,0.7,,0.1,,,0.0,,,,,,,,,
+sanders_QB_CLE,Shedeur Sanders,QB,CLE,,829,832,838,,,36.6,0.2,,,,,,,0.2,3.5,0.0,,,,,,,,,0.0
+sanders_RB_CLE,Raheim Sanders,RB,CLE,,830,833,839,0.9,,,,,,,0.1,,0.0,,5.8,0.0,,,,,,,,,0.1
+sanders_TE_CAR,Ja'Tavion Sanders,TE,CAR,,832,835,841,12.9,,,,,,,1.6,,0.1,,,0.0,,,,,,,,,
+saubert_TE_SEA,Eric Saubert,TE,SEA,,833,836,842,34.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+sauls_K_NYG,Ben Sauls,K,NYG,,834,837,843,,,,,0.4,0.3,,,0.1,,,,,0.3,0.0,,,1.6,,,,
+saylors_RB_DET,Jacob Saylors,RB,DET,,835,838,844,6.2,,,,,,,0.6,,0.0,,9.9,0.0,,,,,,,,,0.1
+schoonmaker_TE_DAL,Luke Schoonmaker,TE,DAL,,836,839,845,7.9,,,,,,,0.9,,0.1,,,0.0,,,,,,,,,
+sharp_TE_TB,Bauer Sharp,TE,TB,,844,847,852,6.9,,,,,,,0.6,,0.1,,,0.0,,,,,,,,,
+shipley_RB_PHI,Will Shipley,RB,PHI,,849,852,857,2.5,,,,,,,0.3,,0.0,,6.8,0.0,,,,,,,,,0.0
+shrader_K_IND,Spencer Shrader,K,IND,,851,854,859,,,,,0.6,0.5,,,4.0,,,,,4.7,0.0,,,19.2,,,,
+simpson_QB_LAR,Ty Simpson,QB,LAR,,855,858,863,,,25.5,0.0,,,,,,,0.2,1.8,0.0,,,,,,,,,0.0
+singletary_RB_NYG,Devin Singletary,RB,NYG,,859,862,867,0.6,,,,,,,0.1,,0.0,,8.2,0.0,,,,,,,,,0.1
+sinnott_TE_WSH,Ben Sinnott,TE,WSH,,861,864,868,6.2,,,,,,,0.6,,0.1,,,0.0,,,,,,,,,
+skowronek_WR_PIT,Ben Skowronek,WR,PIT,,863,866,870,17.0,,,,,,,2.0,,0.0,,0.0,,,,,,,,,,0.0
+slye_K_TEN,Joey Slye,K,TEN,,867,870,873,,,,,0.7,0.6,,,4.2,,,,,4.8,0.0,,,15.8,,,,
+smith_QB_NYJ,Geno Smith,QB,NYJ,,871,874,877,,,2016.0,7.4,,,,,,,10.9,118.0,0.1,,,,,,,,,0.6
+smith_RB_KC,Brashard Smith,RB,KC,,872,875,878,7.1,,,,,,,1.1,,0.1,,11.4,0.0,,,,,,,,,0.0
+smith_TE_GB,Jonnu Smith,TE,GB,,873,876,879,79.7,,,,,,,8.7,,0.5,,10.0,0.0,,,,,,,,,0.0
+smith_WR_NYJ,Arian Smith,WR,NYJ,,877,880,883,0.0,,,,,,,0.0,,0.0,,24.0,,,,,,,,,,0.0
+smythe_TE_BAL,Durham Smythe,TE,BAL,,882,885,888,4.7,,,,,,,0.5,,0.0,,,0.0,,,,,,,,,
+spannford_TE_DAL,Brevyn Spann-Ford,TE,DAL,,885,888,891,6.3,,,,,,,0.6,,0.1,,,0.0,,,,,,,,,
+stevens_K_WSH,Drew Stevens,K,WSH,,887,890,893,,,,,0.4,0.4,,,0.1,,,,,0.4,0.0,,,1.6,,,,
+stidham_QB_DEN,Jarrett Stidham,QB,DEN,,889,892,895,,,7.6,0.0,,,,,,,0.1,1.0,0.0,,,,,,,,,0.0
+stover_TE_HOU,Cade Stover,TE,HOU,,891,894,897,69.8,,,,,,,8.4,,0.6,,10.0,0.0,,,,,,,,,0.0
+stowers_TE_PHI,Eli Stowers,TE,PHI,,892,895,898,21.7,,,,,,,1.9,,0.2,,,0.1,,,,,,,,,
+szmyt_K_CLE,Andre Szmyt,K,CLE,,896,898,901,,,,,0.5,0.3,,,4.1,,,,,4.6,0.0,,,12.9,,,,
+tagovailoa_QB_ATL,Tua Tagovailoa,QB,ATL,,897,899,902,,,1192.0,4.2,,,,,,,5.6,23.6,0.1,,,,,,,,,0.0
+taylor_QB_GB,Tyrod Taylor,QB,GB,,900,902,905,,,72.4,0.5,,,,,,,0.6,7.0,0.0,,,,,,,,,0.0
+taylor_TE_NYJ,Mason Taylor,TE,NYJ,,903,905,908,32.9,,,,,,,3.6,,0.3,,,0.0,,,,,,,,,
+team_DST_WSH,Team,DST,WSH,,905,907,910,,0.3,,,,,0.4,,,,,,0.4,,,,2.8,,0.1,0.0,26.8,
+thomas_TE_LV,Ian Thomas,TE,LV,,908,909,912,20.9,,,,,,,2.4,,0.0,,0.0,0.0,,,,,,,,,0.0
+thomas_WR_CHI,Zavion Thomas,WR,CHI,,909,910,913,91.3,,,,,,,7.6,,0.6,,0.4,0.1,,,,,,,,,0.0
+thornton_WR_KC,Tyquan Thornton,WR,KC,,912,913,916,28.9,,,,,,,1.4,,0.2,,0.0,0.0,,,,,,,,,0.0
+tolbert_WR_MIA,Jalen Tolbert,WR,MIA,,920,920,923,21.7,,,,,,,2.0,,0.2,,0.0,0.0,,,,,,,,,0.0
+tonges_TE_SF,Jake Tonges,TE,SF,,921,921,924,5.7,,,,,,,0.7,,0.1,,,0.0,,,,,,,,,
+traore_TE_MIA,Seydou Traore,TE,MIA,,925,925,928,5.5,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+trautman_TE_DEN,Adam Trautman,TE,DEN,,927,927,930,83.0,,,,,,,8.8,,0.6,,0.0,0.0,,,,,,,,,0.0
+tremayne_WR_CAR,Brycen Tremayne,WR,CAR,,929,929,932,36.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+tremble_TE_CAR,Tommy Tremble,TE,CAR,,930,930,933,94.8,,,,,,,9.7,,0.6,,0.0,0.0,,,,,,,,,0.0
+trubisky_QB_TEN,Mitch Trubisky,QB,TEN,,932,932,935,,,80.8,0.5,,,,,,,0.6,1.2,0.0,,,,,,,,,0.0
+tucker_RB_TB,Sean Tucker,RB,TB,,933,933,936,0.4,,,,,,,0.1,,0.0,,9.8,0.0,,,,,,,,,0.1
+turpin_WR_DAL,KaVontae Turpin,WR,DAL,,937,937,940,227.0,,,,,,,18.0,,2.0,,103.0,,,,,,,,,,0.0
+vaki_RB_DET,Sione Vaki,RB,DET,,941,941,943,9.0,,,,,,,1.0,,0.0,,44.0,,,,,,,,,,0.0
+vidal_RB_LAC,Kimani Vidal,RB,LAC,,946,946,948,9.8,,,,,,,1.0,,0.1,,22.8,0.0,,,,,,,,,0.2
+virgil_WR_ARI,Reggie Virgil,WR,ARI,,947,947,949,39.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+walker_WR_BAL,Devontez Walker,WR,BAL,,952,952,954,209.0,,,,,,,14.0,,1.0,,0.0,,,,,,,,,,0.0
+walker_WR_CHI,Jahdae Walker,WR,CHI,,953,953,955,31.5,,,,,,,2.4,,0.2,,0.2,0.0,,,,,,,,,0.0
+washington_TE_PIT,Darnell Washington,TE,PIT,,960,960,961,22.6,,,,,,,2.0,,0.1,,,0.1,,,,,,,,,
+watson_QB_CLE,Deshaun Watson,QB,CLE,,964,964,965,,,714.0,2.3,,,,,,,3.0,72.0,0.3,,,,,,,,,0.6
+wetjen_WR_PIT,Kaden Wetjen,WR,PIT,,978,978,979,0.0,,,,,,,0.0,,0.0,,12.0,,,,,,,,,,0.0
+whiteheart_TE_CLE,Blake Whiteheart,TE,CLE,,983,983,984,2.6,,,,,,,0.4,,0.0,,,0.0,,,,,,,,,
+whyle_TE_GB,Josh Whyle,TE,GB,,985,985,986,4.4,,,,,,,0.5,,0.0,,,0.0,,,,,,,,,
+wiley_TE_KC,Jared Wiley,TE,KC,,987,987,988,4.8,,,,,,,0.6,,0.0,,,0.0,,,,,,,,,
+williams_WR_CIN,Ke'Shawn Williams,WR,CIN,,991,991,992,0.0,,,,,,,0.0,,0.0,,0.0,,,,,,,,,,0.0
+williams_WR_GB,Savion Williams,WR,GB,,992,992,993,149.0,,,,,,,13.0,,1.0,,46.0,,,,,,,,,,0.0
+williams_WR_NE,Kyle Williams,WR,NE,,993,993,994,232.0,,,,,,,16.0,,1.0,,22.0,,,,,,,,,,0.0
+williams_WR_NYJ,Isaiah Williams,WR,NYJ,,994,994,995,114.0,,,,,,,12.0,,0.0,,13.0,,,,,,,,,,0.0
+williams_WR_WSH,Antonio Williams,WR,WSH,,995,995,996,33.0,,,,,,,2.3,,0.1,,0.8,0.1,,,,,,,,,0.0
+wilson_RB_SEA,Emanuel Wilson,RB,SEA,,1002,1002,1003,7.9,,,,,,,1.0,,0.0,,41.3,0.0,,,,,,,,,0.1
+winston_QB_NYG,Jameis Winston,QB,NYG,,1007,1007,1008,,,8.8,0.0,,,,,,,0.1,1.4,0.0,,,,,,,,,0.0
+woerner_TE_ATL,Charlie Woerner,TE,ATL,,1008,1008,1009,22.6,,,,,,,2.7,,0.0,,0.0,0.0,,,,,,,,,0.0
+woods_TE_NYJ,Jelani Woods,TE,NYJ,,1010,1010,1011,3.5,,,,,,,0.4,,0.1,,,0.0,,,,,,,,,
+wright_RB_MIA,Jaylen Wright,RB,MIA,,1013,1013,1014,3.0,,,,,,,0.4,,0.0,,20.1,0.1,,,,,,,,,0.1
+wright_TE_DET,Brock Wright,TE,DET,,1016,1016,1017,29.0,,,,,,,3.2,,0.4,,,0.0,,,,,,,,,
+young_WR_LV,Dareke Young,WR,LV,,1020,1020,1020,38.0,,,,,,,3.0,,0.0,,0.0,,,,,,,,,,0.0
+zaccheaus_WR_ATL,Olamide Zaccheaus,WR,ATL,,1023,1023,1023,82.2,,,,,,,8.2,,0.6,,0.5,0.0,,,,,,,,,0.0
+zvada_K_NYG,Dominic Zvada,K,NYG,,1026,1026,1026,,,,,0.1,0.1,,,0.0,,,,,0.1,0.0,,,0.6,,,,
