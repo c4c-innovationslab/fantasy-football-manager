@@ -1,68 +1,68 @@
 key,name,pos,team,bye,std,half_ppr,ppr
-gibbs_RB_DET,Jahmyr Gibbs,RB,DET,6,1.5,2.2,1.3
-taylor_RB_IND,Jonathan Taylor,RB,IND,13,2.5,6.1,
+gibbs_RB_DET,Jahmyr Gibbs,RB,DET,6,1.5,2.2,1.2
+taylor_RB_IND,Jonathan Taylor,RB,IND,13,2.5,6.1,8.4
 nacua_WR_LAR,Puka Nacua,WR,LAR,11,3.6,3.0,
 chase_WR_CIN,Ja'Marr Chase,WR,CIN,6,4.7,3.4,4.1
 mccaffrey_RB_SF,Christian McCaffrey,RB,SF,8,5.5,5.6,
-henry_RB_BAL,Derrick Henry,RB,BAL,13,7.0,,14.0
-cook_RB_BUF,James Cook III,RB,BUF,7,7.7,8.4,15.3
-smithnjigba_WR_SEA,Jaxon Smith-Njigba,WR,SEA,11,9.4,,5.3
-brown_WR_DET,Amon-Ra St. Brown,WR,DET,6,10.2,,6.8
+henry_RB_BAL,Derrick Henry,RB,BAL,13,7.0,,13.1
+cook_RB_BUF,James Cook III,RB,BUF,7,7.7,8.4,15.4
+smithnjigba_WR_SEA,Jaxon Smith-Njigba,WR,SEA,11,9.4,,5.1
+brown_WR_DET,Amon-Ra St. Brown,WR,DET,6,10.2,,6.9
 achane_RB_MIA,De'Von Achane,RB,MIA,6,11.1,,
 barkley_RB_PHI,Saquon Barkley,RB,PHI,10,12.9,16.6,
 lamb_WR_DAL,CeeDee Lamb,WR,DAL,14,13.2,12.5,
-jefferson_WR_MIN,Justin Jefferson,WR,MIN,6,14.5,14.4,8.8
+jefferson_WR_MIN,Justin Jefferson,WR,MIN,6,14.5,14.4,
 brown_WR_NE,A.J. Brown,WR,NE,11,15.7,16.0,
-walker_RB_KC,Kenneth Walker,RB,KC,5,16.4,21.5,21.1
+walker_RB_KC,Kenneth Walker,RB,KC,5,16.4,21.5,21.3
 brown_RB_CIN,Chase Brown,RB,CIN,6,16.4,13.7,
 hampton_RB_LAC,Omarion Hampton,RB,LAC,7,20.4,22.8,21.3
-williams_RB_DAL,Javonte Williams,RB,DAL,14,22.6,24.0,31.2
+williams_RB_DAL,Javonte Williams,RB,DAL,14,22.6,24.0,29.6
 flowers_WR_BAL,Zay Flowers,WR,BAL,13,23.8,,
-jeanty_RB_LV,Ashton Jeanty,RB,LV,13,24.6,21.3,19.2
-williams_RB_LAR,Kyren Williams,RB,LAR,11,24.7,,
+jeanty_RB_LV,Ashton Jeanty,RB,LV,13,24.6,21.3,18.7
+williams_RB_LAR,Kyren Williams,RB,LAR,11,24.7,,34.6
 olave_WR_NO,Chris Olave,WR,NO,8,26.3,,
 hall_RB_NYJ,Breece Hall,RB,NYJ,13,28.6,,
 higgins_WR_CIN,Tee Higgins,WR,CIN,6,30.7,,
 adams_WR_LAR,Davante Adams,WR,LAR,11,30.9,37.0,
 etienne_RB_NO,Travis Etienne Jr.,RB,NO,8,31.6,,
-allen_QB_BUF,Josh Allen,QB,BUF,7,32.8,29.0,23.8
+allen_QB_BUF,Josh Allen,QB,BUF,7,32.8,29.0,24.0
 egbuka_WR_TB,Emeka Egbuka,WR,TB,10,33.0,35.9,
-love_RB_ARI,Jeremiyah Love,RB,ARI,14,33.3,,28.4
+love_RB_ARI,Jeremiyah Love,RB,ARI,14,33.3,,27.2
 mcmillan_WR_CAR,Tetairoa McMillan,WR,CAR,5,34.1,,
 smith_WR_PHI,DeVonta Smith,WR,PHI,10,34.8,27.8,
-nabers_WR_NYG,Malik Nabers,WR,NYG,8,35.5,30.6,27.2
+nabers_WR_NYG,Malik Nabers,WR,NYG,8,35.5,30.6,26.1
 skattebo_RB_NYG,Cam Skattebo,RB,NYG,8,35.8,,
 wilson_WR_NYJ,Garrett Wilson,WR,NYJ,13,37.3,,
-swift_RB_CHI,D'Andre Swift,RB,CHI,10,39.7,40.8,42.2
-mcconkey_WR_LAC,Ladd McConkey,WR,LAC,7,42.1,38.9,40.0
-watson_WR_GB,Christian Watson,WR,GB,11,42.4,,50.6
+swift_RB_CHI,D'Andre Swift,RB,CHI,10,39.7,40.8,42.9
+mcconkey_WR_LAC,Ladd McConkey,WR,LAC,7,42.1,38.9,41.0
+watson_WR_GB,Christian Watson,WR,GB,11,42.4,,51.1
 odunze_WR_CHI,Rome Odunze,WR,CHI,10,42.6,49.8,
-waddle_WR_DEN,Jaylen Waddle,WR,DEN,10,44.9,44.0,48.7
+waddle_WR_DEN,Jaylen Waddle,WR,DEN,10,44.9,44.0,50.0
 mclaurin_WR_WSH,Terry McLaurin,WR,WSH,7,45.1,,
 maye_QB_NE,Drake Maye,QB,NE,11,46.7,,
 judkins_RB_CLE,Quinshon Judkins,RB,CLE,11,46.7,,
-moore_WR_BUF,DJ Moore,WR,BUF,7,47.6,47.5,
-montgomery_RB_HOU,David Montgomery,RB,HOU,8,48.3,54.8,
+moore_WR_BUF,DJ Moore,WR,BUF,7,47.6,47.5,47.9
+montgomery_RB_HOU,David Montgomery,RB,HOU,8,48.3,54.8,54.2
 irving_RB_TB,Bucky Irving,RB,TB,10,49.0,,
 bowers_TE_LV,Brock Bowers,TE,LV,13,51.3,36.8,
 burrow_QB_CIN,Joe Burrow,QB,CIN,6,53.2,,
 tuten_RB_JAX,Bhayshul Tuten,RB,JAX,7,54.8,,
 pierce_WR_IND,Alec Pierce,WR,IND,13,55.7,,
 metcalf_WR_PIT,DK Metcalf,WR,PIT,9,57.2,,
-evans_WR_SF,Mike Evans,WR,SF,8,57.8,,54.8
+evans_WR_SF,Mike Evans,WR,SF,8,57.8,,53.2
 burden_WR_CHI,Luther Burden III,WR,CHI,10,58.3,,
 price_RB_SEA,Jadarian Price,RB,SEA,11,58.7,61.1,65.3
-mcbride_TE_ARI,Trey McBride,TE,ARI,14,59.6,47.9,30.0
-washington_WR_JAX,Parker Washington,WR,JAX,7,60.0,59.4,56.4
+mcbride_TE_ARI,Trey McBride,TE,ARI,14,59.6,47.9,29.8
+washington_WR_JAX,Parker Washington,WR,JAX,7,60.0,59.4,57.8
 stevenson_RB_NE,Rhamondre Stevenson,RB,NE,11,61.4,56.2,
 henderson_RB_NE,TreVeyon Henderson,RB,NE,11,62.6,,
 sutton_WR_DEN,Courtland Sutton,WR,DEN,10,63.0,,
 harrison_WR_ARI,Marvin Harrison Jr.,WR,ARI,14,65.7,,
 pollard_RB_TEN,Tony Pollard,RB,TEN,9,67.2,,
 hurts_QB_PHI,Jalen Hurts,QB,PHI,10,68.0,73.4,
-thomas_WR_JAX,Brian Thomas Jr.,WR,JAX,7,68.6,,75.8
+thomas_WR_JAX,Brian Thomas Jr.,WR,JAX,7,68.6,,81.8
 stafford_QB_LAR,Matthew Stafford,QB,LAR,11,69.9,,
-loveland_TE_CHI,Colston Loveland,TE,CHI,10,70.8,62.2,47.2
+loveland_TE_CHI,Colston Loveland,TE,CHI,10,70.8,62.2,
 wilson_WR_ARI,Michael Wilson,WR,ARI,14,72.6,78.0,
 tate_WR_TEN,Carnell Tate,WR,TEN,9,75.1,,
 johnston_WR_LAC,Quentin Johnston,WR,LAC,7,79.2,,
@@ -70,8 +70,8 @@ reed_WR_GB,Jayden Reed,WR,GB,11,79.8,87.2,
 addison_WR_MIN,Jordan Addison,WR,MIN,6,79.9,,
 godwin_WR_TB,Chris Godwin Jr.,WR,TB,10,80.1,74.7,
 worthy_WR_KC,Xavier Worthy,WR,KC,5,80.7,,
-golden_WR_GB,Matthew Golden,WR,GB,11,85.2,,99.8
-hubbard_RB_CAR,Chuba Hubbard,RB,CAR,5,85.3,,
+golden_WR_GB,Matthew Golden,WR,GB,11,85.2,,
+hubbard_RB_CAR,Chuba Hubbard,RB,CAR,5,85.3,,70.1
 laporta_TE_DET,Sam LaPorta,TE,DET,6,85.6,,
 warren_TE_IND,Tyler Warren,TE,IND,13,86.5,72.4,
 pittman_WR_PIT,Michael Pittman Jr.,WR,PIT,9,86.8,,
@@ -80,22 +80,22 @@ mason_RB_MIN,Jordan Mason,RB,MIN,6,89.4,110.9,
 lawrence_QB_JAX,Trevor Lawrence,QB,JAX,7,94.7,,
 goff_QB_DET,Jared Goff,QB,DET,6,95.6,,
 texans_DST_HOU,Texans,DST,HOU,8,96.3,105.2,
-williams_QB_CHI,Caleb Williams,QB,CHI,10,97.6,,77.5
-diggs_WR_WSH,Stefon Diggs,WR,WSH,7,99.4,,86.1
+williams_QB_CHI,Caleb Williams,QB,CHI,10,97.6,,77.2
+diggs_WR_WSH,Stefon Diggs,WR,WSH,7,99.4,,86.3
 rams_DST_LAR,Rams,DST,LAR,11,100.3,99.5,
 downs_WR_IND,Josh Downs,WR,IND,13,101.2,,
 shaheed_WR_SEA,Rashid Shaheed,WR,SEA,11,104.0,,
 corum_RB_LAR,Blake Corum,RB,LAR,11,105.8,132.2,125.7
 herbert_QB_LAC,Justin Herbert,QB,LAC,7,107.2,115.2,
-jacobs_RB_GB,Josh Jacobs,RB,GB,11,107.9,,
+jacobs_RB_GB,Josh Jacobs,RB,GB,11,107.9,,98.4
 nix_QB_DEN,Bo Nix,QB,DEN,10,109.2,,
 lloyd_RB_GB,MarShawn Lloyd,RB,GB,11,110.8,115.3,
 jones_RB_MIN,Aaron Jones Sr.,RB,MIN,6,111.7,,
 concepcion_WR_CLE,KC Concepcion Jr.,WR,CLE,11,112.7,114.4,
 lemon_WR_PHI,Makai Lemon,WR,PHI,10,113.5,,
-mahomes_QB_KC,Patrick Mahomes,QB,KC,5,117.0,102.2,99.2
+mahomes_QB_KC,Patrick Mahomes,QB,KC,5,117.0,102.2,99.3
 stribling_WR_SF,De'Zhaun Stribling,WR,SF,8,117.7,126.9,
-aubrey_K_DAL,Brandon Aubrey,K,DAL,14,118.4,134.9,119.3
+aubrey_K_DAL,Brandon Aubrey,K,DAL,14,118.4,134.9,116.3
 white_RB_WSH,Rachaad White,RB,WSH,7,120.6,,
 pitts_TE_ATL,Kyle Pitts Sr.,TE,ATL,11,120.7,,
 jeudy_WR_CLE,Jerry Jeudy,WR,CLE,11,121.8,,
@@ -111,16 +111,17 @@ mayfield_QB_TB,Baker Mayfield,QB,TB,10,136.4,,
 kelce_TE_KC,Travis Kelce,TE,KC,5,137.4,130.6,
 murray_QB_MIN,Kyler Murray,QB,MIN,6,140.6,,
 washington_RB_LV,Mike Washington Jr.,RB,LV,13,143.7,,
-kincaid_TE_BUF,Dalton Kincaid,TE,BUF,7,145.8,,122.6
+kincaid_TE_BUF,Dalton Kincaid,TE,BUF,7,145.8,,124.6
 allen_WR_IND,Keenan Allen,WR,IND,13,150.2,,
 kupp_WR_SEA,Cooper Kupp,WR,SEA,11,155.4,,
 bills_DST_BUF,Bills,DST,BUF,7,157.0,,
-likely_TE_NYG,Isaiah Likely,TE,NYG,8,158.7,,123.4
+likely_TE_NYG,Isaiah Likely,TE,NYG,8,158.7,,120.8
 steelers_DST_PIT,Steelers,DST,PIT,9,164.7,,
-robinson_RB_ATL,Bijan Robinson,RB,ATL,11,,3.0,2.4
-collins_WR_HOU,Nico Collins,WR,HOU,8,,20.6,19.0
+robinson_RB_ATL,Bijan Robinson,RB,ATL,11,,3.0,2.3
+collins_WR_HOU,Nico Collins,WR,HOU,8,,20.6,19.2
 kraft_TE_GB,Tucker Kraft,TE,GB,11,,89.8,
 love_QB_GB,Jordan Love,QB,GB,11,,129.8,
 butker_K_KC,Harrison Butker,K,KC,5,,164.4,
-coker_WR_CAR,Jalen Coker,WR,CAR,5,,,99.4
-samuel_WR_SF,Deebo Samuel Sr.,WR,SF,8,,,107.8
+coker_WR_CAR,Jalen Coker,WR,CAR,5,,,99.6
+samuel_WR_SF,Deebo Samuel Sr.,WR,SF,8,,,109.0
+shough_QB_NO,Tyler Shough,QB,NO,8,,,111.8
